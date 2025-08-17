@@ -1,0 +1,23 @@
+# Core ML packages with compatible versions
+pyarrow==15.0.0
+datasets==2.16.1
+transformers==4.36.2
+accelerate==0.26.1
+peft==0.8.2
+torch==2.1.0
+
+# Update tokenizers to be compatible
+tokenizers>=0.15.0
+
+# Keep existing packages that work
+ipykernel==6.23.1
+numpy==1.24.3
+tqdm==4.65.0
+beautifulsoup4==4.12.2
+wandb==0.15.3
+hydra-core==1.3.2
+
+# Web service packages
+fastapi==0.115.6
+uvicorn==0.34.0
+firebase-admin==6.6.0
