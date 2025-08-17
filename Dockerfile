@@ -9,6 +9,7 @@ COPY config /app/config
 COPY data /app/data
 COPY serviceKey.json /app/serviceKey.json
 
+RUN pip install --no-cache-dir "huggingface_hub==0.23.0"
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 

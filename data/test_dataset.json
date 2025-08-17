@@ -1,0 +1,1724 @@
+[
+    {
+        "prompt": "\n\nHuman: \"Voiced by Harry Shearer, what Simpsons character w\"\n\n\"Voiced by Harry Shearer, what Simpsons character was modeled after Ted Koppel?\"\n\nAssistant:",
+        "responses": [
+            "\"The Simpsons character that was possibly based on Ted Koppel is Kent Brockman.  He is a local news anchor in Springfield and is modeled after Ted Koppel. [1]\"",
+            "\"Apu Nahasapeemapetilon is a recurring character in the American animated television series The Simpsons. He is an Indian immigrant proprietor who runs the Kwik-E-Mart, a popular convenience store in Springfield. [1] He was based on Peter Seller's character in the film The Party. [2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The Simpsons character that was possibly based on Ted Koppel is Kent Brockman.  He is a local news anchor in Springfield and is modeled after Ted Koppel. [1]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Alliumphobia is the irrational fear of which plant\"\n\n\"Alliumphobia is the irrational fear of which plant?\"\n\nAssistant:",
+        "responses": [
+            "\"Alliumphobia is the irrational fear of garlic. [1]\"",
+            "\"Alliumphobia is the fear of garlic [1, 3]. People who suffer from this condition can expect to experience a very high amount of anxiety from merely thinking of garlic, let alone actually seeing it in real life. In fact, their anxiety may be so intense that they may even endure a full blown panic attack as a result of it.  Sometimes, the people suffering from Alliumphobia, which is a Specific phobia, try to avoid not only the exact objects (in this case garlic) or situations that trigger it but sometimes in severe cases the thought of those thing all together.  There have been a lot of cases in which an individual has develop a phobia from garlic where they become fearful of experiencing anxiety itself because it would make them feel very uncomfortable in the moment they are in contact with any of those. [1, 3, 2, 4]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Alliumphobia is the irrational fear of garlic. [1]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Heterophobia is the irrational fear of what\"\n\n\"Heterophobia is the irrational fear of what\"\n\nAssistant:",
+        "responses": [
+            "\" Heterophobia is the irrational fear of the opposite sex, coined as Sexophobia [1]. This phobia can be caused by genetics, heredity, negative experiences with the opposite sex, or a combination of these [1].  Symptoms may result from encountering people of the opposite sex, including breathlessness, dizziness, excessive sweating, nausea, dry mouth, feeling sick, shaking, coronary heart palpitations, and anxiety [1].\"",
+            "\"In modern times, there has been a rise in what is called heterophobia; the irrational fear of, discrimination against, or aversion to heterosexual people. [1][2] The word \\\"heterophobia\\\" is a play on the word \\\"homophobia,\\\" which describes the fear of homosexual people. [1] Like homophobia, heterophobia is promoted by those who wish to shame or bash heterosexuals, especially men who have sex with women. [2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\" Heterophobia is the irrational fear of the opposite sex, coined as Sexophobia [1]. This phobia can be caused by genetics, heredity, negative experiences with the opposite sex, or a combination of these [1].  Symptoms may result from encountering people of the opposite sex, including breathlessness, dizziness, excessive sweating, nausea, dry mouth, feeling sick, shaking, coronary heart palpitations, and anxiety [1].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"What was the name of Dan Dare's co-pilot, in the c\"\n\n\"What was the name of Dan Dare's co-pilot, in the comic strip adventures in the Eagle comic?\"\n\nAssistant:",
+        "responses": [
+            "\"Frank Hampson [1].\"",
+            "\"In the original comic strip, Dan Dare had a co-pilot named Don Watson. [1]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Frank Hampson [1].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"In 1965, which Christmas song became the first son\"\n\n\"In 1965, which Christmas song became the first song to be broadcast from space?\"\n\nAssistant:",
+        "responses": [
+            "\"On December 16, 1965, Gemini 6 astronauts Tom Stafford and Wally Schirra broadcast the song \\\"Jingle Bells\\\" from space in a Christmas-themed prank. [1, 2]\"",
+            "\"On December 16, 1965, \\\"Jingle Bells\\\" became the first song to be broadcast from space during NASA's Gemini 6A space flight. [1,2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"On December 16, 1965, Gemini 6 astronauts Tom Stafford and Wally Schirra broadcast the song \\\"Jingle Bells\\\" from space in a Christmas-themed prank. [1, 2]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Which European city has the highest mileage of can\"\n\n\"Which European city has the highest mileage of canals in the world?\"\n\nAssistant:",
+        "responses": [
+            "\"According to the culturetrip.com, Birmingham beat out Venice in terms of miles of canals. [1]\"",
+            "\"\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"According to the culturetrip.com, Birmingham beat out Venice in terms of miles of canals. [1]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"\\\"\\\"\\\"There was no possibility of taking a walk that \"\n\n\"\\\"\\\"\\\"There was no possibility of taking a walk that day\\\"\\\" is the first line of which classic novel?\\\"\"\n\nAssistant:",
+        "responses": [
+            "\"Jane Eyre opens with an ominous November day described as \\\"cold winter wind [having] brought with it clouds so sombre, and a rain so penetrating, that further out-door exercise was now out of the question.\\\" [1, 2] Later in the novel, Jane is locked in the red room, as a child, at Gateshead [2]. She is lonely at Thornfield Hall, before Rochester's arrival [2]. She is then confined to the house she detests. In the breakfast room, Jane observes that to the left were the clear panes of glass, protecting but not separating her from the drear November day. Later in the day, she is confined to the Red Room, after refusing to be bullied and beaten by her cousin John Reed [2].\"",
+            "\"\\\"There was no possibility of taking a walk that day.\\\" is the first line of \\\"Moby Dick\\\" by Herman Melville [1,2].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Jane Eyre opens with an ominous November day described as \\\"cold winter wind [having] brought with it clouds so sombre, and a rain so penetrating, that further out-door exercise was now out of the question.\\\" [1, 2] Later in the novel, Jane is locked in the red room, as a child, at Gateshead [2]. She is lonely at Thornfield Hall, before Rochester's arrival [2]. She is then confined to the house she detests. In the breakfast room, Jane observes that to the left were the clear panes of glass, protecting but not separating her from the drear November day. Later in the day, she is confined to the Red Room, after refusing to be bullied and beaten by her cousin John Reed [2].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"The Met Office became part of which government dep\"\n\n\"The Met Office became part of which government department in July 2011?\"\n\nAssistant:",
+        "responses": [
+            "\"The Met Office became part of the Department for Business, Energy and Industrial Strategy in July 2011 [1].\"",
+            "\"The Met Office became a part of the Department for Business, Energy and Industrial Strategy in July 2011 [1].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The Met Office became part of the Department for Business, Energy and Industrial Strategy in July 2011 [1].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Name the song and the artist of this 2001 Grammy a\"\n\n\"Name the song and the artist of this 2001 Grammy award winning track: You’re on the road / But you’ve got no destination / You’re in the mud / In the maze of her imagination\"\n\nAssistant:",
+        "responses": [
+            "\"\"",
+            "\"\\\"You're on the road, but you've got no destination; you're in the mud, in the maze of her imagination,\\\" is part of the song \\\"Beautiful Day,\\\" by U2. [1]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"\""
+    },
+    {
+        "prompt": "\n\nHuman: \"The rivers Kennet, Lea, Brent and Pang are all tri\"\n\n\"The rivers Kennet, Lea, Brent and Pang are all tributaries of which English river?\"\n\nAssistant:",
+        "responses": [
+            "\"\"",
+            "\"The River Thames drains into the Atlantic Ocean via the English Channel, and it has five primary tributaries: the River Kennet, the River Lea, the River Brent, the River Pang, and the River Colne [1, 2]. The River Brent and adjacent tributaries the Colne Brook and those downstream such as the River Lea either flowed into this more northern Thames or formed the early course of the present day Thames [1]. The River Brent joins the Thames near Brentford, and the River Pang joins the Thames near Penshurst [1, 2].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"\""
+    },
+    {
+        "prompt": "\n\nHuman: \"In which Asian country is the resort of Pattaya?\"\n\n\"In which Asian country is the resort of Pattaya?\"\n\nAssistant:",
+        "responses": [
+            "\"Pattaya City is in Thailand [1, 2].\"",
+            "\"Pattaya is in Thailand. [1]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Pattaya City is in Thailand [1, 2].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"What lifted the capsule that Felix Baumgartner rod\"\n\n\"What lifted the capsule that Felix Baumgartner rode some 24 miles into the stratosphere before his historic jump this week?\"\n\nAssistant:",
+        "responses": [
+            "\"Baumgartner's custom-built capsule was lifted to the very edges of space in the earth's stratosphere by an attached helium balloon. [1] It took the balloon 90 minutes to get to 90,000 feet, where Baumgartner jumped from. [1, 2]\"",
+            "\"The capsule that Felix Baumgartner rode to the stratosphere was lifted by a giant helium balloon. [1]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Baumgartner's custom-built capsule was lifted to the very edges of space in the earth's stratosphere by an attached helium balloon. [1] It took the balloon 90 minutes to get to 90,000 feet, where Baumgartner jumped from. [1, 2]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Which fashion designer, born 1940 in Chatham, Kent\"\n\n\"Which fashion designer, born 1940 in Chatham, Kent, is well known for her pink hair?\"\n\nAssistant:",
+        "responses": [
+            "\"Zandra Rhodes, born in Chatham, Kent in 1940, is a British fashion designer who is well known for her pink hair. [1][2][3]\"",
+            "\"Born in Chatham, Kent, U.K., fashion designer Zandra Rhodes is well known for her pink hair. [1, 2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Zandra Rhodes, born in Chatham, Kent in 1940, is a British fashion designer who is well known for her pink hair. [1][2][3]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"VVhich Pulitzer prize winning author and journalis\"\n\n\"VVhich Pulitzer prize winning author and journalist was present at both the Normandy landings and the liberation of Paris?\"\n\nAssistant:",
+        "responses": [
+            "\"Rick Atkinson, who is best known for his Pulitzer Prize-winning book An Army at Dawn, is the author of the Liberation Trilogy, which covers the landings at Normandy and the liberation of Paris. [1, 2, 3]\"",
+            "\"The Normandy landings were the landing operations and associated airborne operations on Tuesday, June 6, 1944 of the Allied invasion of Normandy in Operation Overlord during World War II. The operation began the liberation of France and laid the foundations of the Allied victory on the Western Front. [1]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Rick Atkinson, who is best known for his Pulitzer Prize-winning book An Army at Dawn, is the author of the Liberation Trilogy, which covers the landings at Normandy and the liberation of Paris. [1, 2, 3]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Which state of America is nicknamed 'The Beehive S\"\n\n\"Which state of America is nicknamed 'The Beehive State'?\"\n\nAssistant:",
+        "responses": [
+            "\"The state of Utah is known as the \\\"Beehive State\\\". [1][2][3]\"",
+            "\"The state of Utah is titled \\\"The Beehive State.\\\" [1,2,3]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The state of Utah is known as the \\\"Beehive State\\\". [1][2][3]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"What does the musical term forte mean\"\n\n\"What does the musical term forte mean\"\n\nAssistant:",
+        "responses": [
+            "\"The term forte means \\\"loud\\\" or \\\"strong\\\" in music [1,2,3]. It is usually notated by the letter \\\"f\\\" [3]. The opposite of forte is piano which means \\\"quiet\\\" [1,2,3]\"",
+            "\"A forte in music is a dynamic directive that means to perform the indicated passage of music loudly [1,2].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The term forte means \\\"loud\\\" or \\\"strong\\\" in music [1,2,3]. It is usually notated by the letter \\\"f\\\" [3]. The opposite of forte is piano which means \\\"quiet\\\" [1,2,3]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"James Stewart played the character Elwood P. Dowd \"\n\n\"James Stewart played the character Elwood P. Dowd in which classic 1950 film ?\"\n\nAssistant:",
+        "responses": [
+            "\"James Stewart played Elwood P. Dowd in the film Harvey [1].\"",
+            "\"The stage play \\\"Harvey\\\" was made into a movie in 1950, and the main character's name in the play and movie is Elwood P. Dowd [1, 2].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"James Stewart played Elwood P. Dowd in the film Harvey [1].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"How many countries now form the European Union?\"\n\n\"How many countries now form the European Union?\"\n\nAssistant:",
+        "responses": [
+            "\"The European Union was founded on the premise of economic cooperation between several countries. In 1951, only Belgium, Germany, France, Italy, Luxembourg, and the Netherlands participated [1, 2]. Over time, more countries decided to join [2]. The United Kingdom withdrew from the European Union on January 31, 2020 [1, 2]. The EU currently consists of 27 member countries [2, 3].\"",
+            "\"The European Union consists of 27 member states [1]. This number includes the United Kingdom, which withdrew from the EU on January 31, 2020 [2].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The European Union was founded on the premise of economic cooperation between several countries. In 1951, only Belgium, Germany, France, Italy, Luxembourg, and the Netherlands participated [1, 2]. Over time, more countries decided to join [2]. The United Kingdom withdrew from the European Union on January 31, 2020 [1, 2]. The EU currently consists of 27 member countries [2, 3].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"What type of creature is a canvasback?\"\n\n\"What type of creature is a canvasback?\"\n\nAssistant:",
+        "responses": [
+            "\"The canvasback is a type of wild duck found in North America. [1]  It is easily distinguished by its large body size and sloping profile.  [2]  The adult male drake is white-bellied, with a grey-back and a black chest. [1][2][3] The adult female is similar, but lighter in color with a light brown back and reddish-brown head. [1]  Young of both sexes resemble the adult females, but will begin to resemble adult males by November, and have fully grown plumage by February. [1]  The Canvasback is known for its distinguished look and large body size. [3]\"",
+            "\"The canvasback is a species of diving duck, the largest in North America [1, 2]. Distinguished by their large body and sloping profile, they have a white body and a black chest and head [1]. The drake, or male, has a rusty-brown head [1]. Canvasback ducks were once on the verge of extinction due to hunting and development of their habitats, but have made a comeback along with many other waterfowl species [3].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The canvasback is a type of wild duck found in North America. [1]  It is easily distinguished by its large body size and sloping profile.  [2]  The adult male drake is white-bellied, with a grey-back and a black chest. [1][2][3] The adult female is similar, but lighter in color with a light brown back and reddish-brown head. [1]  Young of both sexes resemble the adult females, but will begin to resemble adult males by November, and have fully grown plumage by February. [1]  The Canvasback is known for its distinguished look and large body size. [3]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"The USA entered World War I because Germany attemp\"\n\n\"The USA entered World War I because Germany attempted to enlist Mexico as an ally, and for what other reason?\"\n\nAssistant:",
+        "responses": [
+            "\"The USA entered World War I because Germany attempted to enlist Mexico as an ally, and for the Zimmerman Telegram [1,2,3].\"",
+            "\"The United States entered World War I because of Germany's use of submarine warfare against ships in the Atlantic Ocean,, which was hurting American exports to Europe.  [1][2] Additionally, Germany tried to enlist Mexico as an ally against the United States, an event which convinced American businessmen and industrialists that the United States should enter the war. [1][2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The USA entered World War I because Germany attempted to enlist Mexico as an ally, and for the Zimmerman Telegram [1,2,3].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"How many volunteer hours were estimated to have su\"\n\n\"How many volunteer hours were estimated to have supported the 2012 Summer Olympics?\"\n\nAssistant:",
+        "responses": [
+            "\"In the past six decades, the number of volunteers supporting the Summer Olympics has increased from just over 2,000 in 1952 to over 70,000 in 2012 [1]. Recruitment for the2018 Winter Olympics in Pyeongchang began in 2014, with a goal of 30,000 volunteers [3]. The International Olympic Committee (IOC) recognizes the importance of including volunteers in the organization of the Olympic Games and accordingly established its volunteer program in 1948 [1]. Anyone attending the Games - including athletes, staff, fans, and journalists - is sure to encounter these volunteers because they are so ubiquitous [1].\"",
+            "\"An estimated 240,000 volunteers have supported the 2012 Summer Olympics [1]. These volunteers contributed eight million hours of voluntary work, and are the \\\"unsung heroes and heroines\\\" who made the Games possible [2].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"In the past six decades, the number of volunteers supporting the Summer Olympics has increased from just over 2,000 in 1952 to over 70,000 in 2012 [1]. Recruitment for the2018 Winter Olympics in Pyeongchang began in 2014, with a goal of 30,000 volunteers [3]. The International Olympic Committee (IOC) recognizes the importance of including volunteers in the organization of the Olympic Games and accordingly established its volunteer program in 1948 [1]. Anyone attending the Games - including athletes, staff, fans, and journalists - is sure to encounter these volunteers because they are so ubiquitous [1].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"In needlework, what is the technique in which piec\"\n\n\"In needlework, what is the technique in which pieces of fabric are attached to another piece of material for decoration?\"\n\nAssistant:",
+        "responses": [
+            "\"In needlework, the technique of attaching pieces of fabric to another piece of material for decoration is referred to as appliqué [1]. It is done by stitching the smaller piece to the larger piece to create a design or pattern [2]. This can be done by hand or machine [1,2,3]. The term \\\"applique\\\" derives from the Latin word \\\"applico\\\" which means \\\"I apply\\\" [4].\"",
+            "\"For example, appliqué is a type of ornamental needlework in which pieces of fabric in different shapes and patterns are sewn or stuck onto a larger piece to form a picture or pattern. [1, 2] The technique is accomplished either by hand stitching or machine. [2] Other examples of needlework include couching, in which a thread laid upon the surface of the material is caught down at intervals by stitches taken with another thread through the material, and embroidery. [3, 4]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"In needlework, the technique of attaching pieces of fabric to another piece of material for decoration is referred to as appliqué [1]. It is done by stitching the smaller piece to the larger piece to create a design or pattern [2]. This can be done by hand or machine [1,2,3]. The term \\\"applique\\\" derives from the Latin word \\\"applico\\\" which means \\\"I apply\\\" [4].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Which river was immortalised by Rudyard Kipling as\"\n\n\"Which river was immortalised by Rudyard Kipling as 'The Road to Mandalay'?\"\n\nAssistant:",
+        "responses": [
+            "\"The River Ayeyarwady River is known as \\\"The Road to Mandalay.\\\" [1]\"",
+            "\"The poem \\\"Mandalay\\\" was written by Rudyard Kipling and features in his 1890 collection of poetry, Barrack-Room Ballads [1, 2]. It is set in British Burma, which was then part of British India [2]. The protagonist is a British soldier longing for the warmth of a Burma girl and the freedoms of Mandalay [1, 2]. The poem was set to music in 1907 by Oley Speaks [2]. It has been criticized for its muddled geography [3] but has also been admired for its exotic eroticism as well as a variety of other political, social, and literary themes [3, 4].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The River Ayeyarwady River is known as \\\"The Road to Mandalay.\\\" [1]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"What Italian region has its capital in Florence?\"\n\n\"What Italian region has its capital in Florence?\"\n\nAssistant:",
+        "responses": [
+            "\"\"",
+            "\"The capital of the Italian region of Tuscany is Florence, which is also a province and a municipality within the region. [1, 2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Valentino Rossi, Jorge Lorenzo, Dani Pedrosa & And\"\n\n\"Valentino Rossi, Jorge Lorenzo, Dani Pedrosa & Andrea Dovizioso compete in what sport?\"\n\nAssistant:",
+        "responses": [
+            "\"Valentino Rossi, Jorge Lorenzo, Dani Pedrosa, Andrea Dovizioso and Marc Marquez are professional motorcycle racers [1, 2, 3].\"",
+            "\"Valentino Rossi, Jorge Lorenzo, Dani Pedrosa, and Andrea Dovizioso compete in Grand Prix motorcycle racing, which is the premier championship of motorcycle road racing [2].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Valentino Rossi, Jorge Lorenzo, Dani Pedrosa, Andrea Dovizioso and Marc Marquez are professional motorcycle racers [1, 2, 3].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Hunters call it 'The Glorious Twelfth'. What is it\"\n\n\"Hunters call it 'The Glorious Twelfth'. What is it?\"\n\nAssistant:",
+        "responses": [
+            "\"On the twelfth day of August, the start of the shooting season for red grouse and to a lesser extent the ptarmigan in Great Britain and Northern Ireland is called \\\"The Glorious Twelfth.\\\" [1] This date is traditional, and the current legislation in England and Wales is the Game Act of 1831 and in Northern Ireland, the Wildlife (Northern Ireland) Order 1985. [1, 2] The hunting season was popular among aristocrats and the upper class of the Victorian society. [3]\"",
+            "\"The Glorious Twelfth is the twelfth day of August, the start of the shooting season for red grouse (Lagopus lagopus scotica) in Great Britain and Northern Ireland [1]. This is one of the busiest days in the shooting season, with large numbers of game being shot [1]. Land management techniques are carried out to maintain the moors so that they remain the perfect breeding ground for red grouse [3]. Gamekeepers burn parts of heather before August to allow it to grow at different lengths, which increases the number of grouse yields [3].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"On the twelfth day of August, the start of the shooting season for red grouse and to a lesser extent the ptarmigan in Great Britain and Northern Ireland is called \\\"The Glorious Twelfth.\\\" [1] This date is traditional, and the current legislation in England and Wales is the Game Act of 1831 and in Northern Ireland, the Wildlife (Northern Ireland) Order 1985. [1, 2] The hunting season was popular among aristocrats and the upper class of the Victorian society. [3]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Who was Brigitte Bardot’s third husband\"\n\n\"Who was Brigitte Bardot’s third husband\"\n\nAssistant:",
+        "responses": [
+            "\"Brigitte Bardot's third husband was Gunter Sachs [1, 2, 3]. They married in July of 1966 [1, 3] and divorced just three years later in 1969 [3].\"",
+            "\"Brigitte Bardot was married three times. Her first husband was Roger Vadim, a director's assistant six years her senior, who she married in December 1952 when she was 18 years old. Bardot divorced Vadim in 1957, citing his affair with another woman as the reason.  Bardot briefly lived with Jean-Louis Trintignant, her co-star in And God Created Woman, before their relationship was interrupted by her divorce. [1, 2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Brigitte Bardot's third husband was Gunter Sachs [1, 2, 3]. They married in July of 1966 [1, 3] and divorced just three years later in 1969 [3].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Who were the runners up in the 1998 FIFA World Cup\"\n\n\"Who were the runners up in the 1998 FIFA World Cup Final?\"\n\nAssistant:",
+        "responses": [
+            "\"The 1998 FIFA World Cup Final was a football match played on July 12, 1998 at the Stade de France in Paris, France, to determine the winner of the 1998 FIFA World Cup. The final was contested by defending champions Brazil and the host nation France, which marked the first time that a World Cup final was disputed between the host nation and the defending champion. France won the match 3-0 to claim their maiden World Cup. [1]\"",
+            "\"France defeated Brazil in the 1998 World Cup Final [1].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The 1998 FIFA World Cup Final was a football match played on July 12, 1998 at the Stade de France in Paris, France, to determine the winner of the 1998 FIFA World Cup. The final was contested by defending champions Brazil and the host nation France, which marked the first time that a World Cup final was disputed between the host nation and the defending champion. France won the match 3-0 to claim their maiden World Cup. [1]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Major Walter Wingfield is associated with which sp\"\n\n\"Major Walter Wingfield is associated with which sport?\"\n\nAssistant:",
+        "responses": [
+            "\"Walter Wingfield is associated with the sport of lawn tennis.  [1]  He was inducted into the International Tennis Hall of Fame in 1997 as the founder of modern lawn tennis. [1]\"",
+            "\"Major Walter Wingfield is associated with tennis [1,2].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Walter Wingfield is associated with the sport of lawn tennis.  [1]  He was inducted into the International Tennis Hall of Fame in 1997 as the founder of modern lawn tennis. [1]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"\\\"\\\"\\\"The Butter Battle Book\\\"\\\" by Dr. Seuss was a com\"\n\n\"\\\"\\\"\\\"The Butter Battle Book\\\"\\\" by Dr. Seuss was a commentary on what real-life \\\"\\\"war\\\"\\\"?\\\"\"\n\nAssistant:",
+        "responses": [
+            "\"The Butter Battle Book, although a children's book, is a clear commentary on the state of affairs between America and the USSR during the Cold War [1,3]. The two sides, although technologically advanced, have grown to hate each other purely because of their bread buttering preference [1,2,3]. Even the names of the nations are similar; Yooks and Zooks are practically opposites of each other [2,4]. The book shows how even the slightest of differences can be used to instill hatred between two sides [1,2]. The weapons they developed are basic compared to what was actually developed during the Cold War [2].\"",
+            "\"The Butter Battle Book by Dr. Seuss was a commentary on the Cold War and the arms race between the United States and Russia. [1][2] Both VanItch and Grandpa are willing to use progressively larger weapons in response to the other side's threats. [2] The book can thus be used to discuss war in general, the concept of mutually assured destruction, and how war can develop from a senseless conflict. [1]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The Butter Battle Book, although a children's book, is a clear commentary on the state of affairs between America and the USSR during the Cold War [1,3]. The two sides, although technologically advanced, have grown to hate each other purely because of their bread buttering preference [1,2,3]. Even the names of the nations are similar; Yooks and Zooks are practically opposites of each other [2,4]. The book shows how even the slightest of differences can be used to instill hatred between two sides [1,2]. The weapons they developed are basic compared to what was actually developed during the Cold War [2].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Eliza Manningham Buller was the former Director Ge\"\n\n\"Eliza Manningham Buller was the former Director General of which organisation?\"\n\nAssistant:",
+        "responses": [
+            "\"Eliza Manningham Buller was the Director-General of the UK Security Service between 2002 and 2007 [1, 2]. She is currently the chair of the Wellcome Trust, one of the world's biggest medical trusts with over £25 billion in assets [1]. Between the 1980s and early 1990s, she was one of only a handful of people who knew that Oleg Gordievsky, the deputy head of the KGB at the Soviet embassy in London, was actually a double agent [3]. She was also a member of the Board of Governors of the Wellcome Trust from 2008 to 2021 [2].\"",
+            "\"Eliza Manningham Buller was the former Director General of the Wellcome Trust [1].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Eliza Manningham Buller was the Director-General of the UK Security Service between 2002 and 2007 [1, 2]. She is currently the chair of the Wellcome Trust, one of the world's biggest medical trusts with over £25 billion in assets [1]. Between the 1980s and early 1990s, she was one of only a handful of people who knew that Oleg Gordievsky, the deputy head of the KGB at the Soviet embassy in London, was actually a double agent [3]. She was also a member of the Board of Governors of the Wellcome Trust from 2008 to 2021 [2].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"In literature, who sped across the Atlantic in the\"\n\n\"In literature, who sped across the Atlantic in the SS Henrietta?\"\n\nAssistant:",
+        "responses": [
+            "\"\"",
+            "\"In literature, the SS Henrietta was a ship. [1] It is a three-masted square-sterned merchant ship from 60 to 80 feet in length. It could hold a cargo of 120 tons and had a crew of 18 men. It is thought that it was built in France. [2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Cathays, Splott and Fairwater are all areas of whi\"\n\n\"Cathays, Splott and Fairwater are all areas of which British city?\"\n\nAssistant:",
+        "responses": [
+            "\"The City of Cardiff, which is located in Wales. Cardiff's districts include Cathays, Splott, and Fairwater [1,3].\"",
+            "\"Cathays, Splott and Fairwater are all areas of Cardiff, Wales [1].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The City of Cardiff, which is located in Wales. Cardiff's districts include Cathays, Splott, and Fairwater [1,3].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"King Harold II, Richard I and Richard III all shar\"\n\n\"King Harold II, Richard I and Richard III all share which distinction?\"\n\nAssistant:",
+        "responses": [
+            "\"Harold Godwinson (c. 1022 – 14 October 1066), also called Harold II, was the last crowned Anglo-Saxon king of England. Harold reigned from 6 January 1066 until his death at the Battle of Hastings, fighting the Norman invaders led by William the Conqueror during the Norman conquest of England. [1][2] The Battle of Hastings was fought on October 14, 1066 between the Norman-French army of William, the Duke of Normandy, and an English army under the Anglo-Saxon King Harold Godwinson, beginning the Norman conquest of England. [2][3]\"",
+            "\"All three kings named Harold share the distinction of being kings of England, Norway and Denmark, respectively. Harold II was king of England from 1040 to 1066, Harold III was king of Norway from 1015 to 1066, and Harold I was king of Denmark from 935 to 985. [1, 2, 3]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Harold Godwinson (c. 1022 – 14 October 1066), also called Harold II, was the last crowned Anglo-Saxon king of England. Harold reigned from 6 January 1066 until his death at the Battle of Hastings, fighting the Norman invaders led by William the Conqueror during the Norman conquest of England. [1][2] The Battle of Hastings was fought on October 14, 1066 between the Norman-French army of William, the Duke of Normandy, and an English army under the Anglo-Saxon King Harold Godwinson, beginning the Norman conquest of England. [2][3]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"The Stratosphere Tower is the highest building in \"\n\n\"The Stratosphere Tower is the highest building in which US city?\"\n\nAssistant:",
+        "responses": [
+            "\"The Stratosphere Tower in Las Vegas is the tallest observation tower in the United States [1, 2].\"",
+            "\"The Stratosphere Tower, which is located in Las Vegas, is the tallest observation tower in the United States. [1, 2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The Stratosphere Tower in Las Vegas is the tallest observation tower in the United States [1, 2].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"\\\"Which German-born composer became a naturalised E\"\n\n\"\\\"Which German-born composer became a naturalised Englishman, wrote 30 operas in the 18th century, and is more famous now for his oratorios such as \\\"\\\"The Messiah\\\"\\\"?\\\"\"\n\nAssistant:",
+        "responses": [
+            "\"George Frideric Handel, born in 1685 in Halle, Germany, became a naturalized Englishman and is better known for his oratorios such as The Messiah, than his 30 operas he composed in the 18th century. [1, 2, 4]\"",
+            "\"George Frideric Handel was a German-born composer who became a naturalized Englishman and wrote 30 operas in the 18th century. Handel is now better known for his oratorios such as \\\"The Messiah.\\\"\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"George Frideric Handel, born in 1685 in Halle, Germany, became a naturalized Englishman and is better known for his oratorios such as The Messiah, than his 30 operas he composed in the 18th century. [1, 2, 4]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"\\\"\\\"\\\"I don't see why we need to stand by and watch a\"\n\n\"\\\"\\\"\\\"I don't see why we need to stand by and watch a country go Communist because of the irresponsibility of its own people.\\\"\\\" Whose words that preceded a 1973 coup in a South American country?\\\"\"\n\nAssistant:",
+        "responses": [
+            "\"On September 11, 1973, a coup in Chile led to a 17-year military dictatorship under Augusto Pinochet. The coup was the result of a campaign of political manipulation and destabilization waged by the United States. In 1964, the Johnson administration poured tens of millions of dollars into a covert campaign to insure the election of Christian Democrat Eduardo Frei as president over the Socialist Party candidate, Salvador Allende. [1]  Pinochet and his administration justified the coup as a \\\"national reconstruction,\\\" and the military junta was headed by General Pinochet. The US government's role in orchestrating the coup and the regime is disputed, but Ambassador Edward Korry did recommend a CIA covert operation to prepare a preemptive military coup. [2]\"",
+            "\"The 1973 Chilean coup d'état, which deposed the government of President Salvador Allende, was led by General Augusto Pinochet. It is now confirmed that the US government, led by president Richard Nixon, was heavily involved in the coup. Containment policy and the emphasis on defeating Communism are two of the main reasons behind the US government's actions. [1, 2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"On September 11, 1973, a coup in Chile led to a 17-year military dictatorship under Augusto Pinochet. The coup was the result of a campaign of political manipulation and destabilization waged by the United States. In 1964, the Johnson administration poured tens of millions of dollars into a covert campaign to insure the election of Christian Democrat Eduardo Frei as president over the Socialist Party candidate, Salvador Allende. [1]  Pinochet and his administration justified the coup as a \\\"national reconstruction,\\\" and the military junta was headed by General Pinochet. The US government's role in orchestrating the coup and the regime is disputed, but Ambassador Edward Korry did recommend a CIA covert operation to prepare a preemptive military coup. [2]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"The Noble gases are Helium, Neon, Krypton, Xenon, \"\n\n\"The Noble gases are Helium, Neon, Krypton, Xenon, Radon and which other element?\"\n\nAssistant:",
+        "responses": [
+            "\"All of the elements in Group Zero are noble gases: helium, neon (Ne), argon (Ar), krypton (Kr), xenon (Xe), and radon (Rn).[1]\"",
+            "\"The Noble gases are Helium, Neon, Krypton, Xenon, Radon, and Oganesson [1].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"All of the elements in Group Zero are noble gases: helium, neon (Ne), argon (Ar), krypton (Kr), xenon (Xe), and radon (Rn).[1]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Who in 1711 wrote the line 'A little learning is a\"\n\n\"Who in 1711 wrote the line 'A little learning is a dangerous thing'?\"\n\nAssistant:",
+        "responses": [
+            "\"\\\"A little learning is a dangerous thing\\\" is a quote from the poem \\\"An Essay on Criticism\\\" written by English poet Alexander Pope in 1711 [1,3].\"",
+            "\"The line \\\"A little learning is a dangerous thing\\\" was first penned anonymously by Alexander Pope exactly 300 years ago on May 15, 1711 [2]. It has since become a proverbial saying that has been repurposed in many ways [1].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"\\\"A little learning is a dangerous thing\\\" is a quote from the poem \\\"An Essay on Criticism\\\" written by English poet Alexander Pope in 1711 [1,3].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Specific areas of Britain, e.g. the Broads, are de\"\n\n\"Specific areas of Britain, e.g. the Broads, are designated as ESA's. For what does the S stand?\"\n\nAssistant:",
+        "responses": [
+            "\"ESA stands for Environmentally Sensitive Area [1, 4, 5].\"",
+            "\"The S in ESA stands for \\\"Special Area of Conservation\\\" [2]. Areas of Britain that are environmentally sensitive are designated as SAC's [1][3].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"ESA stands for Environmentally Sensitive Area [1, 4, 5].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Name the 1980's hit sung by Tina Turner and Rod St\"\n\n\"Name the 1980's hit sung by Tina Turner and Rod Stewart?\"\n\nAssistant:",
+        "responses": [
+            "\"\\\"What's Love Got to Do with It\\\" is a 1984 song sung by Tina Turner and Rod Stewart. [1, 2]\"",
+            "\"The song is called Hot Legs.\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"\\\"What's Love Got to Do with It\\\" is a 1984 song sung by Tina Turner and Rod Stewart. [1, 2]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Which board game was invented by part-time clown, \"\n\n\"Which board game was invented by part-time clown, Anthony E Pratt?\"\n\nAssistant:",
+        "responses": [
+            "\"Anthony E. Pratt, also known as Anthony Ernest Pratt, invented the English board game Cluedo. He developed the concept of the game as a murder-mystery evening while working as the entertainment manager of a hotel with his wife. [1, 2]\"",
+            "\"Anthony E. Pratt, a solicitor's clerk and part-time clown from Birmingham, England, invented the board game Clue.\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Anthony E. Pratt, also known as Anthony Ernest Pratt, invented the English board game Cluedo. He developed the concept of the game as a murder-mystery evening while working as the entertainment manager of a hotel with his wife. [1, 2]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Active from 1973 to the present, what Bellevue bas\"\n\n\"Active from 1973 to the present, what Bellevue based sisters front the rock band Heart?\"\n\nAssistant:",
+        "responses": [
+            "\"The rock band Heart was formed in 1973 by two sisters named Ann and Nancy Wilson.  [1][2]  Ann played lead guitar and provided lead vocals, while her younger sister Nancy played guitar as well.  [1][2] The band became infamous for their various hit songs, which include \\\"Crazy on You\\\", \\\"Barracuda\\\", and \\\"What About Love\\\". [2] Heart saw many highs and lows over the years, but are currently still together as a group. [2]\"",
+            "\"HEART is an American rock band. They were formed in 1967 in Seattle, Washington, as THE ARMY. Two years later, THE ARMY changed their name to Hocus Pocus, then they changed their name again to White Heart a year later, but eventually changed the name a final time to HEART in 1973 [1]. By the mid-1970s, original members Roger Fisher (guitar), Steve Fossen (drums), and Michael Derosier (bass) had joined the band [1, 2].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The rock band Heart was formed in 1973 by two sisters named Ann and Nancy Wilson.  [1][2]  Ann played lead guitar and provided lead vocals, while her younger sister Nancy played guitar as well.  [1][2] The band became infamous for their various hit songs, which include \\\"Crazy on You\\\", \\\"Barracuda\\\", and \\\"What About Love\\\". [2] Heart saw many highs and lows over the years, but are currently still together as a group. [2]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Which boxer won the Olympic gold medal at Middlewe\"\n\n\"Which boxer won the Olympic gold medal at Middleweight in 1976, and then went on to win the World Professional title at both Light-heavyweight and Heavyweight?\"\n\nAssistant:",
+        "responses": [
+            "\"The boxer who won an Olympic gold medal at Middleweight in 1976 and then went on to win the World Professional title at both Light-heavyweight and Heavyweight was Leon Spinks. [1, 2, 3, 4]\"",
+            "\"The boxer who won the Olympic gold medal at Middleweight in 1976 and went on to win the World Professional title at both Light-heavyweight and Heavyweight was Michael \\\"Jinx\\\" Spinks. [1]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The boxer who won an Olympic gold medal at Middleweight in 1976 and then went on to win the World Professional title at both Light-heavyweight and Heavyweight was Leon Spinks. [1, 2, 3, 4]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Which wine can be fino' or 'Oloroso'?\"\n\n\"Which wine can be fino' or 'Oloroso'?\"\n\nAssistant:",
+        "responses": [
+            "\"Oloroso is a type of Sherry. [1] It is made from Palomino Grapes. The special structure it demonstrates at an initial tasting destines it for oxidative ageing. Alcohol is added to 17°, preventing the development of the Veil of Flor and allowing the wine to age while exposed to oxygen. [1]\"",
+            "\"Fino is a type of wine made in Spain and typically lacks the yeasty taste as compared to its counterpart Oloroso [2]. While both Fino and Oloroso are made in Spain, Oloroso is made from a heavier more full-bodied must than Fino. The heavier must is fermented and once the wines are evaluated, the ones who have a thicker body will be selected to continue aging as Oloroso [1]. Oloroso is darker and usually has a nutty flavor [2]. Both Fino and Oloroso are types of sherry.\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Oloroso is a type of Sherry. [1] It is made from Palomino Grapes. The special structure it demonstrates at an initial tasting destines it for oxidative ageing. Alcohol is added to 17°, preventing the development of the Veil of Flor and allowing the wine to age while exposed to oxygen. [1]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Where do you want to go today?\"\n\n\"Where do you want to go today?\"\n\nAssistant:",
+        "responses": [
+            "\"\"",
+            "\"The most prominent landmark in Edinburgh, Scotland is the Edinburgh Castle. The castle houses the Honours (Crown Jewels) of Scotland, as well as the Stone of Destiny. The oldest part of the castle is St. Margaret's Chapel, which dates back to the 12th century. [1] The castle was the traditional repository of the Honours of Scotland, however in 1996, the stone was removed to England. The stone is a block of sandstone upon which Scottish monarchs were crowned. [2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"\""
+    },
+    {
+        "prompt": "\n\nHuman: \"True or False? The German's made the first artific\"\n\n\"True or False? The German's made the first artificial Christmas tree out of Goose feathers?\"\n\nAssistant:",
+        "responses": [
+            "\"The Germans did not make the first artificial Christmas tree out of goose feathers. In the early 1900s, Addis Housewares Company, a U.S. firm that manufactured the first toilet bowl brushes, used their technology to construct an artificial tree from brush bristles. Their product was more durable and sturdy than the feather tree and could hold ornaments. [1] Germany is credited with starting the Christmas tree tradition in the 16th century when devout Christians brought decorated trees into their homes. Some built Christmas pyramids of wood. [2] Facing a deforestation problem, the government of mid 1800s Germany enacted a law that limited each family to one tree only. In response, farmers stepped in with a solution and the German feather tree was born. They had an abundance of goose, turkey, swan and ostrich feathers at their disposal. The feathers, dyed green, split and wrapped around sticks or wire created a convincing replica of an evergreen branch. The branches were drilled or wired to a central ‘trunk’. Families began making the trees to sell at Christmas markets. [3]\"",
+            "\"The first artificial holiday trees were made from feathers and were crafted in Germany. [2, 3] These feather trees gained popularity in the 19th century and were sometimes illuminated with wax candles. [1, 3] In 1840, Prince Albert, Queen Victoria's consort, is credited with introducing the Christmas tree into England, although the tradition of having a Christmas tree really began with Queen Charlotte, who was German and the wife of George III. [2] While history records that the Germans made the first artificial Christmas tree out of goose feathers, feathers were not the only material used to make early artificial trees. [1, 2, 3]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The Germans did not make the first artificial Christmas tree out of goose feathers. In the early 1900s, Addis Housewares Company, a U.S. firm that manufactured the first toilet bowl brushes, used their technology to construct an artificial tree from brush bristles. Their product was more durable and sturdy than the feather tree and could hold ornaments. [1] Germany is credited with starting the Christmas tree tradition in the 16th century when devout Christians brought decorated trees into their homes. Some built Christmas pyramids of wood. [2] Facing a deforestation problem, the government of mid 1800s Germany enacted a law that limited each family to one tree only. In response, farmers stepped in with a solution and the German feather tree was born. They had an abundance of goose, turkey, swan and ostrich feathers at their disposal. The feathers, dyed green, split and wrapped around sticks or wire created a convincing replica of an evergreen branch. The branches were drilled or wired to a central ‘trunk’. Families began making the trees to sell at Christmas markets. [3]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"What to the Inuit people are mukluks?\"\n\n\"What to the Inuit people are mukluks?\"\n\nAssistant:",
+        "responses": [
+            "\"Mukluks are soft hide boots designed by Inuit peoples for manoeuvrability and warmth in northern environments. The term mukluk comes from the Yupik word maklak, meaning \\\"bearded seal\\\" - a key animal source for Aboriginal clothing in the North. [1] The name Mukluk is derived from the Yupik word maklak, meaning \\\"bearded seal,\\\" in reference to the bearded-seal skin that was used to make the soles of boots. Earlier versions of mukluks were made from sealskin (mostly bearded seal), moose or caribou hide for the soles and leg uppers. The fur used to insulate the boots was primarily made of squirrel, bear or beaver. [2]\"",
+            "\"Mukluks are soft boots made of reindeer or sealskin and worn by Arctic people, including the Inuit, Iñupiat, and Yupik. [1] They are sometimes used interchangeably with the term \\\"mukluk,\\\" which actually was the Yupik word for the boot. [2] The Inuit word for mukluks is \\\"kamik.\\\" [2] Today, some mukluks are made from modern materials and may not look traditional, but they still serve the purpose of keeping feet warm and dry in cold weather. [2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Mukluks are soft hide boots designed by Inuit peoples for manoeuvrability and warmth in northern environments. The term mukluk comes from the Yupik word maklak, meaning \\\"bearded seal\\\" - a key animal source for Aboriginal clothing in the North. [1] The name Mukluk is derived from the Yupik word maklak, meaning \\\"bearded seal,\\\" in reference to the bearded-seal skin that was used to make the soles of boots. Earlier versions of mukluks were made from sealskin (mostly bearded seal), moose or caribou hide for the soles and leg uppers. The fur used to insulate the boots was primarily made of squirrel, bear or beaver. [2]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Chalcocite is an important ore of which metallic e\"\n\n\"Chalcocite is an important ore of which metallic element?\"\n\nAssistant:",
+        "responses": [
+            "\"Chalcocite, Cu2S, is an important ore of copper. [1]\"",
+            "\"Chalcocite is an important ore of copper. [1,2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Chalcocite, Cu2S, is an important ore of copper. [1]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Now making a career as a pop singer and actress, w\"\n\n\"Now making a career as a pop singer and actress, who was the first African-American woman to win the Miss America crown, which she held for 10 months, before being forced to resign over the imminent publication of nude photos?\"\n\nAssistant:",
+        "responses": [
+            "\"Vanessa Williams was the first African-American woman to win the Miss America crown, which she held for 10 months before being forced to resign over the imminent publication of nude photos. [1]\"",
+            "\"Vanessa Williams was the first African-American woman to win the Miss America crown [1, 4]. She was also the first Miss America to receive death threats and hate mail when unauthorized nude photos of her surfaced and she was pressured to resign [3, 4]. Despite this scandal, she was able to re-emerge and have a successful music and acting career [1, 2].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Vanessa Williams was the first African-American woman to win the Miss America crown, which she held for 10 months before being forced to resign over the imminent publication of nude photos. [1]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Who had a U.K. No 1 in the 80's with Eternal Flame\"\n\n\"Who had a U.K. No 1 in the 80's with Eternal Flame\"\n\nAssistant:",
+        "responses": [
+            "\"\\\"Eternal Flame\\\" was a hit song performed by American pop rock group The Bangles, and written by group member Susanna Hoffs with the established hit songwriting team of Billy Steinberg and Tom Kelly [2]. The song was a #1 hit in nine countries, including Australia, Sweden, the United Kingdom, and the United States [1, 2]. The song was also covered by Australian boy band Human Nature and British girl group Atomic Kitten [2].\"",
+            "\"The song \\\"Eternal Flame\\\" was a UK number one hit in the 80s. [1, 2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"\\\"Eternal Flame\\\" was a hit song performed by American pop rock group The Bangles, and written by group member Susanna Hoffs with the established hit songwriting team of Billy Steinberg and Tom Kelly [2]. The song was a #1 hit in nine countries, including Australia, Sweden, the United Kingdom, and the United States [1, 2]. The song was also covered by Australian boy band Human Nature and British girl group Atomic Kitten [2].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"The iPhone was launched by which company?\"\n\n\"The iPhone was launched by which company?\"\n\nAssistant:",
+        "responses": [
+            "\"iPhone was launched by Apple Inc. [1]\"",
+            "\"Apple Inc., which Steve Jobs co-founded in California in 1976, launched the iPhone in 2012 [1]. In five years after its debut, more than 200 million iPhones were sold [1].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"iPhone was launched by Apple Inc. [1]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Conjoined twins are also known as what?\"\n\n\"Conjoined twins are also known as what?\"\n\nAssistant:",
+        "responses": [
+            "\"Conjoined twins are also known as Siamese twins [1, 2].\"",
+            "\"Conjoined twins are also known as Siamese twins. [1]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Conjoined twins are also known as Siamese twins [1, 2].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Which capital city is on the northern bank of the \"\n\n\"Which capital city is on the northern bank of the La Plata estuary?\"\n\nAssistant:",
+        "responses": [
+            "\"La Plata, the capital city of Buenos Aires Province in Argentina, is located on the northern shore of the La Plata estuary. [1]\"",
+            "\"The capital city of Uruguay, Montevideo, is on the northern bank of the La Plata estuary [1, 2].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"La Plata, the capital city of Buenos Aires Province in Argentina, is located on the northern shore of the La Plata estuary. [1]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"On what holiday did North Vietnam launch a major o\"\n\n\"On what holiday did North Vietnam launch a major offensive?\"\n\nAssistant:",
+        "responses": [
+            "\"North Vietnam launched the \\\"Ho Chi Minh Campaign\\\" on Christmas Eve of 1974. This offensive was launched against the South Vietnamese forces. The \\\"Ho Chi Minh Campaign\\\" successfully overran the provincial capital of Phuoc Binh on January 6, 1975. [1]\"",
+            "\"The US launched a major offensive on Christmas Day 1972. [1]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"North Vietnam launched the \\\"Ho Chi Minh Campaign\\\" on Christmas Eve of 1974. This offensive was launched against the South Vietnamese forces. The \\\"Ho Chi Minh Campaign\\\" successfully overran the provincial capital of Phuoc Binh on January 6, 1975. [1]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Who described his troops – the British army - as ‘\"\n\n\"Who described his troops – the British army - as ‘the scum of the earth’?\"\n\nAssistant:",
+        "responses": [
+            "\"Arthur Wellesley, who later became the Duke of Wellington, described his troops - the British Army - as \\\"the scum of the earth\\\" [1]. These words have become etched in history as a great commander's opinion of his men [1]. In a letter to Henry, Third Earl Bathurst, from Huarte Spain, on July 2, 1813, Wellington wrote, \\\"we have in the service the scum of the Earth as common soldiers\\\" [1]. Edward J. Coss, who researched fourteen British line regiments, four cavalry regiments, and the Artillery Corps, found that the majority of their personnel were laborers, drafted because they could not find any work in the cities [2]. A great rise in the British population, combined with the increasing use of machines in industrial production left many workers facing prospects of starvation [2]. For many, the only alternative was to enlist in one of the king's regiments [2].\"",
+            "\"In his 1939 book, \\\"Democracy in the British Army,\\\" George Orwell described the British army as \\\"the scum of the earth,\\\" referring to its enlisted soldiers as the lowest of the low [1]. Not only was the army made up of commoners, but recruits were poorly paid, often starved, and treated like animals [1, 2]. Many of these soldiers lacked basic rights, such as the ability to marry or vote, yet they were expected to fight in wars [1]. According to Orwell, the majority of the British population looked down upon these men, only valuing them when they returned home from battle as war heroes, though even that respect was short-lived [1].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Arthur Wellesley, who later became the Duke of Wellington, described his troops - the British Army - as \\\"the scum of the earth\\\" [1]. These words have become etched in history as a great commander's opinion of his men [1]. In a letter to Henry, Third Earl Bathurst, from Huarte Spain, on July 2, 1813, Wellington wrote, \\\"we have in the service the scum of the Earth as common soldiers\\\" [1]. Edward J. Coss, who researched fourteen British line regiments, four cavalry regiments, and the Artillery Corps, found that the majority of their personnel were laborers, drafted because they could not find any work in the cities [2]. A great rise in the British population, combined with the increasing use of machines in industrial production left many workers facing prospects of starvation [2]. For many, the only alternative was to enlist in one of the king's regiments [2].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Rhode Island Red, Plymouth Rock, and Jersey Giant \"\n\n\"Rhode Island Red, Plymouth Rock, and Jersey Giant are all types of what?\"\n\nAssistant:",
+        "responses": [
+            "\"First, let's define what a Rhode island red, a Plymouth rock, and a Jersey giant are. A Rhode island red is a chicken breed originating in the US state of Rhode Island. [1] A Plymouth rock is also a US chicken breed originating in Massachusetts, and was named for Plymouth, Massachusetts. [1] Lastly, a Jersey giant is also a US breed originating in New Jersey. [1] As you can see, these three chicken breeds are all from the US, and are all very similar. They may vary in personality and egg production, but they are essentially the same kind of bird. [1]\"",
+            "\"There are three chicken breeds that go by the name of Plymouth Rock, Rhode Island Red, and Jersey Giant.  [1][2][3]  All three are fairly large chicken breeds with males weighing between 13 and 15 pounds and females weighing between 11 and 12 pounds. [3][5] The height of the male bird is usually between 22 and 26 inches, while the female is 16 to 20 inches. [3][4][5] A Plymouth Rock has a black body with yellow feet and four toes, a single comb, and wattles that are red, while the white variety has a white body with yellow feet and brown eyes. [2][4] A Jersey giant chicken is black, has a red comb and wattles, and yellow skin. They also come in white and blue varieties. [3][5]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"First, let's define what a Rhode island red, a Plymouth rock, and a Jersey giant are. A Rhode island red is a chicken breed originating in the US state of Rhode Island. [1] A Plymouth rock is also a US chicken breed originating in Massachusetts, and was named for Plymouth, Massachusetts. [1] Lastly, a Jersey giant is also a US breed originating in New Jersey. [1] As you can see, these three chicken breeds are all from the US, and are all very similar. They may vary in personality and egg production, but they are essentially the same kind of bird. [1]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"\\\"What 1999 film had the tag line \\\"\\\"Bigger, Longer \"\n\n\"\\\"What 1999 film had the tag line \\\"\\\"Bigger, Longer and Uncut\\\"\\\"?\\\"\"\n\nAssistant:",
+        "responses": [
+            "\"\"",
+            "\"\\\"Bigger, Longer and Uncut\\\" is the tagline for the movie South Park: Bigger, Longer, Uncut [1], directed by Trey Parker [2].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"\""
+    },
+    {
+        "prompt": "\n\nHuman: \"What is the name of the aunt that Bertie lives in \"\n\n\"What is the name of the aunt that Bertie lives in mortal fear of?\"\n\nAssistant:",
+        "responses": [
+            "\"\\\"Aunt Agatha\\\" is a fictional character from the Jeeves stories of British comic writer P. G. Wodehouse [1]. She is often mentioned in the stories as being Bertie's fearsome aunt in contrast to her genial aunt, Aunt Dahlia [1]. She is a tall, commanding, gray-haired woman, sharp-nosed and gimlet-eyed [2]. She is described as being formidable and often harasses her nephew both at home and abroad [2].\"",
+            "\"Bertie Wooster lives in fear of his aunts, one of whom is Aunt Agatha. [1] She is the Aunt that Bertie lives in mortal fear of. [1] Agatha Trunchbull is also a primary antagonist in the children's novel \\\"Matilda\\\" and the musical \\\"Matilda\\\". [3]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"\\\"Aunt Agatha\\\" is a fictional character from the Jeeves stories of British comic writer P. G. Wodehouse [1]. She is often mentioned in the stories as being Bertie's fearsome aunt in contrast to her genial aunt, Aunt Dahlia [1]. She is a tall, commanding, gray-haired woman, sharp-nosed and gimlet-eyed [2]. She is described as being formidable and often harasses her nephew both at home and abroad [2].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Who wrote the plays “Nuts in May” and “Abigail’s P\"\n\n\"Who wrote the plays “Nuts in May” and “Abigail’s Party”?\"\n\nAssistant:",
+        "responses": [
+            "\"Mike Leigh wrote \\\"Nuts in May\\\" and \\\"Abigail's Party.\\\" [1, 2, 3, 4]\"",
+            "\"Mike Leigh wrote the plays \\\"Nuts In May\\\" and \\\"Abigail's Party\\\". [1, 2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Mike Leigh wrote \\\"Nuts in May\\\" and \\\"Abigail's Party.\\\" [1, 2, 3, 4]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"In which famous film love story did the lovers mee\"\n\n\"In which famous film love story did the lovers meet in a railway station?\"\n\nAssistant:",
+        "responses": [
+            "\"Brief Encounter is a film about a passionate extramarital affair that takes place shortly before World War II in England. The plot follows a married woman named Laura, who meets a married stranger at the railway station and subsequently falls in love with him. [1]\"",
+            "\"\\\"Brief Encounter\\\" is a 1945 British romantic drama film directed by David Lean from a screenplay written by Noël Coward, based on his 1936 one-act play Still Life [1, 2]. It stars Celia Johnson, Trevor Howard, Stanley Holloway, and Joyce Carey [2]. The film follows a passionate extramarital affair in England shortly before World War II [2]. The film's protagonist is Laura, a married woman with children, whose conventional life becomes increasingly complicated following a chance meeting at a railway station with a married stranger with whom she subsequently falls in love [2].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Brief Encounter is a film about a passionate extramarital affair that takes place shortly before World War II in England. The plot follows a married woman named Laura, who meets a married stranger at the railway station and subsequently falls in love with him. [1]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Which Eire county in the province of Leinster has \"\n\n\"Which Eire county in the province of Leinster has the county town of Trim and has Tara as its main attraction?\"\n\nAssistant:",
+        "responses": [
+            "\"Trim, County Meath [1].\"",
+            "\"County Meath in the province of Leinster has the county town of Trim and is home to the Hill of Tara. [1, 2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Trim, County Meath [1].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Who has won the most medals in Olympic Games since\"\n\n\"Who has won the most medals in Olympic Games since the modern Olympics began in 1896?\"\n\nAssistant:",
+        "responses": [
+            "\"Since the modern Olympics were first held in 1896 in Chamonix, France, Norway has won the most medals of any nation during the Winter Olympics, which were first introduced in 1924. [1]\"",
+            "\"The country that has won the most medals in the modern Olympics is Italy, with 701 medals. [2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Since the modern Olympics were first held in 1896 in Chamonix, France, Norway has won the most medals of any nation during the Winter Olympics, which were first introduced in 1924. [1]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"What is the commonest surname in France\"\n\n\"What is the commonest surname in France\"\n\nAssistant:",
+        "responses": [
+            "\"According to Genealogy Families.com, the commonest last name in France is Martin, which is derived from the first name Martinus, which itself is Latin for \\\"of Mars\\\". A saint by the name of Martin of Tours was popular in Europe during the Middle Ages, and people may have adopted the surname after him. Another theory is that the surname Martin comes from two old English words, \\\"maer\\\" meaning lake and \\\"tun\\\" meaning settlement. [1] The second most common surname in France is Bernard, which comes from the old French word for \\\"bear\\\". It may also have originated from the name of a saint. [1, 2]\"",
+            "\"The most common surname in France is Martin. [1][2] This name is derived from the first name Martinus, which is Latin. Martinus refers to the Roman god of fertility and war, who was named Mars. There was a popular 4th-century saint named Martin of Tours, who was very popular with people who lived in Europe during the Middle ages. It is possible that the surname Martin was adopted by people who were followers of this saint. It also may have come from two Old English words: “maer” which means “lake” and “tun” which means settlement. [1] The second most common surname is Bernard, which refers to the Germanic first name “Bernhard”. There was a saint named Saint Bernard of Clairvaux, who founded the Cistercian monastery and Clairvaux. The surname Bernard may be referring to this saint. [2] The third most common surname is Dubois. This name refers to “someone who lives in the woods”. It comes from the French word “bois”, which means “wood”, and the French definite article “du”. The fourth and fifth most common surnames are\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"According to Genealogy Families.com, the commonest last name in France is Martin, which is derived from the first name Martinus, which itself is Latin for \\\"of Mars\\\". A saint by the name of Martin of Tours was popular in Europe during the Middle Ages, and people may have adopted the surname after him. Another theory is that the surname Martin comes from two old English words, \\\"maer\\\" meaning lake and \\\"tun\\\" meaning settlement. [1] The second most common surname in France is Bernard, which comes from the old French word for \\\"bear\\\". It may also have originated from the name of a saint. [1, 2]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"What Disney film features a princess named Merida?\"\n\n\"What Disney film features a princess named Merida?\"\n\nAssistant:",
+        "responses": [
+            "\"Princess Merida is the protagonist of the 2012 Disney Pixar film Brave [1,2,3].\"",
+            "\"Brave is the Disney movie that features a princess named Merida.\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Princess Merida is the protagonist of the 2012 Disney Pixar film Brave [1,2,3].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Americans call it a purse what would we call it\"\n\n\"Americans call it a purse what would we call it\"\n\nAssistant:",
+        "responses": [
+            "\"In American English, a purse is a small bag used to carry money and other small objects, whereas a handbag is a larger accessory that can hold personal items. [1, 3] In British English, \\\"purse\\\" can refer to both a small bag for money or a handbag. [3] The word \\\"purse\\\" originates from the word \\\"purse\\\" which means a small bag for carrying money. [1, 2]\"",
+            "\"In America, the term \\\"handbag\\\" can refer to any bag, including bags that are large enough to fit a laptop. [3] \\\"Handbag\\\" and \\\"purse\\\" are used interchangeably, although some people prefer to use one or the other. [1] Another word for purse is \\\"pocketbook,\\\" a term that harkens back to the time when women bought things like cigarettes and snacks at drugstores and carried them in small purses that could fit in their pockets. [1]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"In American English, a purse is a small bag used to carry money and other small objects, whereas a handbag is a larger accessory that can hold personal items. [1, 3] In British English, \\\"purse\\\" can refer to both a small bag for money or a handbag. [3] The word \\\"purse\\\" originates from the word \\\"purse\\\" which means a small bag for carrying money. [1, 2]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Which British Prime Minister died in office in 182\"\n\n\"Which British Prime Minister died in office in 1827, just 199 days after assuming the title? His is the shortest term of office of any British P.M.\"\n\nAssistant:",
+        "responses": [
+            "\"James A. Garfield (1831-1881) was the 20th President of the United States[2]. He was sworn in office in March 1881 and died in September of that same year from an assassin’s bullet, making his tenure in office the second-shortest in U.S. presidential history, after William Henry Harrison (1773-1841)[1,2].\"",
+            "\"George Canning is the shortest serving British Prime Minister, just 199 days after assuming the title he died in office [1,3]. Canning died of health issues having suffered a stroke only months into his term as Prime Minister, he died the following year [2,3].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"James A. Garfield (1831-1881) was the 20th President of the United States[2]. He was sworn in office in March 1881 and died in September of that same year from an assassin’s bullet, making his tenure in office the second-shortest in U.S. presidential history, after William Henry Harrison (1773-1841)[1,2].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"The human gastrocolic reflex typically prompts som\"\n\n\"The human gastrocolic reflex typically prompts someone to visit the?\"\n\nAssistant:",
+        "responses": [
+            "\"The gastrocolic reflex prompts the movement of food through the intestines. [1] It is a natural response triggered by the stretching of the stomach after eating. [1, 2] This reflex pushes food out of the colon and creates the urge to defecate after eating. [1, 2]\"",
+            "\"The gastrocolic reflex is a normal involuntary reaction that takes place after food is eaten. [2][3][4] When food is eaten, the body releases a hormone that causes the colon to contract, and these contractions move the food through the digestive system. [1][3][4] This reflex is why you may feel the need to use the bathroom shortly after eating. [1][2][3][4]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The gastrocolic reflex prompts the movement of food through the intestines. [1] It is a natural response triggered by the stretching of the stomach after eating. [1, 2] This reflex pushes food out of the colon and creates the urge to defecate after eating. [1, 2]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Donald Pleasance, Telly Savalas and Charles Gray h\"\n\n\"Donald Pleasance, Telly Savalas and Charles Gray have all played the role of which James Bond villain?\"\n\nAssistant:",
+        "responses": [
+            "\"Telly Savalas, Charles Gray, and Donald Pleasance have all portrayed Ernst Stavro Blofeld, a James Bond villain. [1, 2, 3, 4, 5]\"",
+            "\"Blofeld, a James Bond villain, has been portrayed by three actors - Donald Pleasance, Telly Savalas, and Charles Gray [1]. Among these three, Pleasance remains the most memorable of the trio [1]. Pleasance played Blofeld in the film You Only Live Twice [2, 3].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Telly Savalas, Charles Gray, and Donald Pleasance have all portrayed Ernst Stavro Blofeld, a James Bond villain. [1, 2, 3, 4, 5]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"\\\"What is \\\"\\\"Midway\\\"\\\", the site of the Battle of Mid\"\n\n\"\\\"What is \\\"\\\"Midway\\\"\\\", the site of the Battle of Midway?\\\"\"\n\nAssistant:",
+        "responses": [
+            "\"The Battle of Midway was a battle between the U.S. Navy and the Imperial Japanese Navy that took place over a several day period starting on June 3, 1942 and ending on June 6, 1942. The battle took place at Midway island which is located in the middle of the Pacific Ocean. The major naval battle served as a decisive victory for the United States and effectively turned the tide of World War II in the Pacific in the United States' favor. [1] \\n\\nThe battle began with a surprise attack on the American base at Midway by the Japanese on the morning of June 4, 1942. The Japanese hoped to draw the rest of the United States' Pacific fleet out into open water where they could destroy them. However, the Americans had broken the Japanese communication codes and knew that an attack was imminent. They were also able to confirm the attack location and time by sending a false message about being out of fresh water. Japan responded with the correct message that indicated that they understood the base at Midway was low on fresh water. Subsequent attacks by the Japanese aircraft left the U.S. base damaged but still operational. The Americans were able to use this time to reorganize and prepare for battle. [2] \\n\\nDuring the battle\"",
+            "\"Midway is a Atoll in the North Pacific Ocean [3]. The Battle of Midway took place six months after the Japanese attack on Pearl Harbor and was between the United States and the Empire of Japan [1][2]. It turned the tide of World War II in the Pacific [1]. It was an important naval battle and played out half a year after the Battle of the Coral Sea [2]. The United States destroyed Japan’s first-line carrier strength and most of its best trained naval pilots in the Battle of Midway [4].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The Battle of Midway was a battle between the U.S. Navy and the Imperial Japanese Navy that took place over a several day period starting on June 3, 1942 and ending on June 6, 1942. The battle took place at Midway island which is located in the middle of the Pacific Ocean. The major naval battle served as a decisive victory for the United States and effectively turned the tide of World War II in the Pacific in the United States' favor. [1] \\n\\nThe battle began with a surprise attack on the American base at Midway by the Japanese on the morning of June 4, 1942. The Japanese hoped to draw the rest of the United States' Pacific fleet out into open water where they could destroy them. However, the Americans had broken the Japanese communication codes and knew that an attack was imminent. They were also able to confirm the attack location and time by sending a false message about being out of fresh water. Japan responded with the correct message that indicated that they understood the base at Midway was low on fresh water. Subsequent attacks by the Japanese aircraft left the U.S. base damaged but still operational. The Americans were able to use this time to reorganize and prepare for battle. [2] \\n\\nDuring the battle\""
+    },
+    {
+        "prompt": "\n\nHuman: \"\\\"The W.W.II campaign, known as, \\\"\\\"The Battle of th\"\n\n\"\\\"The W.W.II campaign, known as, \\\"\\\"The Battle of the Bulge\\\"\\\", was fought in which area of Europe?\\\"\"\n\nAssistant:",
+        "responses": [
+            "\"The Battle of the Bulge, also known as the Ardennes Counteroffensive, took place in Belgium and Luxembourg in December 1944 [1].\"",
+            "\"The Battle of the Bulge took place in the Ardennes Forest between Belgium and Luxembourg.[1, 2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The Battle of the Bulge, also known as the Ardennes Counteroffensive, took place in Belgium and Luxembourg in December 1944 [1].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"The population of Malta is reputed to be descended\"\n\n\"The population of Malta is reputed to be descended from which ancient people?\"\n\nAssistant:",
+        "responses": [
+            "\"The current population of Malta is descended from people from Sicily and Calabria [1], and DNA evidence shows that they are mostly descended from Sicilians, with some minor input from Phoenicians [2, 3].\"",
+            "\"The current population of Malta is descended from Sicilians and Calabrians [3], Sicilians primarily [5], who colonized the islands after the population had dropped due to the Arab conquest of Aghlabids in AD 870 [3]. The Maltese, descended from these colonists, speak a Romance language derived from Siculo-Arabic [2, 4], with many English and French loan words, and use the Latin alphabet with various diacritics [5]. However, there were other cultures on the islands prior to the current population. The Phoenicians, Greeks, and Romans all had influence on the culture, but left few traces as the names of places were mostly lost [2]. The Phoenicians did leave a religion, which may have influenced the current Christianity [6] and cuisine, as the ancient diet was mostly meat and cereal [7].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The current population of Malta is descended from people from Sicily and Calabria [1], and DNA evidence shows that they are mostly descended from Sicilians, with some minor input from Phoenicians [2, 3].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Which is the most easterly state of the USA?\"\n\n\"Which is the most easterly state of the USA?\"\n\nAssistant:",
+        "responses": [
+            "\"The northernmost state in the United States is Alaska, and the most easterly state could be considered Alaska as well. [1] The easternmost state is Maine at the West Quoddy Head lighthouse (66 degrees 57 minutes west). The westernmost state is Alaska at Cape Wrangell on Attu Island (172 degrees 27 minutes east). [2]\"",
+            "\"The most easterly state of the United States is Maine, at the West Quoddy Head lighthouse. [1] Alaska is the most eastern state because it shares land borders with Canada and Russia, and it is the northernmost and westernmost state. [1, 2] Hawaii is the southernmost state. [1]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The northernmost state in the United States is Alaska, and the most easterly state could be considered Alaska as well. [1] The easternmost state is Maine at the West Quoddy Head lighthouse (66 degrees 57 minutes west). The westernmost state is Alaska at Cape Wrangell on Attu Island (172 degrees 27 minutes east). [2]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"If you were watching a game between the Red Sox an\"\n\n\"If you were watching a game between the Red Sox and the Yankees, what sport would they be playing?\"\n\nAssistant:",
+        "responses": [
+            "\"\"",
+            "\"The Red Sox and Yankees play in the American League, which means they play baseball [1].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Which top 10 hit of 1959 by 'The Browns' tells the\"\n\n\"Which top 10 hit of 1959 by 'The Browns' tells the story of little Jimmy Brown\"\n\nAssistant:",
+        "responses": [
+            "\"\"",
+            "\"\\\"The Three Bells\\\"—also known as \\\"Little Jimmy Brown\\\"—is a song that was a top hit in 1959 [1, 2]. It was based on the song \\\"Les Trois Cloches\\\" by Jean Villard Gilles and Marc Herrand; Bert Reisfeld provided English lyrics [2].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Which group ha a number one hit for three weeks in\"\n\n\"Which group ha a number one hit for three weeks in 1982 with 'The Lion Sleeps Tonight'?\"\n\nAssistant:",
+        "responses": [
+            "\"The Tokens had a number one hit with \\\"The Lion Sleeps Tonight\\\" in the U.S. in 1961. [1, 2]\"",
+            "\"\\\"The Lion Sleeps Tonight\\\" was performed by the South African group Ladysmith Black Mambazo and the American group The Tokens in 1982. [1][2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The Tokens had a number one hit with \\\"The Lion Sleeps Tonight\\\" in the U.S. in 1961. [1, 2]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Whose nickname was a derived from the term satchel\"\n\n\"Whose nickname was a derived from the term satchel-mouth?\"\n\nAssistant:",
+        "responses": [
+            "\"Louis Armstrong's nickname was derived from the term \\\"satchel-mouth\\\" [1,3,4].\"",
+            "\"Louis Armstrong's nickname was derived from the term \\\"satchel-mouth\\\" [1, 3]. It is a contracted form of \\\"it'll be reet,\\\" where \\\"reet\\\" means \\\"alright\\\" or \\\"okay\\\" [2]. The most likely story behind the origin of his nickname is the story of Armstrong as a young boy dancing for pennies in the streets of New Orleans, who would scoop up the coins off of the street and stick them into his mouth to avoid having the bigger children steal them from him. Someone dubbed him \\\"satchel mouth\\\" for his mouth acting as a satchel [1, 3].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Louis Armstrong's nickname was derived from the term \\\"satchel-mouth\\\" [1,3,4].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Who stole fire from The Gods?\"\n\n\"Who stole fire from The Gods?\"\n\nAssistant:",
+        "responses": [
+            "\"In Greek lore, Prometheus is credited with the creation of humanity from clay and of defying the gods by stealing fire and giving it to humanity as civilization [1]. Zeus, king of the Olympian gods, sentenced Prometheus to eternal torment for his transgression [1]. Prometheus was bound to a rock, and an eagle—the emblem of Zeus—was sent to eat his liver [1, 2]. In some versions of the myth, Prometheus was the first to bring fire to humanity [2]. In these tellings, Prometheus stole fire for humanity out of pity, rather than to correct Zeus’s unjust act [2]. The punishment of Prometheus as a consequence of the theft of fire and giving it to humans is a popular subject of both ancient and modern culture [1].\"",
+            "\"In Greek mythology, Prometheus is a Titan god of fire who stole fire from Zeus and gave it to humanity as civilization [1, 3]. He is credited with the creation of humanity from clay, and for defying the gods by stealing fire and giving it to humanity [1]. Prometheus is known for his intelligence and for being a champion of humankind[1]. He is sometimes presented as the father of Deucalion, the hero of the flood story[1]. Zeus, king of the Olympian gods, sentenced Prometheus to eternal torment for his transgression [1]. Prometheus was bound to a rock, and an eagle—the emblem of Zeus—was sent to eat his liver (in ancient Greece, the liver was often thought to be the seat of human emotions) [1]. \""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"In Greek lore, Prometheus is credited with the creation of humanity from clay and of defying the gods by stealing fire and giving it to humanity as civilization [1]. Zeus, king of the Olympian gods, sentenced Prometheus to eternal torment for his transgression [1]. Prometheus was bound to a rock, and an eagle—the emblem of Zeus—was sent to eat his liver [1, 2]. In some versions of the myth, Prometheus was the first to bring fire to humanity [2]. In these tellings, Prometheus stole fire for humanity out of pity, rather than to correct Zeus’s unjust act [2]. The punishment of Prometheus as a consequence of the theft of fire and giving it to humans is a popular subject of both ancient and modern culture [1].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"What amorphous form of graphite or pure carbon is \"\n\n\"What amorphous form of graphite or pure carbon is used mainly as a lubricant for machinery?\"\n\nAssistant:",
+        "responses": [
+            "\"Amorphous graphite, which has a flake-like appearance, is used mainly as a natural lubricant for machinery. [1] It is used in oil drilling as a natural lubricant. [1] Besides this, it is also used in graphite sprays and industrial oils as a solid lubricant. [2] Furthermore, graphite grease is a form of graphite lubricant that is designed to stick to a surface. [3]\"",
+            "\"Amorphous carbon, a form of carbon with no definite crystalline structure, is one of the principal forms of carbon. [1][3]  Its most stable form is graphite, which can be found naturally, and is used as a lubricant and a pigment in glass manufacturing. [1][2]  Graphite is formed when carbon atoms bond together into sheets, which allows the atoms to slip past one another with ease, thereby providing lubrication. [3]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Amorphous graphite, which has a flake-like appearance, is used mainly as a natural lubricant for machinery. [1] It is used in oil drilling as a natural lubricant. [1] Besides this, it is also used in graphite sprays and industrial oils as a solid lubricant. [2] Furthermore, graphite grease is a form of graphite lubricant that is designed to stick to a surface. [3]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Which prolific Australian bastman retired in early\"\n\n\"Which prolific Australian bastman retired in early 2009?\"\n\nAssistant:",
+        "responses": [
+            "\"Former Zimbabwean cricket player Tatenda Taibu retired in early 2009 [1]. The 34-year old was a mainstay of Zimbabwe's batting line-up [1]. He scored a solitary Test century and made 1546 runs at 30.31 [1]. He also played for Kolkata Knight Riders in 2008 but played only three matches [1]. He retired at 29 to work for a church [1].\"",
+            "\"\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Former Zimbabwean cricket player Tatenda Taibu retired in early 2009 [1]. The 34-year old was a mainstay of Zimbabwe's batting line-up [1]. He scored a solitary Test century and made 1546 runs at 30.31 [1]. He also played for Kolkata Knight Riders in 2008 but played only three matches [1]. He retired at 29 to work for a church [1].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Who was buried in Milan under the name of Maria Ma\"\n\n\"Who was buried in Milan under the name of Maria Maggi to discourage grave robbers?\"\n\nAssistant:",
+        "responses": [
+            "\"Eva Perón was buried under the name Maria Maggi in Milan to discourage grave robbers from stealing her body [1,2]. After her death in 1952, her body was put on display in Buenos Aires until an enormous mausoleum could be constructed for her. However, in 1955, Argentine military leaders who had seized power from Juan Peron feared the symbolic power of Evita's corpse, so they hid it in various locations around the city [1,3]. In 1957, Perón was secretly buried in Milan, Italy [1,3]. Fourteen years later, her body was exhumed and moved to Madrid, where her husband lived in exile [1,3]. In 1974, her remains were returned to Buenos Aires and buried in a fortified crypt in La Recoleta Cemetery [1,3].\"",
+            "\"After Peron's embalmed body of his wife was put on display in Buenos Aires in 1952, it was eventually hidden in locations around the city, including a movie theater and water works. In 1957, Peron was secretly buried in Milan, Italy under the assumed name \\\"Maria Maggi\\\" to discourage grave robbers [1]. Fourteen years later, Evita's body was exhumed and moved to Madrid, where her husband lived in exile [1]. Finally, in 1974, her remains were returned to Buenos Aires and buried in a fortified crypt in La Recoleta Cemetery [1].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Eva Perón was buried under the name Maria Maggi in Milan to discourage grave robbers from stealing her body [1,2]. After her death in 1952, her body was put on display in Buenos Aires until an enormous mausoleum could be constructed for her. However, in 1955, Argentine military leaders who had seized power from Juan Peron feared the symbolic power of Evita's corpse, so they hid it in various locations around the city [1,3]. In 1957, Perón was secretly buried in Milan, Italy [1,3]. Fourteen years later, her body was exhumed and moved to Madrid, where her husband lived in exile [1,3]. In 1974, her remains were returned to Buenos Aires and buried in a fortified crypt in La Recoleta Cemetery [1,3].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"\\\"\\\"\\\"April is the cruellest month\\\"\\\" is the opening l\"\n\n\"\\\"\\\"\\\"April is the cruellest month\\\"\\\" is the opening line of which poem by T S Eliot?\\\"\"\n\nAssistant:",
+        "responses": [
+            "\"\\\"April is the cruellest month\\\" is the opening line of \\\"The Waste Land\\\" by T. S. Eliot. [1][2]\"",
+            "\"\\\"April is the cruellest month,\\\" is the opening line of T. S. Eliot's 1922 poem \\\"The Waste Land.\\\"\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"\\\"April is the cruellest month\\\" is the opening line of \\\"The Waste Land\\\" by T. S. Eliot. [1][2]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"What was the name of the play known to have been w\"\n\n\"What was the name of the play known to have been written by Shakespeare as a sequel to 'Love's Labour's Lost', but for which no manuscript has ever been found?\"\n\nAssistant:",
+        "responses": [
+            "\"Love's Labour's Won is a play written by Shakespeare as a sequel to \\\"Love's Labour's Lost\\\".\"",
+            "\"The play \\\"Love's Labour's Won\\\" is a lost play attributed to William Shakespeare. [1, 2, 3] It is believed to be a sequel to his play \\\"Love's Labour's Lost.\\\" [1, 2] The play was first published in the First Folio in 1603, but it is unknown whether any copies of the play have survived. [1, 2, 3]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Love's Labour's Won is a play written by Shakespeare as a sequel to \\\"Love's Labour's Lost\\\".\""
+    },
+    {
+        "prompt": "\n\nHuman: \"The okta is a unit used by meteorologists to measu\"\n\n\"The okta is a unit used by meteorologists to measure which aspect of the weather?\"\n\nAssistant:",
+        "responses": [
+            "\"An okta is a unit of measurement used by meteorologists to describe the amount of cloud cover at any given location [1]. In the SYNOP code, '0' indicates a completely clear sky, '1' indicates a completely overcast sky, and '9' indicates that the sky is totally obscured due to dense fog or heavy snow [1].\"",
+            "\"In meteorology, an okta is a unit of measurement used to describe the amount of cloud cover at any given location such as a weather station. [1][2] An okta estimates how many eighths of the sky (octo-) is covered in clouds. A clear sky is 0 oktas, while a totally overcast or gray sky is 8 oktas. [2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"An okta is a unit of measurement used by meteorologists to describe the amount of cloud cover at any given location [1]. In the SYNOP code, '0' indicates a completely clear sky, '1' indicates a completely overcast sky, and '9' indicates that the sky is totally obscured due to dense fog or heavy snow [1].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"What war that did not see a change in the borders \"\n\n\"What war that did not see a change in the borders or reparations even after nearly eight years of fighting but saw over a million deaths is said to be 20th century's longest conventional war?\"\n\nAssistant:",
+        "responses": [
+            "\"The longest conventional war of the 20th century was the Iran-Iraq War between 1980 and 1988. The war did not see a change in borders or reparations after nearly eight years of fighting, and resulted in over a million deaths [1, 2]. Both sides claimed victory [1]. The war had stalemated after Iraqi failure to capture Iranian territories and bolster Arab separatism in Iran's Khuzestan province, and Iranian failure to topple Saddam Hussein and destroy Iraqi military power [2].\"",
+            "\"The Iran–Iraq War lasted from 1980 to 1988 and saw over a million deaths but no change in the borders or reparations [1, 2].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The longest conventional war of the 20th century was the Iran-Iraq War between 1980 and 1988. The war did not see a change in borders or reparations after nearly eight years of fighting, and resulted in over a million deaths [1, 2]. Both sides claimed victory [1]. The war had stalemated after Iraqi failure to capture Iranian territories and bolster Arab separatism in Iran's Khuzestan province, and Iranian failure to topple Saddam Hussein and destroy Iraqi military power [2].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"What does the Latin phrase ‘lapsus linguae’ mean i\"\n\n\"What does the Latin phrase ‘lapsus linguae’ mean in English?\"\n\nAssistant:",
+        "responses": [
+            "\"Lapsus linguae is Latin for \\\"slip of the tongue.\\\" [1, 2]\"",
+            "\"\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Lapsus linguae is Latin for \\\"slip of the tongue.\\\" [1, 2]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Which popular four word named organisation, founde\"\n\n\"Which popular four word named organisation, founded in 1844 in London has, as its main motto, 'Empowering Young People' and has its headquarters in Geneva ? It is normally known by its four initials.\"\n\nAssistant:",
+        "responses": [
+            "\"The Young Men's Christian Association, or YMCA, was founded in 1844 in London as a Christian organization. [1] It is now known by its four initials. The YMCA has its headquarters in Geneva and now has more than 64 million beneficiaries across 120 countries. [1] It focuses on empowering young people through its athletic facilities and classes. [2]\"",
+            "\"Founded in London in 1844, the Young Men's Christian Association (YMCA) is a nonprofit that aims to empower young people and strengthen communities across the world [1]. It is well known for its four initial letters. The YMCA's main goals are to provide young people with places to grow and learn as well as giving them a safe place to be, both physically and emotionally [2, 3].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The Young Men's Christian Association, or YMCA, was founded in 1844 in London as a Christian organization. [1] It is now known by its four initials. The YMCA has its headquarters in Geneva and now has more than 64 million beneficiaries across 120 countries. [1] It focuses on empowering young people through its athletic facilities and classes. [2]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"The capital of which US state is named after prosp\"\n\n\"The capital of which US state is named after prospector (and discoverer of local gold in 1880) Joseph Juneau?\"\n\nAssistant:",
+        "responses": [
+            "\"Joseph (Joe) Juneau is the namesake of Juneau, Alaska, which was named after him in 1881.  [1][2][3] Juneau was a gold prospector who reportedly bribed his fellow miners with alcohol or money to vote to name the settlement for him. About a year after the vote was taken, Joe Juneau split town, leaving behind nothing but his name. Before the gold rush brought miners streaming into the region the area that would become Juneau was known as Dzantik’i Heeni, or Gold Creek, and was a popular Tlingit fishing spot in the summer months. [1]\"",
+            "\"The capital of the US state named after Joseph Juneau is Juneau, Alaska.\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Joseph (Joe) Juneau is the namesake of Juneau, Alaska, which was named after him in 1881.  [1][2][3] Juneau was a gold prospector who reportedly bribed his fellow miners with alcohol or money to vote to name the settlement for him. About a year after the vote was taken, Joe Juneau split town, leaving behind nothing but his name. Before the gold rush brought miners streaming into the region the area that would become Juneau was known as Dzantik’i Heeni, or Gold Creek, and was a popular Tlingit fishing spot in the summer months. [1]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Name either of the countries in which the Nubian p\"\n\n\"Name either of the countries in which the Nubian people are found?\"\n\nAssistant:",
+        "responses": [
+            "\"Nubians are a native ethnic group of people who live in Sudan and Egypt.  They originate from the early inhabitants of the central Nile valley.  They are descendants of the ancient African civilization and their rich history spans thousands of years.  During the rule of British and later Egyptian governments, the Nubians faced great intolerance and were forced to relocate from their homeland. [2, 3, 4]\"",
+            "\"Nubians are located in Northern Sudan and Southern Egypt. [1]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Nubians are a native ethnic group of people who live in Sudan and Egypt.  They originate from the early inhabitants of the central Nile valley.  They are descendants of the ancient African civilization and their rich history spans thousands of years.  During the rule of British and later Egyptian governments, the Nubians faced great intolerance and were forced to relocate from their homeland. [2, 3, 4]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"\\\"Which creature hunts in family groups called \\\"\\\"po\"\n\n\"\\\"Which creature hunts in family groups called \\\"\\\"pods\\\"\\\" and is the longest and fastest member of the dolphin family ?\\\"\"\n\nAssistant:",
+        "responses": [
+            "\"Currently, there are 49 dolphin and porpoise species that are grouped into six families: the oceanic dolphin family is by far the largest with 38 members; the porpoise family has seven members; and there are four river dolphin families, each containing just one species. [1]\\n\\nThe answer is not \\\"which creature\\\" but rather which family, family group, or pod.\"",
+            "\"\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Currently, there are 49 dolphin and porpoise species that are grouped into six families: the oceanic dolphin family is by far the largest with 38 members; the porpoise family has seven members; and there are four river dolphin families, each containing just one species. [1]\\n\\nThe answer is not \\\"which creature\\\" but rather which family, family group, or pod.\""
+    },
+    {
+        "prompt": "\n\nHuman: \"When Britain's first Labour Prime Minister, Ramsay\"\n\n\"When Britain's first Labour Prime Minister, Ramsay MacDonald, came to power for the second time his appointment was almost immediately followed by what world-affecting event?\"\n\nAssistant:",
+        "responses": [
+            "\"The 1929 resignation of Ramsay MacDonald as Prime Minister of the United Kingdom, which was immediately followed by Labour's election of Ramsay MacDonald as Prime Minister of the United Kingdom for a second time. [1]\"",
+            "\"When Ramsay MacDonald was reappointed as Prime Minister of the United Kingdom in 1929, it was immediately followed by the formation of the second Labour government [1][2][4]. MacDonald was the first Labour Prime Minister, and he held the office in the Labour governments of 1924 and 1929-1931 [4]. By 1929, Britain was suffering from the effects of the depression, and MacDonald formed a national government to cut spending and defend the gold standard [3][4]. The government was forced to abandon the gold standard after an armed naval mutiny, and MacDonald called for a general election to seek a mandate to fix the economy [3][4].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The 1929 resignation of Ramsay MacDonald as Prime Minister of the United Kingdom, which was immediately followed by Labour's election of Ramsay MacDonald as Prime Minister of the United Kingdom for a second time. [1]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Who won the San Marino Grand Prix in 2005\"\n\n\"Who won the San Marino Grand Prix in 2005\"\n\nAssistant:",
+        "responses": [
+            "\"The 2005 San Marino Grand Prix was won by Renault driver Fernando Alonso. [1, 2]\"",
+            "\"The San Marino Grand Prix in 2005 was won by Michael Schumacher [1]. In a tight duel, Schumacher held off Fernando Alonso by 2.0 seconds to win the race [1]. This was the only win for Schumacher since the end of the 2004 season [1]. Alonso pipped Schumacher in an epic fight, winning by just 0.215 seconds [2].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The 2005 San Marino Grand Prix was won by Renault driver Fernando Alonso. [1, 2]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"\\\"In which quiz show would you hear the words \\\"\\\"Is \"\n\n\"\\\"In which quiz show would you hear the words \\\"\\\"Is that your final answer?'?\\\"\"\n\nAssistant:",
+        "responses": [
+            "\"\\\"Is that your final answer?\\\" is a catchphrase from the American game show Who Wants to Be a Millionaire [1].\"",
+            "\"One of the most popular quiz shows is Who Wants to Be a Millionaire? [1]. On this show, a host asks contestant have a series of questions, each worth more money than the previous one [1]. Before the host reads the next question, he asks, \\\"Is that your final answer?\\\" [1]. Once a contestant answers, they cannot change their answer [1].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"\\\"Is that your final answer?\\\" is a catchphrase from the American game show Who Wants to Be a Millionaire [1].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"In which US state were the Salem witch trials held\"\n\n\"In which US state were the Salem witch trials held?\"\n\nAssistant:",
+        "responses": [
+            "\"The Salem Witch Trials took place in a settlement within the Massachusetts Bay Colony named Salem, which consisted of two sections: Salem town and Salem Village in 1692. [1] The majority of the accused witches were held in the jail in Salem town, and the convicted witches were executed and buried in Salem town. [2] Although some of the events did happen in Danvers, it doesn't have the same name as the trials anymore, as it was named Salem Village in 1752. [3] Also, the witch trial sites are not clustered in the downtown area of a small city, but instead are spread out over miles. [3]\"",
+            "\"The Salem witch trials took place in colonial Massachusetts [1, 2, 3].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The Salem Witch Trials took place in a settlement within the Massachusetts Bay Colony named Salem, which consisted of two sections: Salem town and Salem Village in 1692. [1] The majority of the accused witches were held in the jail in Salem town, and the convicted witches were executed and buried in Salem town. [2] Although some of the events did happen in Danvers, it doesn't have the same name as the trials anymore, as it was named Salem Village in 1752. [3] Also, the witch trial sites are not clustered in the downtown area of a small city, but instead are spread out over miles. [3]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"\\\"Which German composer was assistant to Wagner at \"\n\n\"\\\"Which German composer was assistant to Wagner at Bayreuth 1880-1, taught at Barcelona, Frankfurt and Berlin, and is best known for his opera \\\"\\\"Hansel and Gretel\\\"\\\"?\\\"\"\n\nAssistant:",
+        "responses": [
+            "\"Engelbert Humperdinck.\"",
+            "\"George Frideric Handel [1, 3, 4, 5]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Engelbert Humperdinck.\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Which pop group’s last UK number 1 single was enti\"\n\n\"Which pop group’s last UK number 1 single was entitled ‘Holler’?\"\n\nAssistant:",
+        "responses": [
+            "\"\"",
+            "\"\\\"Holler\\\" is a song by the Spice Girls [1].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"\""
+    },
+    {
+        "prompt": "\n\nHuman: \"The name of what renowned institution comes from w\"\n\n\"The name of what renowned institution comes from what a group of French knights, known for their lavish feasts, hung their awarded crosses from?\"\n\nAssistant:",
+        "responses": [
+            "\"\"",
+            "\"The University of Notre Dame was named in honor of Our Lady in French, \\\"L'Université de Notre Dame du Lac,\\\" by Father Edward Sorin. [1][2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"\""
+    },
+    {
+        "prompt": "\n\nHuman: \"In which English city can you find an old street c\"\n\n\"In which English city can you find an old street called The Shambles containing many overhanging timber-framed buildings, some dating back to the 14th century ? Amoing the buildings of The Shambles is a shrine to Saint Margaret Clitherow who was married and livd in a shop there.\"\n\nAssistant:",
+        "responses": [
+            "\"The Shambles in York, England, contains many old timber-framed buildings, some dating back to the 13th century [3]. The street was originally home to butchers, with each shop specializing in a different meat [2, 3]. The meat was hung up outside the shops and laid out for sale on what are now the shop window-bottoms [2]. There is a butcher on the street now but the rest of the street is home to a bright mix of mostly independent retailers [3].\"",
+            "\"The Shambles is an old street in York, England, with overhanging timber-framed buildings, some dating back to the 14th century. [1][2][3][4]  The architecture which now appears so quaint had a very practical purpose. The overhanging timber-framed fronts of the buildings are deliberately close-set so as to give shelter to the ‘wattle and daub’ walls below. This would also have protected the meat from any direct sunshine. [2] The Shambles is often called Europe's best-preserved medieval street, although the name is also used to collectively refer to the surrounding maze of narrow, twisting lanes and alleys as well. The street itself is mentioned in the Domesday Book, so we know that it has been in continuous existence. [4]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The Shambles in York, England, contains many old timber-framed buildings, some dating back to the 13th century [3]. The street was originally home to butchers, with each shop specializing in a different meat [2, 3]. The meat was hung up outside the shops and laid out for sale on what are now the shop window-bottoms [2]. There is a butcher on the street now but the rest of the street is home to a bright mix of mostly independent retailers [3].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"The Mason-Dixon Line, surveyed by Charles Mason an\"\n\n\"The Mason-Dixon Line, surveyed by Charles Mason and Jeremiah Dixon, which became a popular name for the dividing line between the slave and free states, is the boundary between which two states of the USA?\"\n\nAssistant:",
+        "responses": [
+            "\"The Mason-Dixon Line, surveyed by Charles Mason and Jeremiah Dixon, is the boundary between the states of Pennsylvania, Maryland, Delaware, and West Virginia. [1] It was not called the Mason-Dixon Line when it was first drawn; instead, it got this name during the Missouri Compromise, which was agreed to in 1820. It was used to reference the boundary between states where slavery was legal and states where it was not, after which both the name and its meaning became more widespread and it eventually became part of the border between the seceded Confederate States of America. [2, 3]\"",
+            "\"The Mason-Dixon Line, also called the Mason and Dixon Line, is a boundary line that makes up the border between Pennsylvania, Delaware, and Maryland [1, 3]. It also became the unofficial border between the North and the South, and perhaps more importantly, between states where slavery was allowed and states where slavery had been abolished [2]. Even today, the Mason-Dixon Line still serves figuratively as the political and social dividing line between the North and the South [3].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The Mason-Dixon Line, surveyed by Charles Mason and Jeremiah Dixon, is the boundary between the states of Pennsylvania, Maryland, Delaware, and West Virginia. [1] It was not called the Mason-Dixon Line when it was first drawn; instead, it got this name during the Missouri Compromise, which was agreed to in 1820. It was used to reference the boundary between states where slavery was legal and states where it was not, after which both the name and its meaning became more widespread and it eventually became part of the border between the seceded Confederate States of America. [2, 3]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"The 1792 Battle of Valmy in which a citizen army d\"\n\n\"The 1792 Battle of Valmy in which a citizen army defeated the Prussian army is significant for saving/preserving what?\"\n\nAssistant:",
+        "responses": [
+            "\"The 1792 Battle of Valmy is significant for saving/preserving the French revolution. [1][2][3] Specifically, the new French government was quite new and thus the result at Valmy was a huge psychological victory for the French revolutionaries. [1] This victory emboldened the National Convention to end monarchy in France and establish the French republic. [1]\"",
+            "\"The French Revolution was saved/preserved [2].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The 1792 Battle of Valmy is significant for saving/preserving the French revolution. [1][2][3] Specifically, the new French government was quite new and thus the result at Valmy was a huge psychological victory for the French revolutionaries. [1] This victory emboldened the National Convention to end monarchy in France and establish the French republic. [1]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"What was marmalade originally made from\"\n\n\"What was marmalade originally made from\"\n\nAssistant:",
+        "responses": [
+            "\"Marmalade is a fruit preserve made from the juice and peel of citrus fruits boiled with sugar and water. The well-known version is made from bitter orange, but it is also made from lemons, limes, grapefruits, mandarins, sweet oranges, bergamots, and other citrus fruits, or a combination. Citrus is the most typical choice of fruit for a marmalade, though historically the term has often been used. [1] \\nThe preferred citrus fruit for marmalade production is the Spanish Seville or bitter orange, Citrus aurantium var. aurantium, prized for its high pectin content, which sets readily to the thick consistency expected of marmalade. The peel imparts a bitter taste. [2] Marmalade dates back to the 18th century. Marmalade has been a core part of our national life since, it was first put into commercial production in 1790 after a Spanish ship carrying a haul of rotting Seville oranges was washed ashore at Dundee harbor during a storm.  The cargo was sold off cheaply to a local merchant named James Keiller whose wife turned the rapidly decomposing citrus slurry into a tangy preserve.  The couple may have\"",
+            "\"Marmalade is made from citrus fruits like oranges. [1] Its original definition is a fruit spread made by boiling citrus, water, and sugar together, including the peel. [1, 3] Originally, marmalade was made using quince; this kind of preserve is now referred to as quince paste. [1] Marmalade is a popular condiment in Great Britain. [2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Marmalade is a fruit preserve made from the juice and peel of citrus fruits boiled with sugar and water. The well-known version is made from bitter orange, but it is also made from lemons, limes, grapefruits, mandarins, sweet oranges, bergamots, and other citrus fruits, or a combination. Citrus is the most typical choice of fruit for a marmalade, though historically the term has often been used. [1] \\nThe preferred citrus fruit for marmalade production is the Spanish Seville or bitter orange, Citrus aurantium var. aurantium, prized for its high pectin content, which sets readily to the thick consistency expected of marmalade. The peel imparts a bitter taste. [2] Marmalade dates back to the 18th century. Marmalade has been a core part of our national life since, it was first put into commercial production in 1790 after a Spanish ship carrying a haul of rotting Seville oranges was washed ashore at Dundee harbor during a storm.  The cargo was sold off cheaply to a local merchant named James Keiller whose wife turned the rapidly decomposing citrus slurry into a tangy preserve.  The couple may have\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Which film star was known as the million dollar me\"\n\n\"Which film star was known as the million dollar mermaid\"\n\nAssistant:",
+        "responses": [
+            "\"\\\"Million Dollar Mermaid\\\" is a movie starring Annette Kellerman, who was a swimming champion and later biopic movie star [2]. The 1952 film \\\"The Million Dollar Mermaid\\\" was about her life and starred Kellerman [1].\"",
+            "\"Million Dollar Mermaid is a 1952 MGM biographical musical film based on the life of Australian swimming sensation Annette Kellerman [1]. She was known as the million dollar mermaid [1, 2]. It stars Esther Williams [2], and was directed by Mervyn LeRoy and produced by Arthur Hornblow Jr. [1]. Everett Freeman wrote the screenplay [1]. The music score was by Adolph Deutsch [1], the cinematography by George Folsey [1], and the choreography by Busby Berkeley [1].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"\\\"Million Dollar Mermaid\\\" is a movie starring Annette Kellerman, who was a swimming champion and later biopic movie star [2]. The 1952 film \\\"The Million Dollar Mermaid\\\" was about her life and starred Kellerman [1].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Which is the world's oldest parliament, founded in\"\n\n\"Which is the world's oldest parliament, founded in 930?\"\n\nAssistant:",
+        "responses": [
+            "\"The oldest continuously operating parliamentary system is the Tynwald on the Isle of Man, founded in 979 [1]. The Icelandic Althing was founded in 930 but has not been continuously in operation [1].\"",
+            "\"The oldest parliament is the Althing of Iceland which was founded in 930 [1].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The oldest continuously operating parliamentary system is the Tynwald on the Isle of Man, founded in 979 [1]. The Icelandic Althing was founded in 930 but has not been continuously in operation [1].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Of what species is Yggdrasil, the immense tree at \"\n\n\"Of what species is Yggdrasil, the immense tree at the heart of Norse mythology?\"\n\nAssistant:",
+        "responses": [
+            "\"In Norse mythology, Yggdrasil is a mighty tree that is commonly said to be an ash tree, although at other times its species is not specified [1, 2, 3]. Affiliate Disclosures\\n━ worlds in place, and as such, is considered highly important\"",
+            "\"Yggdrasil is an ash tree [1][2]. It is called the \\\"world tree\\\" because it is at the center of Norse cosmology, around which all else exists [1].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"In Norse mythology, Yggdrasil is a mighty tree that is commonly said to be an ash tree, although at other times its species is not specified [1, 2, 3]. Affiliate Disclosures\\n━ worlds in place, and as such, is considered highly important\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Kåre Kristiansen, a member of the Nobel Committee \"\n\n\"Kåre Kristiansen, a member of the Nobel Committee resigned in 1994 in protest at the awarding of the Peace Prize to which person, calling the awardee a terrorist?\"\n\nAssistant:",
+        "responses": [
+            "\"In 1935, Carl von Ossietzky, a German pacifist writer who was imprisoned by the Nazis for exposing Germany's secret rearmament, was awarded the Nobel Prize. [1] Two committee members resigned in protest, perhaps fearing German repercussions. [1]  In 1970, Soviet dissident Aleksandr Solzhenitsyn was awarded the Nobel Prize. [1]  Solzhenitsyn, who exposed the horrors of Soviet slave labor camps, was likely awarded the Prize due to his literary merits, but the ensuing political reaction is unclear. [1]  In 1973, the Nobel Peace Prize was awarded to Israeli Prime Minister Yitzhak Rabin, Israeli President Shimon Peres, and Palestinian leader Yasser Arafat. [1] Kaare Kristiansen, a member of the Nobel Committee, resigned in protest, calling Arafat a \\\"terrorist\\\". [3]  Finally, in 1994, Rabin was assassinated by an ultra-nationalist Israeli who opposed his peace moves, and another committee member later said she wished Peres' award could be revoked because of the collapse of the process and Rabin's assassination. [3]\"",
+            "\"Kåre Kristiansen, a member of the Nobel Committee, resigned in 1994 in protest at the awarding of the Peace Prize to Yasser Arafat, calling the awardee a terrorist.[1]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"In 1935, Carl von Ossietzky, a German pacifist writer who was imprisoned by the Nazis for exposing Germany's secret rearmament, was awarded the Nobel Prize. [1] Two committee members resigned in protest, perhaps fearing German repercussions. [1]  In 1970, Soviet dissident Aleksandr Solzhenitsyn was awarded the Nobel Prize. [1]  Solzhenitsyn, who exposed the horrors of Soviet slave labor camps, was likely awarded the Prize due to his literary merits, but the ensuing political reaction is unclear. [1]  In 1973, the Nobel Peace Prize was awarded to Israeli Prime Minister Yitzhak Rabin, Israeli President Shimon Peres, and Palestinian leader Yasser Arafat. [1] Kaare Kristiansen, a member of the Nobel Committee, resigned in protest, calling Arafat a \\\"terrorist\\\". [3]  Finally, in 1994, Rabin was assassinated by an ultra-nationalist Israeli who opposed his peace moves, and another committee member later said she wished Peres' award could be revoked because of the collapse of the process and Rabin's assassination. [3]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"For the 1932 Summer Olympics in Los Angeles, USA, \"\n\n\"For the 1932 Summer Olympics in Los Angeles, USA, why was there only one new venue in the 15 used?\"\n\nAssistant:",
+        "responses": [
+            "\"For the 1932 Summer Olympics in Los Angeles, USA, only one new venue was constructed because the organizing committee did not have much money to spend on the Olympics [1,3,4]. There were already a number of existing venues in Los Angeles that could be repurposed for the Olympics [2]. These included a number of university dormitories that were used to house athletes from foreign countries [4]. The 1984 Los Angeles Olympics were also budget conscious due to a limited time frame and a limited government budget [3,4]. The committee did not have much money to spend so they were unable to fund many new venues for the Olympics [3].\"",
+            "\"In 1932, the Olympics were held in Los Angeles during the middle of the Great Depression, so given the transport links of that time, the Olympics were held in a relatively remote region of California. Only half as many athletes participated as in 1928, but the competition was excellent. [2]  In order to control costs, existing venues were used. There were two golf courses, two city parks, three public highways, and a city road. The only new venue constructed was the Swimming Stadium. [4]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"For the 1932 Summer Olympics in Los Angeles, USA, only one new venue was constructed because the organizing committee did not have much money to spend on the Olympics [1,3,4]. There were already a number of existing venues in Los Angeles that could be repurposed for the Olympics [2]. These included a number of university dormitories that were used to house athletes from foreign countries [4]. The 1984 Los Angeles Olympics were also budget conscious due to a limited time frame and a limited government budget [3,4]. The committee did not have much money to spend so they were unable to fund many new venues for the Olympics [3].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"What spirit drink is the base of a screwdriver coc\"\n\n\"What spirit drink is the base of a screwdriver cocktail?\"\n\nAssistant:",
+        "responses": [
+            "\"The screwdriver consists of vodka and OJ. [1]\"",
+            "\"A screwdriver is a cocktail made with vodka and orange juice [1, 2, 3]. The name of the drink originates from lore of American oil workers in the Middle East who used vodka to spike their orange juice while on the job [2]. They did this discreetly since the vodka was forbidden by their employers and they lacked spoons for mixing, so they used actual screwdrivers to mix the beverage [2]. The drink can be made with an orange or lemon slice for a garnish [3]. And while it is frequently requested during daytime events, drinkers can enjoy various versions of the cocktail by adding other flavors and liquors to the basic mixture [3].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The screwdriver consists of vodka and OJ. [1]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Who wrote the plays 'Cavalcade', 'Bitter Sweet' an\"\n\n\"Who wrote the plays 'Cavalcade', 'Bitter Sweet' and 'Hay Fever'?\"\n\nAssistant:",
+        "responses": [
+            "\"\"",
+            "\"Noël Coward is the playwright who wrote Cavalcade, Hay Fever, and Bitter Sweet [1,2,3,4].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Who became manager of Melchester Rovers in 1978?\"\n\n\"Who became manager of Melchester Rovers in 1978?\"\n\nAssistant:",
+        "responses": [
+            "\"Ben Galloway was manager of Melchester Rovers from 1964 to 1973 [1]. From 1973 to 1978, it was Tony Storme, then Roy Race, then Ben Galloway again, then finally back to Roy Race [1].\"",
+            "\"The manger of Melchester Rovers from 1973 until 1978 was Ben Galloway. From 1973 until 1978 there were a total of seven different managers including Ben Galloway. Those managers include Tony Storme, Roy Race, Ben Galloway, Roy Race, Sir Alf Ramsey (caretaker), Roy Race, and Blackie Gray. [1]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Ben Galloway was manager of Melchester Rovers from 1964 to 1973 [1]. From 1973 to 1978, it was Tony Storme, then Roy Race, then Ben Galloway again, then finally back to Roy Race [1].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"London to Suez = a; Suez to Bombay = b; Bombay to \"\n\n\"London to Suez = a; Suez to Bombay = b; Bombay to Calcutta = c; Calcutta to Hong Kong = d; Hong Kong to Yokohoma = e; Yokohama to San Francisco = f; San Francisco to New York City = g; New York to London = h. In terms of 19th century adventure time, a + b + c + d + e + f + g + h = ?\"\n\nAssistant:",
+        "responses": [
+            "\"London to Suez = 4 hours, 58 minutes [1]\\n\\nSuez to Bombay = 5 hours, 46 minutes [2]\\n\\nBombay to Calcutta = 5 hours, 14 minutes [2]\\n\\nCalcutta to Hong Kong = 14 hours, 26 minutes [2]\\n\\nHong Kong to Yokohama = 12 hours, 37 minutes [2]\\n\\nYokohama to San Francisco = 18 hours, 45 minutes [2]\\n\\nSan Francisco to New York City = 10 hours, 57 minutes [2]\\n\\nNew York to London = 10 hours, 43 minutes [2]\"",
+            "\"In the mid-19th century, it was possible to travel from London to Suez, Suez to Bombay, Bombay to Calcutta, Calcutta to Hong Kong, and Hong Kong to Yokohama, and then from Yokohama to San Francisco, and then from San Francisco back to London, all via P&O steamers. [1] In order to do this, one would leave London four days after leaving Tilbury on a Friday, take the Bombay-Express to Bombay, then take a steamer to Calcutta, then another steamer to Hong Kong, and then take a Yokohama-Express to San Francisco, and then finally a San Francisco-Express to New York City, and then a New York-Express back to London, a total of 19 days after having left London. [1, 2, 3]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"London to Suez = 4 hours, 58 minutes [1]\\n\\nSuez to Bombay = 5 hours, 46 minutes [2]\\n\\nBombay to Calcutta = 5 hours, 14 minutes [2]\\n\\nCalcutta to Hong Kong = 14 hours, 26 minutes [2]\\n\\nHong Kong to Yokohama = 12 hours, 37 minutes [2]\\n\\nYokohama to San Francisco = 18 hours, 45 minutes [2]\\n\\nSan Francisco to New York City = 10 hours, 57 minutes [2]\\n\\nNew York to London = 10 hours, 43 minutes [2]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Which British actor played the role of Leon Trotsk\"\n\n\"Which British actor played the role of Leon Trotsky in the 1972 film ‘The Assassination of Trotsky’?\"\n\nAssistant:",
+        "responses": [
+            "\"\"",
+            "\"The Assassination of Trotsky is a 1972 British historical drama film, directed by Joseph Losey with a screenplay by Nicholas Mosley. It stars Richard Burton as Leon Trotsky, as well as Romy Schneider and Alain Delon [1].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Who played Mortimer Brewster in the 1942 film Arse\"\n\n\"Who played Mortimer Brewster in the 1942 film Arsenic and Old Lace?\"\n\nAssistant:",
+        "responses": [
+            "\"The actor who played Mortimer Brewster in the 1942 film \\\"Arsenic and Old Lace\\\" was Boris Karloff. [1] Jonathan Brewster, Mortimer's psychopathic brother, looks like the famous horror actor because he has had plastic surgery to disguise his appearance. The surgeon who altered his face was drunk and watching a horror film starring Karloff when he did the surgery. It is ironic that Jonathan is insulted by the remark that he resembles Boris Karloff because he is as sinister as the characters that Karloff portrays. [2]\"",
+            "\"Mortimer Brewster was played by Cary Grant in the 1942 film Arsenic and Old Lace. [1][2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The actor who played Mortimer Brewster in the 1942 film \\\"Arsenic and Old Lace\\\" was Boris Karloff. [1] Jonathan Brewster, Mortimer's psychopathic brother, looks like the famous horror actor because he has had plastic surgery to disguise his appearance. The surgeon who altered his face was drunk and watching a horror film starring Karloff when he did the surgery. It is ironic that Jonathan is insulted by the remark that he resembles Boris Karloff because he is as sinister as the characters that Karloff portrays. [2]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Which three-funnelled White Star liner was origina\"\n\n\"Which three-funnelled White Star liner was originally known as the Bismarck ?\"\n\nAssistant:",
+        "responses": [
+            "\"\"",
+            "\"RMS Majestic (II), formerly known as Bismarck, was a German ship launched in 1889. She was eventually handed over to the Allies after World War I and became the flagship of the White Star Line. [1, 2, 3, 4]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Released in August 2014, which noisy song from Jes\"\n\n\"Released in August 2014, which noisy song from Jessie J features Ariana Grande and Nicki Minaj\"\n\nAssistant:",
+        "responses": [
+            "\"\\\"Bang Bang\\\" was a song recorded by English singer Jessie J, American singer Ariana Grande, and Trinidadian-American rapper Nicki Minaj. [1]\"",
+            "\"The song \\\"Bang Bang\\\" features Ariana Grande, Nicki Minaj, and Jessie J. [1]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"\\\"Bang Bang\\\" was a song recorded by English singer Jessie J, American singer Ariana Grande, and Trinidadian-American rapper Nicki Minaj. [1]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"What distance is the Breeders' Cup Classic?\"\n\n\"What distance is the Breeders' Cup Classic?\"\n\nAssistant:",
+        "responses": [
+            "\"The Breeders' Cup Classic is a Grade I Weight for Age thoroughbred horse race for 3-year-olds and older. It is held annually at a different racetrack as part of the Breeders' Cup World Championships in late October or early November. The Classic is run at a distance of 1+1⁄4 miles (2,000 m) on dirt. [1]\"",
+            "\"The Breeders' Cup Classic is a Grade I Weight for Age thoroughbred horse race for 3-year-olds and older run at a distance of 1+1/4 miles (2,000 m) on dirt. [1]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The Breeders' Cup Classic is a Grade I Weight for Age thoroughbred horse race for 3-year-olds and older. It is held annually at a different racetrack as part of the Breeders' Cup World Championships in late October or early November. The Classic is run at a distance of 1+1⁄4 miles (2,000 m) on dirt. [1]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"In heraldry, what name is given to a diamond shape\"\n\n\"In heraldry, what name is given to a diamond shape?\"\n\nAssistant:",
+        "responses": [
+            "\"In heraldry, a diamond shape is referred to as a lozenge [1,2].\"",
+            "\"In heraldry, a diamond-shaped charge is known as a lozenge [1]. It can be displayed on the shield, which is the element on which armorial charges are displayed [2].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"In heraldry, a diamond shape is referred to as a lozenge [1,2].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Rosaria, Mendoza and Salta are all cities in which\"\n\n\"Rosaria, Mendoza and Salta are all cities in which South American country?\"\n\nAssistant:",
+        "responses": [
+            "\"Mendoza, Rosaria, and Salta are all cities in Argentina. [1]\"",
+            "\"Mendoza, Argentina. [1]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Mendoza, Rosaria, and Salta are all cities in Argentina. [1]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"\\\"Who orders martinis \\\"\\\"shaken, not stirred\\\"\\\"?\\\"\"\n\n\"\\\"Who orders martinis \\\"\\\"shaken, not stirred\\\"\\\"?\\\"\"\n\nAssistant:",
+        "responses": [
+            "\"Fleming's fictional British Secret Service agent James Bond orders his martini cocktail shaken, not stirred [1]. Bond's preferences for his martini are carried over to the films, where his orders are seen in both the 1961 film Dr. No and the 2006 film Casino Royale [1, 2]. In both films, Bond's subordinates copy his order, telling the bartender to keep the fruit with their drinks [2]. However, in the 2006 film, Bond appears irritated when the bartender asks if he would like his drink shaken or stirred [2].\"",
+            "\"Sean Connery's character, fictional British Secret Service agent James Bond, in the movie Goldfinger, stated that he preferred his martini to be \\\"shaken, not stirred\\\". [1] Some believe that Bond ordered his martini shaken because of the vodka it contained, as vodka was, for the most part, refined from potatoes (cheaper brands) which made the vodka oily. To disperse the oil, Bond ordered his martinis shaken. [2]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Fleming's fictional British Secret Service agent James Bond orders his martini cocktail shaken, not stirred [1]. Bond's preferences for his martini are carried over to the films, where his orders are seen in both the 1961 film Dr. No and the 2006 film Casino Royale [1, 2]. In both films, Bond's subordinates copy his order, telling the bartender to keep the fruit with their drinks [2]. However, in the 2006 film, Bond appears irritated when the bartender asks if he would like his drink shaken or stirred [2].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Sural relates to which part of the body?\"\n\n\"Sural relates to which part of the body?\"\n\nAssistant:",
+        "responses": [
+            "\"The sural region is the muscular swelling of the back of the leg below the knee, formed chiefly by the bellies of the gastrocnemius and soleus muscles [1,2].\"",
+            "\"The Sural nerve runs down the side of the leg near the small saphenous vein, then passes forward below the lateral malleolus and continues on the outside of the foot as the lateral dorsal cutaneous nerve, which then communicates with the intermediate dorsal cutaneous nerve, which branches off to the side of the foot. [1]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The sural region is the muscular swelling of the back of the leg below the knee, formed chiefly by the bellies of the gastrocnemius and soleus muscles [1,2].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Which one of the following singles was not a Chris\"\n\n\"Which one of the following singles was not a Christmas number one? Lonely This Christmas by Mud, Last Christmas by Wham or Merry Christmas Everyone by Shakin Stevens?\"\n\nAssistant:",
+        "responses": [
+            "\"Merry Christmas Everyone by Shakin' Stevens [1]. It reached number 1 in the UK Christmas charts in 1983 and 1984 [1].\"",
+            "\"\\\"Lonely This Christmas\\\" was a Christmas song by Mud that topped the UK Singles Chart in 1974 [1]. On the other hand, \\\"Last Christmas\\\" was written and produced by George Michael and was a double A-side release with \\\"Everything She Wants\\\" by Wham! [2]. Finally, \\\"Merry Christmas Everyone\\\" was a Christmas song by Shakin' Stevens [3].\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"Merry Christmas Everyone by Shakin' Stevens [1]. It reached number 1 in the UK Christmas charts in 1983 and 1984 [1].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"Bennett Cerf, Dr. Seuss's publisher, wagered $50 t\"\n\n\"Bennett Cerf, Dr. Seuss's publisher, wagered $50 that Seuss could not write a book using only fifty different words. Seuss won by writing which book?\"\n\nAssistant:",
+        "responses": [
+            "\"In 1960, Dr. Seuss, which is the pen name of Theodore Geisel, wrote his most popular book, Green Eggs and Ham, on a bet with his publisher, Bennett Cerf, for $50. [1][2][3] Cerf bet that Geisel couldn't write a book with 50 or fewer different words, and Geisel won the bet by writing Green Eggs and Ham, which consisted of only 49 different words. [1][2][3]\"",
+            "\"Bennett Cerf bet that Dr. Seuss could not write a book using only 50 different words, which he wagered $50. Dr. Seuss wrote the book Green Eggs and Ham to win the bet. [1]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"In 1960, Dr. Seuss, which is the pen name of Theodore Geisel, wrote his most popular book, Green Eggs and Ham, on a bet with his publisher, Bennett Cerf, for $50. [1][2][3] Cerf bet that Geisel couldn't write a book with 50 or fewer different words, and Geisel won the bet by writing Green Eggs and Ham, which consisted of only 49 different words. [1][2][3]\""
+    },
+    {
+        "prompt": "\n\nHuman: \"What is the largest rough gem-quality diamond ever\"\n\n\"What is the largest rough gem-quality diamond ever found (as at 2010)?\"\n\nAssistant:",
+        "responses": [
+            "\"The Cullinan Diamond, found in South Africa in 1905, weighs over 3,106 carats [1]. It is the largest gem-quality diamond ever discovered [1].\"",
+            "\"The largest rough gem-quality diamond ever found was the Cullinan Diamond, discovered in South Africa in 1905 [1, 3]. It measured approximately 10.1 x 6.35 x 5.9 centimeters and weighed 3,106.75 carats [1, 3]. \""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The Cullinan Diamond, found in South Africa in 1905, weighs over 3,106 carats [1]. It is the largest gem-quality diamond ever discovered [1].\""
+    },
+    {
+        "prompt": "\n\nHuman: \"If the squares of the numbers 1 to 10 are added to\"\n\n\"If the squares of the numbers 1 to 10 are added together, what is the result?\"\n\nAssistant:",
+        "responses": [
+            "\"The sum of the squares of the numbers 1 to 10 is 101. [1, 2, 3]  This is true because the square of any natural number, N, can be written as N(N+1)/2.  Therefore, to find the sum of the squares of the numbers 1 to 10, one would simply add the squares of 1 to 10, which is the same as multiplying those numbers by 11, which equals 101. [4]\"",
+            "\"1. Start by rewriting the problem as a double digit multiplication problem, so you will end up with a number with more than 1 digit.  For example, to do [Image: 24^2], write 24 x 24.  Multiply the number on the bottom ones place by the 1 directly above it.  You will end up with a number with more than 1 digit. [6] \\n2. Put a 0 under the result and multiply the bottom tens number by the top ones. The 0 will act as a placeholder. Write the result of multiplying the bottom tens number by the top ones number next to the 0. 3. Add the 2 results to get your answer. If you multiplied a number with 3 or more digits, you'll have more lines to add together. [3]\""
+        ],
+        "pairs": [
+            [
+                0,
+                1
+            ]
+        ],
+        "sft_target": "\"The sum of the squares of the numbers 1 to 10 is 101. [1, 2, 3]  This is true because the square of any natural number, N, can be written as N(N+1)/2.  Therefore, to find the sum of the squares of the numbers 1 to 10, one would simply add the squares of 1 to 10, which is the same as multiplying those numbers by 11, which equals 101. [4]\""
+    }
+]

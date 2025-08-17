@@ -26,7 +26,7 @@ async def trigger_finetune(data: dict):
         command = [
             "python", 
             "train.py",
-            "model=pythia28",
+            "model=zephyr",
             "datasets=[novalto]",  # Hardcoded to use the `novalto` dataset handler
             "loss=dpo",
             "loss.beta=0.1",
