@@ -1,0 +1,140 @@
+[
+  {
+    "src": "webhook_handler.py",
+    "dst": "api/webhook_handler.py",
+    "reason": "Separate web service layer from core training logic - establishes clear API domain",
+    "dependencies_to_update": ["Dockerfile"]
+  },
+  {
+    "src": "train.py",
+    "dst": "training/train.py",
+    "reason": "Group core training logic into dedicated training domain",
+    "dependencies_to_update": ["webhook_handler.py", "Dockerfile"]
+  },
+  {
+    "src": "trainers.py",
+    "dst": "training/trainers.py",
+    "reason": "Consolidate training implementations with main training entry point",
+    "dependencies_to_update": ["train.py"]
+  },
+  {
+    "src": "preference_datasets.py",
+    "dst": "datasets/preference_datasets.py",
+    "reason": "Create dedicated datasets module for data processing logic",
+    "dependencies_to_update": ["trainers.py", "testing_datasets.py"]
+  },
+  {
+    "src": "utils.py",
+    "dst": "core/utils.py",
+    "reason": "Establish core utilities package for shared functionality",
+    "dependencies_to_update": ["train.py", "trainers.py", "preference_datasets.py"]
+  },
+  {
+    "src": "upload_to_bucket.py",
+    "dst": "storage/firebase_storage.py",
+    "reason": "Create storage abstraction layer and improve naming clarity",
+    "dependencies_to_update": ["trainers.py", "webhook_handler.py", "upload_test.py"]
+  },
+  {
+    "src": "upload_test.py",
+    "dst": "tests/test_firebase_storage.py",
+    "reason": "Group all testing files in dedicated tests directory",
+    "dependencies_to_update": []
+  },
+  {
+    "src": "testing_datasets.py",
+    "dst": "tests/test_datasets.py",
+    "reason": "Consolidate testing files and improve naming convention",
+    "dependencies_to_update": []
+  },
+  {
+    "src": "config/config.yaml",
+    "dst": "config/training/base.yaml",
+    "reason": "Organize configs by domain and purpose for better maintainability",
+    "dependencies_to_update": ["train.py"]
+  },
+  {
+    "src": "config/model/blank_model.yaml",
+    "dst": "config/training/models/blank_model.yaml",
+    "reason": "Group model configs under training domain for logical organization",
+    "dependencies_to_update": []
+  },
+  {
+    "src": "config/model/gpt2-large.yaml",
+    "dst": "config/training/models/gpt2_large.yaml",
+    "reason": "Standardize naming convention and group under training models",
+    "dependencies_to_update": []
+  },
+  {
+    "src": "config/model/gpt2-xl.yaml",
+    "dst": "config/training/models/gpt2_xl.yaml",
+    "reason": "Standardize naming convention and group under training models",
+    "dependencies_to_update": []
+  },
+  {
+    "src": "config/model/gptj.yaml",
+    "dst": "config/training/models/gptj.yaml",
+    "reason": "Group model configs under training domain for logical organization",
+    "dependencies_to_update": []
+  },
+  {
+    "src": "config/model/llama7b.yaml",
+    "dst": "config/training/models/llama_7b.yaml",
+    "reason": "Standardize naming convention and group under training models",
+    "dependencies_to_update": []
+  },
+  {
+    "src": "config/model/pythia28.yaml",
+    "dst": "config/training/models/pythia_2_8b.yaml",
+    "reason": "Improve naming clarity and group under training models",
+    "dependencies_to_update": []
+  },
+  {
+    "src": "config/model/pythia69.yaml",
+    "dst": "config/training/models/pythia_6_9b.yaml",
+    "reason": "Improve naming clarity and group under training models",
+    "dependencies_to_update": []
+  },
+  {
+    "src": "config/model/zephyr.yaml",
+    "dst": "config/training/models/zephyr.yaml",
+    "reason": "Group model configs under training domain for logical organization",
+    "dependencies_to_update": []
+  },
+  {
+    "src": "config/loss/dpo.yaml",
+    "dst": "config/training/losses/dpo.yaml",
+    "reason": "Group loss configs under training domain for logical organization",
+    "dependencies_to_update": []
+  },
+  {
+    "src": "config/loss/sft.yaml",
+    "dst": "config/training/losses/sft.yaml",
+    "reason": "Group loss configs under training domain for logical organization",
+    "dependencies_to_update": []
+  },
+  {
+    "src": "data/test_dataset.json",
+    "dst": "datasets/samples/test_dataset.json",
+    "reason": "Group sample data with datasets module for better organization",
+    "dependencies_to_update": []
+  },
+  {
+    "src": "serviceKey.json",
+    "dst": "config/secrets/firebase_service_key.json",
+    "reason": "Improve security organization by grouping credentials in dedicated secrets directory",
+    "dependencies_to_update": ["webhook_handler.py", "upload_to_bucket.py", "upload_test.py"]
+  },
+  {
+    "src": "test.txt",
+    "dst": "tests/fixtures/test_file.txt",
+    "reason": "Group test fixtures with test files for better organization",
+    "dependencies_to_update": ["upload_test.py"]
+  },
+  {
+    "src": "test_results.txt",
+    "dst": "tests/output/test_results.txt",
+    "reason": "Separate test output from source code for cleaner organization",
+    "dependencies_to_update": ["testing_datasets.py"]
+  }
+]

@@ -1,0 +1,72 @@
+.
+├── CLAUDE.md
+├── Dockerfile
+├── LICENSE
+├── Makefile
+├── README.md
+├── config
+│   ├── config.yaml
+│   ├── loss
+│   │   ├── dpo.yaml
+│   │   └── sft.yaml
+│   ├── model
+│   │   ├── blank_model.yaml
+│   │   ├── gpt2-large.yaml
+│   │   ├── gpt2-xl.yaml
+│   │   ├── gptj.yaml
+│   │   ├── llama7b.yaml
+│   │   ├── pythia28.yaml
+│   │   ├── pythia69.yaml
+│   │   └── zephyr.yaml
+│   └── schemas
+│       ├── loss_schema.yaml
+│       ├── model_schema.yaml
+│       └── training_schema.yaml
+├── core
+│   ├── __init__.py
+│   └── validators.py
+├── data
+│   ├── dataset.json
+│   ├── test_dataset.json
+│   └── validation_dataset.json
+├── datasets
+│   ├── __init__.py
+│   └── preference_datasets.py
+├── plan
+│   ├── 00_program.md
+│   ├── 00_state.json
+│   ├── 01_cartography.md
+│   ├── 01_moves.json
+│   ├── 02_contracts.md
+│   ├── 04_ops.md
+│   └── 90_assets
+│       └── repo_tree.txt
+├── requirements.txt
+├── serviceKey.json
+├── storage
+│   └── __init__.py
+├── test.txt
+├── test_results.txt
+├── testing_datasets.py
+├── tests
+│   ├── __init__.py
+│   ├── test_api.py
+│   ├── test_dataset.py
+│   └── test_training_toy.py
+├── tools
+│   ├── __init__.py
+│   ├── make_toy_novalto.py
+│   └── validate_novalto.py
+├── train.py
+├── trainers.py
+├── training
+│   ├── __init__.py
+│   ├── train.py
+│   ├── trainers.py
+│   └── utils.py
+├── upload_test.py
+├── upload_to_bucket.py
+├── utils.py
+└── webhook_handler.py
+
+14 directories, 56 files

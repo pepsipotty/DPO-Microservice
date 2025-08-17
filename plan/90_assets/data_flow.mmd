@@ -1,0 +1,43 @@
+graph LR
+    subgraph "External Input"
+        Request[API Request]
+        Dataset[Dataset JSON]
+    end
+    
+    subgraph "Validation Layer"
+        SchemaVal[Schema Validation]
+        DataVal[Dataset Validation]
+        ConfigVal[Config Validation]
+    end
+    
+    subgraph "Processing Pipeline"
+        Parse[Parse Request]
+        Store[Store Dataset]
+        Config[Load Config]
+        Train[Run Training]
+    end
+    
+    subgraph "Outputs"
+        Model[Trained Model]
+        Artifacts[Training Artifacts]
+        Response[API Response]
+    end
+    
+    Request --> SchemaVal
+    Dataset --> DataVal
+    SchemaVal --> Parse
+    DataVal --> Store
+    Parse --> ConfigVal
+    ConfigVal --> Config
+    Store --> Train
+    Config --> Train
+    Train --> Model
+    Train --> Artifacts
+    Train --> Response
+    
+    style Request fill:#ffebee
+    style Response fill:#e8f5e8
+    style Train fill:#f3e5f5
+    style SchemaVal fill:#fff3e0
+    style DataVal fill:#fff3e0
+    style ConfigVal fill:#fff3e0

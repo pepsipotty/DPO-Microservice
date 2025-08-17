@@ -1,0 +1,42 @@
+# Model Configuration Schema
+# Validates model configuration structure
+
+type: object
+properties:
+  name_or_path:
+    type: string
+    description: "Model name or path (e.g., gpt2-xl, huggyllama/llama-7b)"
+  
+  tokenizer_name_or_path:
+    type: ["string", "null"]
+    description: "Tokenizer name or path; if null, uses tokenizer from model"
+  
+  archive:
+    type: ["string", "null"]
+    description: "Override pre-trained weights (e.g., from SFT); optional"
+  
+  block_name:
+    type: ["string", "null"]
+    description: "Module class to wrap with FSDP (e.g., GPT2Block, LlamaDecoderLayer)"
+  
+  policy_dtype:
+    type: string
+    enum: ["float32", "float16", "bfloat16"]
+    description: "Dtype for policy parameters/optimizer state"
+  
+  fsdp_policy_mp:
+    type: ["string", "null"]
+    enum: ["float32", "float16", "bfloat16", null]
+    description: "Mixed precision dtype if using FSDP"
+  
+  reference_dtype:
+    type: string
+    enum: ["float32", "float16", "bfloat16"]
+    description: "Dtype for reference model (inference only)"
+
+required:
+  - name_or_path
+  - policy_dtype
+  - reference_dtype
+
+additionalProperties: true

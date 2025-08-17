@@ -1,0 +1,39 @@
+# Loss Function Configuration Schema
+# Validates loss function configuration structure
+
+type: object
+properties:
+  name:
+    type: string
+    enum: ["dpo", "sft"]
+    description: "Loss function name"
+  
+  beta:
+    type: number
+    minimum: 0
+    description: "Temperature parameter for DPO; lower values mean we care less about reference model"
+  
+  label_smoothing:
+    type: number
+    minimum: 0
+    maximum: 0.5
+    description: "Noise parameter for conservative DPO; fraction of preference pairs that are flipped"
+  
+  reference_free:
+    type: boolean
+    description: "If true, use uniform (maximum entropy) reference model"
+
+required:
+  - name
+
+# Conditional requirements based on loss type
+oneOf:
+  - properties:
+      name:
+        const: "dpo"
+    required: ["beta"]
+  - properties:
+      name:
+        const: "sft"
+
+additionalProperties: true

@@ -1,10 +1,200 @@
-# DPO: Direct Preference Optimization
+# DPO Microservice: Scalable Direct Preference Optimization
+
+This is a production-ready microservice implementation of Direct Preference Optimization (DPO) with a clean API interface, Docker deployment, and comprehensive testing suite.
 
 **New:** in addition to the original DPO algorithm, this repo now supports ['conservative' DPO](https://ericmitchell.ai/cdpo.pdf) and [IPO](https://arxiv.org/pdf/2310.12036.pdf).
 
 For conservative DPO, you just need to additionally pass the parameter `loss.label_smoothing=X` for some `X` between 0 and 0.5 when performing DPO training (0 gives the original DPO loss). This parameter is essentially the conservativeness parameter, i.e., the fraction of the training preference data that is incorrect (flipped preference direction). Starting with something like 0.1 might be reasonable, but I haven't tested this yet (and it will depend on the preference dataset).
 
 For IPO, just pass `loss=ipo` and `loss.beta=X` for some non-negative `X` (same as with DPO/conservative DPO).
+
+## 🚀 Quick Start (5 minutes)
+
+### Prerequisites
+- Python 3.8+
+- Docker (optional)
+- 4GB+ RAM for toy examples, 16GB+ for real training
+
+### Method 1: Local Development Setup
+
+```bash
+# 1. Clone and setup
+git clone <repo-url>
+cd DPO-Microservice
+make setup
+
+# 2. Test with toy data
+make toy-data
+make toy-train
+
+# 3. Start the API server
+make api
+# Server runs at http://localhost:8000
+
+# 4. Test the complete pipeline
+make toy-trigger
+```
+
+### Method 2: Docker Deployment
+
+```bash
+# Build and run
+make docker-build
+make docker-run
+# Server runs at http://localhost:8000
+```
+
+### Method 3: Quick API Test
+
+```bash
+curl -X POST "http://localhost:8000/trigger-finetune" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "communityId": "my_test",
+    "dataset": [
+      {
+        "prompt": "What is the best programming language?",
+        "chosen": "Python is great for data science and machine learning.",
+        "rejected": "Assembly is the only real programming language."
+      }
+    ]
+  }'
+```
+
+## 📁 Project Structure
+
+```
+DPO-Microservice/
+├── 🌐 API Layer
+│   ├── webhook_handler.py      # FastAPI webhook server
+│   └── tests/test_api.py       # API integration tests
+├── 🧠 Training Package
+│   ├── training/               # Core training logic
+│   │   ├── __init__.py        # Clean programmatic API
+│   │   ├── train.py           # Main training entry point
+│   │   ├── trainers.py        # Trainer implementations
+│   │   └── utils.py           # Training utilities
+├── 📊 Datasets Package
+│   ├── datasets/              # Dataset processing
+│   │   ├── __init__.py        # Dataset interfaces
+│   │   └── preference_datasets.py # Dataset implementations
+├── 💾 Storage Package
+│   ├── storage/               # Storage abstractions
+│   │   └── __init__.py        # Firebase and local storage
+├── 🔧 Core Package
+│   ├── core/                  # Shared utilities
+│   │   ├── __init__.py
+│   │   └── validators.py      # Configuration validation
+├── ⚙️ Configuration
+│   ├── config/                # Hydra configurations
+│   │   ├── schemas/           # JSON Schema validation
+│   │   ├── model/             # Model configurations
+│   │   └── loss/              # Loss function configs
+├── 🛠️ Tools
+│   ├── tools/                 # Development utilities
+│   │   ├── make_toy_novalto.py
+│   │   └── validate_novalto.py
+├── 🧪 Tests
+│   └── tests/                 # Comprehensive test suite
+├── 🐳 Deployment
+│   ├── Dockerfile             # Production container
+│   ├── Makefile              # Development workflow
+│   └── .gitignore            # Security and cleanup
+└── 📚 Documentation
+    ├── README.md             # This file
+    └── plan/                 # Architecture docs
+```
+
+## 🎯 Key Features
+
+### 🔌 API-First Design
+- **RESTful Webhook**: Simple JSON API for triggering training jobs
+- **Health Monitoring**: Built-in health checks for production deployment
+- **Error Handling**: Comprehensive error handling with cleanup
+
+### 🏗️ Clean Architecture
+- **Package Organization**: Well-structured codebase with clear separation of concerns
+- **Interface Contracts**: Type-safe interfaces for datasets, storage, and training
+- **Configuration Validation**: JSON Schema validation for all configurations
+
+### 🚀 Developer Experience
+- **One-Command Setup**: `make setup` gets you running in seconds
+- **Comprehensive Testing**: Full test suite with API integration tests
+- **Docker Support**: Production-ready containerization
+- **Documentation**: Clear docs with examples and architecture diagrams
+
+### 🔧 Operational Excellence
+- **Environment Variables**: Secure configuration management
+- **Logging**: Structured logging for debugging and monitoring
+- **Cleanup**: Automatic cleanup of temporary files and datasets
+- **Validation**: Pre-flight checks for all configurations
+
+## 📚 Usage Guide
+
+### Programmatic API
+
+```python
+from training import run_training
+
+# Run training programmatically
+result = run_training(
+    model_name="zephyr",
+    datasets=["novalto"],
+    loss_config={"name": "dpo", "beta": 0.1},
+    exp_name="my_experiment",
+    n_examples=1000,
+    debug=True
+)
+
+print(f"Training completed: {result['artifact_path']}")
+```
+
+### Webhook API
+
+```bash
+# Health check
+curl http://localhost:8000/health
+
+# Trigger training
+curl -X POST "http://localhost:8000/trigger-finetune" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "communityId": "my_community",
+    "dataset": [
+      {
+        "prompt": "What is machine learning?",
+        "chosen": "Machine learning is a subset of AI that enables computers to learn from data.",
+        "rejected": "Machine learning is just fancy statistics."
+      }
+    ]
+  }'
+```
+
+### Development Commands
+
+```bash
+# Setup and validation
+make setup              # Complete environment setup
+make validate-structure # Validate package imports
+
+# Testing
+make test              # Run all tests
+make test-api          # Run API integration tests
+
+# Training pipeline
+make toy-data          # Generate test dataset
+make toy-train         # Run training with toy data
+make toy-trigger       # Test full API pipeline
+
+# Docker operations
+make docker-build      # Build container
+make docker-run        # Run container
+make docker-clean      # Clean Docker artifacts
+
+# Maintenance
+make clean             # Clean temporary files
+make lint              # Run code linting
+```
 
 ## What is this repo?
 

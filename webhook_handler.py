@@ -4,12 +4,19 @@ import subprocess
 import json
 import firebase_admin
 from firebase_admin import credentials
+from training import run_training
 
 app = FastAPI()
 cred = credentials.Certificate("serviceKey.json")
 firebase_admin.initialize_app(cred, {
     "storageBucket": "dpo-frontend.firebasestorage.app"
 })
+
+
+@app.get("/health")
+async def health_check():
+    """Health check endpoint for Docker and monitoring."""
+    return {"status": "healthy", "service": "dpo-microservice"}
 
 
 @app.post("/trigger-finetune")
@@ -22,24 +29,38 @@ async def trigger_finetune(data: dict):
         with open(dataset_path, "w") as f:
             json.dump(data["dataset"], f)
 
-        # Step 2: Run the fine-tuning command
-        command = [
-            "python", 
-            "train.py",
-            "model=zephyr",
-            "datasets=[novalto]",  # Hardcoded to use the `novalto` dataset handler
-            "loss=dpo",
-            "loss.beta=0.1",
-            f"exp_name={data['communityId']}"
-        ]
-        subprocess.run(command, check=True)
+        # Step 2: Run the fine-tuning using the training facade
+        try:
+            # Use the programmatic API as the primary method
+            result = run_training(
+                model_name="zephyr",
+                datasets=["novalto"],
+                loss_config={"name": "dpo", "beta": 0.1},
+                exp_name=data['communityId']
+            )
+            policy_path = result["artifact_path"]
+            
+        except Exception as facade_error:
+            # Fallback to subprocess method if facade fails
+            print(f"Training facade failed: {facade_error}. Falling back to subprocess method.")
+            
+            command = [
+                "python", 
+                "train.py",
+                "model=zephyr",
+                "datasets=[novalto]",  # Hardcoded to use the `novalto` dataset handler
+                "loss=dpo",
+                "loss.beta=0.1",
+                f"exp_name={data['communityId']}"
+            ]
+            subprocess.run(command, check=True)
+            
+            # Verify that fine-tuning completed and `policy.pt` was generated
+            policy_path = f".cache/root/{data['communityId']}/LATEST/policy.pt"
+            if not os.path.exists(policy_path):
+                raise HTTPException(status_code=500, detail="Fine-tuning failed: policy.pt not found")
 
-        # Step 3: Verify that fine-tuning completed and `policy.pt` was generated
-        policy_path = f".cache/root/{data['communityId']}/LATEST/policy.pt"
-        if not os.path.exists(policy_path):
-            raise HTTPException(status_code=500, detail="Fine-tuning failed: policy.pt not found")
-
-        # Step 4: Delete the dataset file after successful training
+        # Step 3: Delete the dataset file after successful training
         os.remove(dataset_path)
 
         return {"status": "success", "policy_path": policy_path}
