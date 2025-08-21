@@ -1,0 +1,129 @@
+# DPO Microservice .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyTorch
+*.pt
+*.pth
+*.ckpt
+
+# Training artifacts and caches
+.cache/
+data/
+datasets/samples/*.json
+experiments/
+logs/
+wandb/
+*.log
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+serviceKey.json
+config/secrets/
+*.key
+*.pem
+*.crt
+
+# IDE and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Documentation builds
+docs/_build/
+site/
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Docker
+.dockerignore
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Model files (typically large)
+*.bin
+*.safetensors
+models/
+checkpoints/
+
+# Firebase and cloud storage
+firebase-debug.log
+.firebase/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Development and planning artifacts (exclude from production)
+plan/
+eval_results/
+A100_TESTING_GUIDE.md
+DPO_MICROSERVICE_TROUBLESHOOTING_REPORT.md
+a100_test.py
+test_commands.sh
+train_test.sh
+upload_test.py
+test.txt
+test_results.txt
+testing_datasets.py
+requirements_fixed.txt
+config/a100_optimized.yaml
+config/model/zephyr_a100.yaml
