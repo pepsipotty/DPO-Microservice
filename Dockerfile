@@ -6,8 +6,9 @@ WORKDIR /app
 # Copy requirements first for better caching
 COPY requirements.txt /app/requirements.txt
 
-# Install dependencies
-RUN pip install --no-cache-dir "huggingface_hub==0.23.0" && \
+# Install system dependencies and Python packages
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/* && \
+    pip install --no-cache-dir "huggingface_hub==0.23.0" && \
     pip install --no-cache-dir -r requirements.txt
 
 # Copy package structure (organized codebase)
@@ -36,12 +37,19 @@ COPY testing_datasets.py /app/testing_datasets.py
 # Create data directory (runtime volume mount point)
 RUN mkdir -p /app/data
 
-# Copy service key if it exists (can be overridden by environment variables)
-COPY serviceKey.json* /app/
-
 # Set environment variables
 ENV WANDB_DISABLED=true
 ENV PYTHONPATH=/app
+
+# Gateway integration environment variables (set defaults for development)
+ENV DPO_GATEWAY_SHARED_SECRET=""
+ENV DPO_SERVICE_TTL_SECONDS=21600
+ENV DPO_MAX_CONCURRENT_JOBS=2
+ENV DPO_JOB_TIMEOUT_SECONDS=3600
+ENV DPO_MAX_DATASET_SIZE_MB=5
+ENV DPO_RATE_LIMIT_PER_MINUTE=5
+ENV DPO_WORKING_DIR=/app
+ENV DPO_CACHE_DIR=/app/.cache
 
 # Expose port
 EXPOSE 8000
