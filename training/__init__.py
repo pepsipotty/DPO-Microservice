@@ -125,7 +125,7 @@ def run_training(
                 elif isinstance(value, list):
                     # Handle list values like datasets
                     if len(value) == 1:
-                        overrides.append(f"{key}={value[0]}")
+                        overrides.append(f"{key}=[{value[0]}]")
                     else:
                         overrides.append(f"{key}=[{','.join(value)}]")
                 else:
