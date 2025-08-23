@@ -113,7 +113,8 @@ def run_training(
         os.chdir(package_dir)
         
         # Initialize Hydra with our config
-        with hydra.initialize(version_base=None, config_path="config"):
+        config_dir = str(package_dir / "config")
+        with hydra.initialize_config_dir(version_base=None, config_dir=config_dir):
             # Create config with overrides
             overrides = []
             for key, value in config_overrides.items():
