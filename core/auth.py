@@ -111,9 +111,10 @@ async def verify_request_auth(request: Request, require_admin: bool = True) -> U
     """
     config = get_config()
     
-    # Get required headers
-    user_header = request.headers.get("X-Novalto-User")
-    signature = request.headers.get("X-Novalto-Signature")
+    # Get required headers (case-insensitive)
+    # Accept both lowercase (x-novalto-*) and uppercase (X-Novalto-*) variants
+    user_header = request.headers.get("x-novalto-user") or request.headers.get("X-Novalto-User")
+    signature = request.headers.get("x-novalto-signature") or request.headers.get("X-Novalto-Signature")
     
     if not user_header or not signature:
         logger.warning("Missing authentication headers")
