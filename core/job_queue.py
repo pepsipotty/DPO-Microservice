@@ -209,9 +209,24 @@ class JobQueue:
                 # Import training module
                 from training import run_training
                 
+                # Map model names to available configs
+                model_mapping = {
+                    "pythia_2_8b": "pythia28",
+                    "pythia_6_9b": "pythia69", 
+                    "pythia-2.8b": "pythia28",
+                    "pythia-6.9b": "pythia69",
+                    "zephyr": "zephyr",
+                    "gpt2": "gpt2-large",
+                    "llama": "llama7b"
+                }
+                
+                # Use mapped model name or default to zephyr if not found
+                mapped_model = model_mapping.get(job.base_model, "zephyr")
+                logger.info(f"Using model '{mapped_model}' for requested '{job.base_model}'")
+                
                 # Run training
                 result = run_training(
-                    model_name=job.base_model,
+                    model_name=mapped_model,
                     datasets=["novalto"],  # Always use novalto for microservice
                     loss_config={"name": job.algo, "beta": 0.1},
                     exp_name=job.exp_name,
