@@ -230,7 +230,11 @@ class JobQueue:
                     datasets=["novalto"],  # Always use novalto for microservice
                     loss_config={"name": job.algo, "beta": 0.1},
                     exp_name=job.exp_name,
-                    debug=True  # Disable wandb (no API key configured)
+                    debug=True,  # Disable wandb (no API key configured)
+                    batch_size=8,
+                    eval_batch_size=4,
+                    n_examples=80,
+                    n_eval_examples=20
                 )
                 
                 # Update run with results
