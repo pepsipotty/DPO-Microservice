@@ -33,10 +33,11 @@ logger = logging.getLogger(__name__)
 
 # Request/Response Models
 class DPORecord(BaseModel):
-    """A single DPO training record."""
+    """A single DPO training record in standard DPO format."""
     prompt: str = Field(..., min_length=1, description="The input prompt")
-    chosen: str = Field(..., min_length=1, description="The preferred response")
-    rejected: str = Field(..., min_length=1, description="The rejected response")
+    responses: List[str] = Field(..., min_items=2, description="List of response options")
+    pairs: List[List[int]] = Field(..., min_items=1, description="Preference pairs as [preferred_idx, rejected_idx]")
+    sft_target: str = Field(..., min_length=1, description="The best response for SFT pre-training")
 
 
 class TriggerFinetuneRequest(BaseModel):
