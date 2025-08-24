@@ -1,0 +1,34 @@
+# Locked dependency versions that are known to work together
+# Generated from working RunPod environment - 2025-08-24
+# Use this file for reproducible deployments to avoid dependency conflicts
+
+# Core ML packages - these versions are critical for compatibility
+ipykernel==6.23.1
+numpy==1.24.3
+tokenizers==0.15.2
+torch==2.1.0
+tqdm==4.65.0
+transformers==4.36.2
+peft==0.3.0
+datasets==2.14.5
+huggingface-hub==0.24.7
+
+# Supporting packages
+beautifulsoup4==4.12.2
+wandb==0.15.3
+hydra-core==1.3.2
+tensor-parallel==1.2.4
+
+# Web service packages
+fastapi==0.115.6
+uvicorn==0.34.0
+httpx==0.28.1
+
+# Cloud services
+firebase_admin==7.1.0
+
+# Installation notes:
+# 1. Use Python 3.11 (RunPod default)
+# 2. Install in this order to avoid conflicts:
+#    pip install torch==2.1.0 --index-url https://download.pytorch.org/whl/cu118
+#    pip install -r requirements-locked.txt
