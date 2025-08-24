@@ -1,0 +1,500 @@
+================================================================================
+DPO MICROSERVICE PROGRESS TRACKING SYSTEM - IMPLEMENTATION PLAN
+================================================================================
+
+EXECUTIVE SUMMARY
+-----------------
+The frontend currently has no visibility into fine-tuning progress beyond basic 
+status states (queued/running/completed). This plan outlines a comprehensive 
+progress tracking system to provide real-time training updates, metrics, and 
+ETA estimates to improve user experience.
+
+CURRENT STATE AUDIT
+-------------------
+
+EXISTING INFRASTRUCTURE:
+✅ Basic status tracking (queued, running, completed, failed, cancelled)
+✅ Timestamp tracking (created_at, started_at, finished_at)
+✅ Final metrics storage capability
+✅ REST API endpoint /runs/{run_id} for status polling
+✅ TrainingRun dataclass with extensible structure
+✅ Job queue system with worker processes
+
+GAPS IDENTIFIED:
+❌ No intermediate progress tracking (epochs, steps, examples processed)
+❌ No real-time metrics during training (loss, accuracy, rewards)
+❌ No ETA or time remaining estimates
+❌ No detailed error reporting for training failures
+❌ No way to track training phases (data loading, model building, training, evaluation)
+❌ Frontend polling blind - no indication of actual progress
+
+TRAINING PIPELINE ANALYSIS:
+- Uses tqdm for progress bars (currently only visible in logs)
+- Generates metrics every N steps (mean_train_metrics, mean_eval_metrics)
+- Uses rank0_print for status updates (only visible in logs)
+- Has built-in evaluation cycles with detailed metrics
+- Already captures training statistics that could be exposed
+
+PROPOSED SOLUTION ARCHITECTURE
+------------------------------
+
+1. ENHANCED DATA MODEL
+   
+   TrainingRun Extensions:
+   ```python
+   @dataclass
+   class TrainingRun:
+       # ... existing fields ...
+       current_epoch: Optional[int] = None
+       total_epochs: Optional[int] = None
+       current_step: Optional[int] = None
+       total_steps: Optional[int] = None
+       examples_processed: int = 0
+       total_examples: Optional[int] = None
+       current_phase: str = "queued"  # queued, initializing, training, evaluating, saving
+       progress_percentage: float = 0.0
+       eta_seconds: Optional[float] = None
+       last_metrics: Optional[Dict[str, float]] = None
+       progress_history: List[Dict] = field(default_factory=list)
+   ```
+
+   New ProgressUpdate class:
+   ```python
+   @dataclass
+   class ProgressUpdate:
+       timestamp: float
+       phase: str
+       step: int
+       epoch: int
+       progress_percentage: float
+       metrics: Dict[str, float]
+       message: str
+       eta_seconds: Optional[float] = None
+   ```
+
+2. PROGRESS REPORTER SYSTEM
+
+   Core ProgressReporter class:
+   ```python
+   class ProgressReporter:
+       def __init__(self, run_store, run_id):
+           self.run_store = run_store
+           self.run_id = run_id
+           self.start_time = time.time()
+           
+       async def update_progress(self, **kwargs):
+           # Update run with progress data
+           # Calculate ETA based on current progress
+           # Store in progress history (circular buffer)
+           
+       async def update_phase(self, phase: str, message: str = ""):
+           # Update current training phase
+           
+       async def update_metrics(self, metrics: Dict[str, float]):
+           # Store intermediate training metrics
+   ```
+
+3. TRAINING INTEGRATION POINTS
+
+   Modify trainers.py:
+   - Inject ProgressReporter into trainer __init__
+   - Add progress callbacks to training loop
+   - Capture tqdm progress and convert to updates
+   - Report metrics at regular intervals
+   - Update phase transitions (data loading -> training -> evaluation)
+
+   Key integration points:
+   ```python
+   # In FSDPTrainer.__init__:
+   self.progress_reporter = ProgressReporter(run_store, run_id)
+   
+   # In train loop:
+   await self.progress_reporter.update_progress(
+       step=step_idx,
+       epoch=epoch,
+       progress_percentage=step_idx / total_steps * 100,
+       metrics=mean_train_metrics
+   )
+   
+   # Phase transitions:
+   await self.progress_reporter.update_phase("training", "Starting training loop")
+   await self.progress_reporter.update_phase("evaluating", "Running evaluation")
+   ```
+
+4. ENHANCED API ENDPOINTS
+
+   Enhanced /runs/{run_id} response:
+   ```json
+   {
+       "run_id": "abc123",
+       "status": "running",
+       "current_phase": "training",
+       "progress_percentage": 45.6,
+       "current_epoch": 1,
+       "total_epochs": 3,
+       "current_step": 456,
+       "total_steps": 1000,
+       "examples_processed": 58368,
+       "eta_seconds": 1847,
+       "last_metrics": {
+           "loss": 0.234,
+           "accuracy": 0.78,
+           "rewards/margins": 0.456
+       },
+       "started_at": 1703123456,
+       "estimated_completion": 1703125303
+   }
+   ```
+
+   New endpoint /runs/{run_id}/progress:
+   ```json
+   {
+       "run_id": "abc123",
+       "progress_history": [
+           {
+               "timestamp": 1703123500,
+               "phase": "training",
+               "step": 100,
+               "epoch": 1,
+               "progress_percentage": 10.0,
+               "metrics": {"loss": 0.567},
+               "message": "Completed 100 training steps"
+           }
+       ]
+   }
+   ```
+
+IMPLEMENTATION PHASES
+--------------------
+
+PHASE 1: ENHANCED DATA MODEL (2-3 days)
+□ Extend TrainingRun dataclass with progress fields
+□ Create ProgressUpdate dataclass
+□ Update RunStore to handle new fields
+□ Modify existing API responses to include progress data
+□ Add database migrations if needed
+
+Files to modify:
+- core/run_store.py (add fields, update methods)
+- webhook_handler.py (update response models)
+
+PHASE 2: PROGRESS REPORTER (3-4 days)
+□ Create ProgressReporter class
+□ Implement progress calculation and ETA estimation
+□ Add circular buffer for progress history
+□ Create async update methods
+□ Add error handling and fallbacks
+
+New files:
+- core/progress_reporter.py
+
+PHASE 3: TRAINING INTEGRATION (4-5 days)
+□ Modify trainers.py to accept ProgressReporter
+□ Add progress callbacks to training loop
+□ Integrate with tqdm progress bars
+□ Capture and forward training metrics
+□ Handle phase transitions
+□ Add error reporting improvements
+
+Files to modify:
+- trainers.py (major modifications)
+- training/__init__.py (pass progress reporter)
+- core/job_queue.py (create and pass reporter)
+
+PHASE 4: API ENHANCEMENTS (1-2 days)
+□ Update /runs/{run_id} endpoint with progress data
+□ Create /runs/{run_id}/progress endpoint
+□ Add query parameters for filtering progress history
+□ Update API documentation
+□ Add response validation
+
+Files to modify:
+- webhook_handler.py (enhance existing endpoints)
+
+PHASE 5: FRONTEND INTEGRATION GUIDE (1 day)
+□ Document new API fields and endpoints
+□ Provide polling strategies and best practices
+□ Create example frontend code
+□ Define update frequency recommendations
+
+PHASE 6: TESTING & VALIDATION (2-3 days)
+□ Unit tests for ProgressReporter
+□ Integration tests with training pipeline
+□ API endpoint testing
+□ Load testing for progress updates
+□ Validate ETA accuracy
+
+OPTIONAL FUTURE ENHANCEMENTS
+----------------------------
+
+REAL-TIME UPDATES (WebSocket/SSE):
+- Add WebSocket endpoint /ws/runs/{run_id}
+- Implement Server-Sent Events /runs/{run_id}/stream
+- Push progress updates in real-time
+- Handle connection management and reconnection
+
+WEBHOOK NOTIFICATIONS:
+- Allow frontend to register webhook URLs
+- Push progress updates to external endpoints
+- Support different event types (phase changes, completion, errors)
+
+ADVANCED METRICS:
+- GPU utilization tracking
+- Memory usage monitoring
+- Training speed (examples/second)
+- Loss curve visualization data
+
+DETAILED IMPLEMENTATION SPECIFICATIONS
+--------------------------------------
+
+1. PROGRESS CALCULATION ALGORITHM
+
+   ```python
+   def calculate_progress(current_step, total_steps, current_epoch, total_epochs):
+       if total_steps and total_epochs:
+           # Epoch-based progress
+           epoch_progress = current_epoch / total_epochs
+           step_progress = current_step / total_steps
+           return (epoch_progress + step_progress / total_epochs) * 100
+       elif total_steps:
+           # Step-based progress
+           return (current_step / total_steps) * 100
+       else:
+           return 0.0
+   ```
+
+2. ETA CALCULATION
+
+   ```python
+   def calculate_eta(start_time, current_progress, total_progress=100.0):
+       if current_progress <= 0:
+           return None
+       
+       elapsed = time.time() - start_time
+       rate = current_progress / elapsed
+       remaining_progress = total_progress - current_progress
+       return remaining_progress / rate if rate > 0 else None
+   ```
+
+3. METRICS AGGREGATION
+
+   ```python
+   def aggregate_metrics(metrics_list):
+       aggregated = {}
+       for metrics in metrics_list:
+           for key, value in metrics.items():
+               if key not in aggregated:
+                   aggregated[key] = []
+               aggregated[key].append(value)
+       
+       return {
+           key: {
+               'current': values[-1],
+               'mean': sum(values) / len(values),
+               'min': min(values),
+               'max': max(values)
+           }
+           for key, values in aggregated.items()
+       }
+   ```
+
+4. CIRCULAR BUFFER IMPLEMENTATION
+
+   ```python
+   class CircularProgressBuffer:
+       def __init__(self, max_size=1000):
+           self.max_size = max_size
+           self.buffer = []
+           self.index = 0
+       
+       def add(self, item):
+           if len(self.buffer) < self.max_size:
+               self.buffer.append(item)
+           else:
+               self.buffer[self.index] = item
+               self.index = (self.index + 1) % self.max_size
+       
+       def get_recent(self, n=10):
+           return self.buffer[-n:] if len(self.buffer) >= n else self.buffer
+   ```
+
+INTEGRATION WITH EXISTING SYSTEMS
+---------------------------------
+
+1. JOB QUEUE INTEGRATION
+   - Pass ProgressReporter to training function
+   - Handle progress updates in worker loop
+   - Ensure thread safety for async updates
+
+2. RUN STORE INTEGRATION
+   - Add new fields to in-memory storage
+   - Implement atomic updates for progress data
+   - Add cleanup for old progress history
+
+3. API COMPATIBILITY
+   - Maintain backward compatibility
+   - Add new fields as optional
+   - Provide fallback for clients not expecting progress data
+
+FRONTEND INTEGRATION GUIDELINES
+-------------------------------
+
+1. POLLING STRATEGY
+   ```javascript
+   // Recommended polling pattern
+   async function pollRunStatus(runId) {
+       const response = await fetch(`/runs/${runId}`);
+       const run = await response.json();
+       
+       if (run.status === 'running') {
+           // Update UI with progress
+           updateProgressBar(run.progress_percentage);
+           updateETA(run.eta_seconds);
+           updateMetrics(run.last_metrics);
+           
+           // Poll again in 2-5 seconds
+           setTimeout(() => pollRunStatus(runId), 3000);
+       }
+   }
+   ```
+
+2. UI COMPONENTS NEEDED
+   - Progress bar with percentage
+   - ETA display
+   - Current phase indicator
+   - Real-time metrics display
+   - Training logs/messages
+
+3. ERROR HANDLING
+   - Handle network failures gracefully
+   - Implement exponential backoff
+   - Show user-friendly error messages
+
+TESTING STRATEGY
+----------------
+
+1. UNIT TESTS
+   - ProgressReporter functionality
+   - ETA calculation accuracy
+   - Metrics aggregation
+   - Circular buffer operations
+
+2. INTEGRATION TESTS
+   - End-to-end training with progress tracking
+   - API endpoint responses
+   - Database persistence
+
+3. PERFORMANCE TESTS
+   - Progress update frequency impact
+   - Memory usage with large progress history
+   - API response times under load
+
+4. USER ACCEPTANCE TESTS
+   - Frontend polling behavior
+   - Progress accuracy validation
+   - ETA accuracy over time
+
+ROLLOUT STRATEGY
+----------------
+
+1. DEVELOPMENT PHASE
+   - Implement on local development environment
+   - Test with short training runs
+   - Validate API responses
+
+2. STAGING DEPLOYMENT
+   - Deploy to staging environment
+   - Test with full training runs
+   - Frontend integration testing
+
+3. PRODUCTION ROLLOUT
+   - Feature flag for progress tracking
+   - Gradual rollout to subset of users
+   - Monitor performance impact
+   - Full rollout after validation
+
+MONITORING AND ALERTING
+-----------------------
+
+1. METRICS TO TRACK
+   - Progress update frequency
+   - ETA accuracy (actual vs predicted)
+   - API response times
+   - Memory usage for progress data
+
+2. ALERTS
+   - Progress updates stopped during training
+   - High API response times
+   - Memory usage thresholds
+   - Training failures with detailed errors
+
+SECURITY CONSIDERATIONS
+-----------------------
+
+1. ACCESS CONTROL
+   - Ensure progress data respects user permissions
+   - Admin vs user access to detailed metrics
+   - Rate limiting for progress endpoints
+
+2. DATA SANITIZATION
+   - Sanitize training logs before exposure
+   - Prevent sensitive information in progress messages
+   - Limit progress history retention
+
+MAINTENANCE PLAN
+----------------
+
+1. DATA CLEANUP
+   - Implement retention policy for progress history
+   - Clean up completed run progress data
+   - Archive historical metrics
+
+2. PERFORMANCE OPTIMIZATION
+   - Monitor and optimize update frequency
+   - Implement caching for frequently accessed data
+   - Database query optimization
+
+SUCCESS METRICS
+---------------
+
+1. USER EXPERIENCE
+   - Reduced support tickets about training status
+   - Increased user engagement during training
+   - Improved user satisfaction scores
+
+2. TECHNICAL METRICS
+   - <100ms API response time for progress endpoints
+   - >95% uptime for progress tracking
+   - <5% memory overhead for progress data
+
+3. ACCURACY METRICS
+   - ETA accuracy within 20% for >80% of jobs
+   - Progress percentage accuracy >95%
+   - Zero false positive completion status
+
+CONCLUSION
+----------
+
+This comprehensive progress tracking system will transform the user experience
+from a "black box" training process to a transparent, monitored operation.
+The phased implementation approach allows for iterative development and
+validation while maintaining system stability.
+
+The investment in progress tracking will pay dividends in:
+- Improved user confidence in the training process
+- Better debugging capabilities for failed runs
+- Enhanced system observability
+- Foundation for future real-time features
+
+NEXT STEPS
+----------
+
+1. Review and approve this implementation plan
+2. Allocate development resources (estimated 15-20 development days)
+3. Set up development environment for testing
+4. Begin Phase 1 implementation
+5. Establish testing and validation procedures
+
+================================================================================
+END OF PROGRESS TRACKING IMPLEMENTATION PLAN
+================================================================================

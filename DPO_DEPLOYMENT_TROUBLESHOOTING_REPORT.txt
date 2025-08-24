@@ -1,0 +1,217 @@
+# DPO Microservice Deployment - Troubleshooting Report
+Date: August 23, 2025
+Service: DPO-Microservice with Gateway Integration
+
+## EXECUTIVE SUMMARY
+
+SERVICE STATUS: ✅ FULLY OPERATIONAL
+Public URL: https://pocpsncdcs7m2u-8080.proxy.runpod.net
+Commit: c69e221 (header case-insensitivity fix)
+Outstanding Issue: Gateway registration returns 500 error (service works independently)
+
+## ISSUES ENCOUNTERED & RESOLUTIONS
+
+### 1. HEADER CASE SENSITIVITY ISSUE
+**Problem:** Service only accepted uppercase X-Novalto-* headers, gateway sends lowercase
+**Root Cause:** FastAPI request.headers.get() used exact case matching
+**Location:** core/auth.py lines 115-116
+**Fix Applied:**
+```python
+# Before:
+user_header = request.headers.get("X-Novalto-User")
+signature = request.headers.get("X-Novalto-Signature")
+
+# After:
+user_header = request.headers.get("x-novalto-user") or request.headers.get("X-Novalto-User")
+signature = request.headers.get("x-novalto-signature") or request.headers.get("X-Novalto-Signature")
+```
+
+### 2. PORT CONFLICTS & ACCESSIBILITY
+**Problem:** Multiple port conflicts and external access issues
+**Issues Encountered:**
+a) Port 8000 occupied by Jupyter notebook
+b) Port 8080 not externally accessible despite internal binding
+c) Port 8888 freed from Jupyter but still not externally accessible
+d) Direct IP access (62.169.158.26:port) blocked by firewall/routing
+
+**Root Cause:** RunPod uses proxy-based external access, not direct IP:port mapping
+**Resolution:** Used RunPod proxy URL format: https://[pod-id]-[port].proxy.runpod.net
+**Final Working URL:** https://pocpsncdcs7m2u-8080.proxy.runpod.net
+
+### 3. REGISTRATION URL MISMATCH
+**Problem:** Service configured with wrong gateway registration endpoint
+**Incorrect URL:** https://dpo-frontend.web.app/dpo/runtime/service
+**Correct URL:** https://dpo-frontend.web.app/api/dpo/register
+**Fix:** Updated DPO_REGISTER_URL environment variable
+
+### 4. ENVIRONMENT VARIABLE CONFIGURATION
+**Problem:** Variables needed to be set correctly for each pod restart
+**Required Variables:**
+- DPO_GATEWAY_SHARED_SECRET: 7183f7b796e351df8d1f44532f62f990c21fb776679a33c1f6c09b4512db83e6
+- DPO_REGISTER_SECRET: e0ed301b9e426751405d02efe0d8224f3c74e3f075af8585f86e1cdb68842ec0
+- DPO_REGISTER_URL: https://dpo-frontend.web.app/api/dpo/register
+- DPO_PUBLIC_BASE_URL: [RunPod-specific proxy URL]
+
+### 5. SSH CONFIGURATION UPDATES
+**Problem:** SSH config needed updating after pod restart
+**Changes Required:**
+- New SSH port: 17215 (was 34361)
+- Host key verification needed for new connection
+- Commands: ssh-keyscan -p [port] [host] >> ~/.ssh/known_hosts
+
+## OUTSTANDING ISSUES
+
+### Gateway Registration Failure
+**Status:** UNRESOLVED
+**Symptom:** Gateway returns 500 "REGISTRATION_FAILED" despite service being accessible
+**Impact:** Service works independently but won't be routed through gateway
+**Evidence:** 
+- Service health check responds: ✅ 200 OK
+- All auth endpoints work: ✅ Returns proper 401/403/200 responses  
+- External accessibility confirmed: ✅ RunPod proxy URL works
+- Gateway registration: ❌ 500 Internal Server Error
+
+**Potential Causes:**
+1. Gateway-side bug in registration validation
+2. Gateway testing additional endpoints not yet identified
+3. Specific RunPod proxy URL format not supported by gateway
+4. Authentication mismatch in registration process
+
+## STEPS TO FIX REMAINING ISSUES
+
+### Immediate Actions:
+1. Contact gateway maintainer about 500 registration errors
+2. Check gateway logs for specific validation failures
+3. Test if gateway accepts other URL formats (http vs https, different ports)
+4. Verify registration secret format matches gateway expectations
+
+### Alternative Approaches:
+1. Deploy on different hosting provider with direct IP access
+2. Use ngrok/cloudflare tunnel for consistent public URLs
+3. Implement manual gateway configuration if auto-registration fails
+
+## PREVENTION STRATEGIES
+
+### 1. Pre-Deployment Checklist
+- [ ] Verify SSH config and connection before starting
+- [ ] Identify pod's external URL format before service start
+- [ ] Test external accessibility early in deployment
+- [ ] Confirm all environment variables before service launch
+
+### 2. Configuration Template
+Create reusable configuration files:
+- Fixed gateway secrets (remain constant)
+- Variable pod-specific URLs (updated per session)
+- Automated port detection scripts
+
+### 3. Automated Deployment Script
+Implement script that:
+- Detects available ports
+- Tests external accessibility
+- Sets up environment variables automatically
+- Validates service before registration
+
+## MINIMIZED USER INPUT TEMPLATE
+
+### CONSTANTS (Never Change)
+```bash
+# Gateway Configuration - FIXED VALUES
+DPO_GATEWAY_SHARED_SECRET="7183f7b796e351df8d1f44532f62f990c21fb776679a33c1f6c09b4512db83e6"
+DPO_REGISTER_SECRET="e0ed301b9e426751405d02efe0d8224f3c74e3f075af8585f86e1cdb68842ec0"
+DPO_REGISTER_URL="https://dpo-frontend.web.app/api/dpo/register"
+DPO_SERVICE_TTL_SECONDS="21600"
+```
+
+### VARIABLES (User Must Provide)
+**Deployment Request Format:**
+```json
+{
+  "pod_info": {
+    "ssh_host": "62.169.158.26",
+    "ssh_port": "17215",  
+    "runpod_id": "pocpsncdcs7m2u",
+    "exposed_port": "8080"
+  }
+}
+```
+
+**Auto-Generated Values:**
+- Public URL: https://{runpod_id}-{exposed_port}.proxy.runpod.net
+- SSH Config Entry: Host runpod -> HostName {ssh_host} Port {ssh_port}
+
+### RECOMMENDED USER WORKFLOW
+
+1. **Start RunPod Instance**
+   - Note: pod ID, SSH port, exposed port from interface
+
+2. **Provide Minimal Info:**
+   ```
+   Pod ID: pocpsncdcs7m2u
+   SSH Port: 17215  
+   HTTP Port: 8080
+   ```
+
+3. **Automated Deployment:**
+   - Claude auto-generates URLs and SSH config
+   - Claude deploys service with proper configuration
+   - Claude verifies external access and functionality
+
+### DEPLOYMENT AUTOMATION SCRIPT TEMPLATE
+
+```bash
+#!/bin/bash
+# Variables from user input
+POD_ID="pocpsncdcs7m2u"
+SSH_PORT="17215"
+HTTP_PORT="8080" 
+SSH_HOST="62.169.158.26"
+
+# Auto-generated values
+PUBLIC_URL="https://${POD_ID}-${HTTP_PORT}.proxy.runpod.net"
+SSH_CONFIG="Host runpod\n    HostName ${SSH_HOST}\n    Port ${SSH_PORT}"
+
+# Fixed constants
+GATEWAY_SECRET="7183f7b796e351df8d1f44532f62f990c21fb776679a33c1f6c09b4512db83e6"
+REGISTER_SECRET="e0ed301b9e426751405d02efe0d8224f3c74e3f075af8585f86e1cdb68842ec0"
+REGISTER_URL="https://dpo-frontend.web.app/api/dpo/register"
+```
+
+## LESSONS LEARNED
+
+1. **RunPod Networking:** Always use proxy URL format, never direct IP:port
+2. **Header Standards:** Implement case-insensitive header handling upfront
+3. **External Validation:** Test external accessibility before attempting registration
+4. **Environment Management:** Create reusable config templates to minimize setup
+5. **Error Investigation:** 500 errors may be gateway-side, not service-side
+
+## TESTING COMMANDS
+
+### Verify Service Health:
+```bash
+curl -s https://pocpsncdcs7m2u-8080.proxy.runpod.net/health
+```
+
+### Test Authentication:
+```bash
+curl -s https://pocpsncdcs7m2u-8080.proxy.runpod.net/trigger-finetune \
+  -H "Content-Type: application/json" \
+  -d '{"kb_id":"test","exp_name":"test"}'
+# Expected: {"detail":"Missing authentication headers"}
+```
+
+### Test Registration:
+```bash
+curl -X POST https://dpo-frontend.web.app/api/dpo/register \
+  -H "x-dpo-register-secret: e0ed301b9e426751405d02efe0d8224f3c74e3f075af8585f86e1cdb68842ec0" \
+  -H "Content-Type: application/json" \
+  -d '{"base_url":"https://pocpsncdcs7m2u-8080.proxy.runpod.net","version":"1.0.0","ttl_seconds":21600}'
+```
+
+## FINAL STATUS
+
+✅ SERVICE: Fully operational with case-insensitive headers
+✅ ACCESSIBILITY: External access via RunPod proxy confirmed  
+✅ AUTHENTICATION: All security guardrails working
+❌ REGISTRATION: Gateway returns 500 error (requires investigation)
+
+The DPO microservice is production-ready and can handle requests independently of gateway registration status.

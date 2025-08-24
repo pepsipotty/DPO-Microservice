@@ -1,0 +1,103 @@
+CONNECTIVITY_CONTRACT.txt
+
+Connectivity Contract v1 — DPO Frontend ↔ Gateway ↔ Microservice
+
+1. Auth & Trust
+---------------
+Browser → Gateway
+- Auth: Firebase ID token (`Authorization: Bearer <token>`).
+- Admin check:
+  - Email in dpo.admin_email_allowlist OR
+  - customClaims.admin === true.
+
+Gateway → Microservice
+- HMAC required on all proxied calls.
+- Headers (lowercase canonical spelling):
+  - x-novalto-user: Base64 JSON {uid, email, admin}.
+  - x-novalto-signature: Hex HMAC-SHA256.
+- Canonical string:
+  METHOD\n
+  PATH\n
+  <sha256(body_as_string)>\n
+  <base64(x-novalto-user)>
+- Admin enforcement: /trigger-finetune requires "admin": true.
+
+2. Service Discovery & Registration
+-----------------------------------
+- Registry document: dpo/runtime/service (configurable).
+- Written by gateway’s /api/dpo/register.
+- Request:
+  { "base_url": "<pod_url>", "version": "1.0.0", "ttl_seconds": 21600 }
+- Required header: x-dpo-register-secret (case-insensitive).
+- TTL: default 6h, re-register at 75%. Expired entries cleaned automatically.
+- Unregister: DELETE /api/dpo/register.
+
+3. Trigger Schema
+-----------------
+The service schema is authoritative; frontend sends this directly, gateway passes it through unchanged.
+
+{
+  "kb_id": "knowledge_base_123",
+  "base_model": "zephyr",     // optional, default = "zephyr"
+  "algo": "dpo",              // optional, default = "dpo"
+  "exp_name": "experiment_v1",
+  "dataset_inline": [ { "prompt": "Q", "chosen": "A1", "rejected": "A2" } ],
+  "dataset_url": "https://.../dataset.jsonl"
+}
+
+Constraints:
+- Provide exactly one of dataset_inline or dataset_url.
+- Inline cap: 5 MB.
+- URL formats: .json, .jsonl, .jsonl.gz (≤5 MB).
+- Errors: 400 invalid schema, 413 payload too large.
+
+4. Core Endpoints
+-----------------
+Exposed by gateway to browser:
+- GET /api/dpo/health → microservice /health
+- POST /api/dpo/trigger-finetune → microservice /trigger-finetune
+- GET /api/dpo/runs/:id → microservice /runs/{id}
+- GET /api/dpo/runs/:id/artifacts → microservice /runs/{id}/artifacts
+- (Optional) DELETE /api/dpo/runs/:id → microservice /runs/{id}
+
+Run lifecycle statuses (exact):
+queued | running | completed | failed | cancelled
+
+5. Error Vocabulary
+-------------------
+401 Unauthorized → Bad/missing HMAC (gateway→service)
+403 Forbidden → Non-admin trigger attempt
+429 Too Many Requests → >5/min per user OR concurrent run per kb_id
+400 Bad Request → Schema invalid
+413 Payload Too Large → Inline >5MB
+503 Service Unavailable → No registered service in registry
+
+6. Optional Headers
+-------------------
+Idempotency-Key:
+- May be passed from frontend → gateway → service.
+- Service dedupes for 10 minutes; duplicate returns original run_id.
+
+7. Deployment & Ops
+-------------------
+Service:
+- Port: 8000.
+- Entrypoint: uvicorn webhook_handler:app --host 0.0.0.0 --port 8000
+- Required envs:
+  - DPO_GATEWAY_SHARED_SECRET
+  - DPO_PUBLIC_BASE_URL, DPO_REGISTER_URL, DPO_REGISTER_SECRET (if registering)
+
+Gateway:
+- Firebase Functions config:
+  - dpo.register_secret, dpo.gateway_shared_secret, dpo.admin_email_allowlist, dpo.registry_doc
+- Hosting rewrites /api/dpo/** → dpoGateway
+- CORS allowlist includes localhost + prod domains
+
+8. Acceptance Checklist
+-----------------------
+- [ ] Admin user can trigger fine-tune via /admin; receives {run_id, status:"queued"}.
+- [ ] Gateway always emits lowercase x-novalto-* headers.
+- [ ] Service accepts headers case-insensitively; HMAC verification passes.
+- [ ] Registry honors ttl_seconds; pods re-register at 75% TTL.
+- [ ] Inline datasets >5 MB are rejected with 413; URL datasets accepted if ≤5 MB and in allowed formats.
+- [ ] Run transitions observable through queued → running → completed and artifacts retrievable.
