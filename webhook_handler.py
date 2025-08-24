@@ -180,11 +180,13 @@ def check_rate_limit(uid: str) -> bool:
 # API Endpoints
 
 @app.get("/health", response_model=HealthResponse)
+@app.get("/api/dpo/health", response_model=HealthResponse)
 async def health_check():
     """
     Health check endpoint.
     
     Returns service health status and basic metrics.
+    Available at both /health and /api/dpo/health for frontend compatibility.
     """
     try:
         uptime = int(time.time() - app_start_time)
