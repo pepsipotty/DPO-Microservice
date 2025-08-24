@@ -24,6 +24,7 @@ def run_training(
     lr: float = 3e-6,
     n_epochs: Optional[int] = 1,
     n_examples: Optional[int] = None,
+    n_eval_examples: int = 256,
     max_length: int = 512,
     max_prompt_length: int = 256,
     seed: int = 0,
@@ -47,6 +48,7 @@ def run_training(
         lr: Learning rate
         n_epochs: Number of epochs (if None, must specify n_examples)
         n_examples: Number of examples (if None, must specify n_epochs)
+        n_eval_examples: Number of examples for evaluation
         max_length: Maximum sequence length
         max_prompt_length: Maximum prompt length
         seed: Random seed
@@ -86,6 +88,7 @@ def run_training(
         'batch_size': batch_size,
         'eval_batch_size': eval_batch_size,
         'lr': lr,
+        'n_eval_examples': n_eval_examples,
         'max_length': max_length,
         'max_prompt_length': max_prompt_length,
         'seed': seed,
