@@ -262,8 +262,8 @@ class JobQueue:
     
     async def _prepare_dataset(self, job: JobRequest) -> str:
         """Prepare dataset file for training."""
-        # Create data directory
-        data_dir = os.path.join(self.config.working_directory, "data")
+        # Create data directory in current working directory where training expects it
+        data_dir = "data"
         os.makedirs(data_dir, exist_ok=True)
         
         # Use standard dataset.json name for novalto handler compatibility
