@@ -1,0 +1,190 @@
+ 🚀 Deployment Steps
+
+  Step 1: Connect to RunPod and Clone Repository
+
+  # Connect to pod
+  ssh runpod
+
+  # Clone repository
+  git clone
+  https://github.com/pepsipotty/DPO-Microservice.git
+  cd DPO-Microservice
+
+  Step 2: Create Service Runner Script
+
+  Create run_service.sh with ALL environment variables
+  from dpo-gateway.env:
+
+  cat > run_service.sh << 'EOF'
+  #!/bin/bash
+
+  # DPO Microservice Environment Configuration
+  # CRITICAL: These values MUST match dpo-gateway.env 
+  exactly
+  export DPO_GATEWAY_SHARED_SECRET="7183f7b796e351df8d1f4
+  4532f62f990c21fb776679a33c1f6c09b4512db83e6"
+  export DPO_REGISTER_SECRET="e0ed301b9e426751405d02efe0d
+  8224f3c74e3f075af8585f86e1cdb68842ec0"
+  export DPO_REGISTER_URL="https://dpo-frontend.web.app/a
+  pi/dpo/register"
+  export DPO_SERVICE_TTL_SECONDS="21600"
+  export DPO_ADMIN_EMAIL="sengweiyeoh@gmail.com"
+  export DPO_RATE_LIMIT_PER_MINUTE="5"
+  export DPO_MAX_DATASET_SIZE_MB="5"
+  export DPO_MAX_CONCURRENT_JOBS="2"
+  export DPO_JOB_TIMEOUT_SECONDS="3600"
+  export DPO_FIREBASE_CREDENTIALS_FILE="serviceKey.json"
+  export DPO_FIREBASE_PROJECT_ID="tact-ai-dev"
+  export DPO_FIREBASE_COLLECTION_NAME="dpo-runs-dev"
+
+  # Pod-specific variables (UPDATE THESE)
+  export DPO_PUBLIC_BASE_URL="https://q9dvf8saru48y2-8080.proxy.runpod.net/"
+  export DPO_WORKING_DIRECTORY="/root/DPO-Microservice"
+  export DPO_CACHE_DIR="/root/DPO-Microservice/.cache"
+  export DPO_ALLOW_DIRECT_ORIGINS="[]"
+
+  # Create logs directory
+  mkdir -p logs
+
+  # Start the service
+  echo "Starting DPO Microservice with gateway 
+  registration..."
+  python3 -m uvicorn webhook_handler:app --host 0.0.0.0
+  --port 8080 >> logs/service.log 2>&1
+  EOF
+
+  chmod +x run_service.sh
+
+  Step 3: Install Dependencies
+
+  # Install base dependencies
+  pip3 install --no-cache-dir \
+      fastapi==0.111.0 \
+      uvicorn==0.30.1 \
+      pydantic==2.7.4 \
+      httpx==0.27.0 \
+      firebase-admin==6.5.0 \
+      python-multipart==0.0.9
+
+  # Install ML dependencies (compatible versions)
+  pip3 install --no-cache-dir \
+      torch==2.1.0 \
+      transformers==4.39.3 \
+      accelerate==0.34.2 \
+      datasets==2.20.0 \
+      wandb==0.17.5 \
+      omegaconf==2.3.0 \
+      hydra-core==1.3.2
+
+  Step 4: Update Pod-Specific URL
+
+  CRITICAL: Update the DPO_PUBLIC_BASE_URL in
+  run_service.sh:
+
+  # Get the actual RunPod URL from the user or RunPod 
+  dashboard
+  # Format: https://[POD_ID]-8080.proxy.runpod.net
+  # Example: https://50wijgoj6ov1q2-8080.proxy.runpod.net
+
+  # Edit run_service.sh and replace [REPLACE_WITH_POD_ID]
+   with actual pod ID
+
+  Step 5: Start the Service
+
+  # Start service in background
+  nohup ./run_service.sh > service_startup.log 2>&1 &
+
+  # Wait for startup
+  sleep 5
+
+  # Check if service started successfully
+  ps aux | grep uvicorn
+
+  Step 6: Verify Gateway Registration
+
+  # Check service logs for registration success
+  tail -20 logs/service.log | grep -i register
+
+  # Should see:
+  # "Registering service with gateway: 
+  https://dpo-frontend.web.app/api/dpo/register"
+  # "Service registration successful"
+
+  Step 7: Test Service Health
+
+  # Test direct service health
+  curl -s https://[POD_ID]-8080.proxy.runpod.net/health
+
+  # Test gateway health (confirms registration)
+  curl -s https://dpo-frontend.web.app/api/dpo/health
+
+  ---
+  ⚠️ Critical Registration Requirements
+
+  For successful gateway registration, ALL of the
+  following MUST be set:
+
+  1. DPO_GATEWAY_SHARED_SECRET - For HMAC authentication
+  (from dpo-gateway.env)
+  2. DPO_REGISTER_SECRET - For registration
+  authentication (from dpo-gateway.env)
+  3. DPO_REGISTER_URL - Gateway registration endpoint
+  (from dpo-gateway.env)
+  4. DPO_PUBLIC_BASE_URL - The RunPod proxy URL (changes
+  per session)
+
+  Without ALL four values, registration will be disabled
+  and you'll see:
+  "Service registration disabled (missing configuration)"
+
+  ---
+  🔍 Troubleshooting
+
+  If Registration Fails:
+
+  1. Check all 4 required environment variables are set
+  2. Verify DPO_PUBLIC_BASE_URL matches actual RunPod URL
+  3. Check logs: grep -i register logs/service.log
+  4. Verify secrets match those in dpo-gateway.env
+  exactly
+
+  If Service Shows as Unreachable in Frontend:
+
+  1. Verify gateway health returns your service URL:
+  curl -s https://dpo-frontend.web.app/api/dpo/health |
+  grep service_url
+  2. Check if service is responding locally:
+  ssh runpod "curl -s http://localhost:8080/health"
+  3. If 502/524 errors occur, service may be overloaded
+  (check disk space)
+
+  Disk Space Issues:
+
+  # Check available space
+  df -h | grep overlay
+
+  # Clean cache if needed
+  rm -rf /root/DPO-Microservice/.cache/*
+
+  # Minimum recommended: 50GB free space for training
+
+  ---
+  📝 Summary Checklist
+
+  - Clone repository to RunPod instance
+  - Create run_service.sh with ALL vars from
+  dpo-gateway.env
+  - Update DPO_PUBLIC_BASE_URL with actual RunPod URL
+  - Install all dependencies (base + ML)
+  - Start service with ./run_service.sh
+  - Verify registration in logs
+  - Test health endpoints (direct + gateway)
+  - Frontend shows service as "reachable"
+
+  ---
+  Note to Future Instance: The dpo-gateway.env file in
+  the local repository contains the authoritative
+  configuration. Always refer to it for the correct
+  values. The only value that changes is
+  DPO_PUBLIC_BASE_URL which must match your current
+  RunPod instance URL.
