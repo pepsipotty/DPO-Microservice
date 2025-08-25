@@ -61,6 +61,8 @@ class MockJobRequest:
     dataset_inline: Optional[List[Dict[str, Any]]] = None
     dataset_url: Optional[str] = None
     idempotency_key: Optional[str] = None
+    batch_size: int = 16
+    n_examples: int = 100
 
 
 def create_sample_dataset(output_path: str, num_samples: int = 5):
@@ -242,7 +244,9 @@ async def simulate_pipeline_mode(
             exp_name=exp_name,
             dataset_inline=dataset,
             dataset_url=None,
-            idempotency_key=None
+            idempotency_key=None,
+            batch_size=batch_size,
+            n_examples=n_examples
         )
         
         # Simulate job processing directly (bypass queue)
@@ -428,6 +432,8 @@ def main():
                 exp_name=args.exp_name,
                 base_model=args.model,
                 algo=args.algo,
+                batch_size=args.batch_size,
+                n_examples=args.n_examples,
                 kb_id=args.kb_id
             ))
             print("\n✅ SIMULATION COMPLETED SUCCESSFULLY!")
