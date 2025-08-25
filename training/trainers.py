@@ -482,7 +482,6 @@ class FSDPTrainer(BasicTrainer):
                 )
                 non_reentrant_wrapper = functools.partial(
                     checkpoint_wrapper,
-                    offload_to_cpu=False,
                     checkpoint_impl=CheckpointImpl.NO_REENTRANT,
                 )
             except Exception as e:
