@@ -132,7 +132,11 @@ def run_training(
                     else:
                         overrides.append(f"{key}=[{','.join(value)}]")
                 else:
-                    overrides.append(f"{key}={value}")
+                    # Handle None values properly for Hydra
+                    if value is None:
+                        overrides.append(f"{key}=null")
+                    else:
+                        overrides.append(f"{key}={value}")
             
             cfg = hydra.compose(config_name="config", overrides=overrides)
             
