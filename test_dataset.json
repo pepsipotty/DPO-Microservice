@@ -1,0 +1,44 @@
+[
+  {
+    "prompt": "What is the best way to learn programming? (Example 1)",
+    "responses": [
+      "Start with Python as it's beginner-friendly and has great community support. Build small projects to practice. (Response A, Example 1)",
+      "Just dive into any language and start coding immediately without learning fundamentals. (Response B, Example 1)"
+    ],
+    "pairs": [
+      [
+        0,
+        1
+      ]
+    ],
+    "sft_target": "Start with Python as it's beginner-friendly and has great community support. Build small projects to practice. (SFT Target, Example 1)"
+  },
+  {
+    "prompt": "What is the best way to learn programming? (Example 2)",
+    "responses": [
+      "Start with Python as it's beginner-friendly and has great community support. Build small projects to practice. (Response A, Example 2)",
+      "Just dive into any language and start coding immediately without learning fundamentals. (Response B, Example 2)"
+    ],
+    "pairs": [
+      [
+        0,
+        1
+      ]
+    ],
+    "sft_target": "Start with Python as it's beginner-friendly and has great community support. Build small projects to practice. (SFT Target, Example 2)"
+  },
+  {
+    "prompt": "What is the best way to learn programming? (Example 3)",
+    "responses": [
+      "Start with Python as it's beginner-friendly and has great community support. Build small projects to practice. (Response A, Example 3)",
+      "Just dive into any language and start coding immediately without learning fundamentals. (Response B, Example 3)"
+    ],
+    "pairs": [
+      [
+        0,
+        1
+      ]
+    ],
+    "sft_target": "Start with Python as it's beginner-friendly and has great community support. Build small projects to practice. (SFT Target, Example 3)"
+  }
+]
