@@ -420,7 +420,17 @@ class BasicTrainer(object):
             unique_name = f"policy_{self.exp_name}_{current_datetime}.pt"
 
             rank0_print(f"Uploading file as {unique_name}")
-            trigger_policy_upload(output_path, unique_name)
+            # Upload without cleanup - cleanup will happen later in save() method
+            upload_success = trigger_policy_upload(output_path, unique_name, cleanup_after_upload=False)
+            
+            # Store the upload status and paths for cleanup later
+            self._upload_success = upload_success
+            self._policy_path = output_path
+            
+            if upload_success:
+                rank0_print("✅ Policy uploaded successfully")
+            else:
+                rank0_print("⚠️  Policy upload failed")
     
     def save(self, output_dir: Optional[str] = None, metrics: Optional[Dict] = None):
         """Save policy, optimizer, and scheduler state to disk."""
@@ -435,6 +445,15 @@ class BasicTrainer(object):
 
         scheduler_state_dict = self.scheduler.state_dict()
         self.write_state_dict(self.example_counter, scheduler_state_dict, metrics, 'scheduler.pt', output_dir)
+        
+        # Perform cleanup after all files are saved, if upload was successful
+        if hasattr(self, '_upload_success') and self._upload_success and hasattr(self, '_policy_path'):
+            from upload_to_bucket import cleanup_training_artifacts
+            rank0_print("Starting cleanup of training artifacts...")
+            cleanup_training_artifacts(self._policy_path)
+            rank0_print("✅ Local training artifacts cleaned up after successful upload")
+        elif hasattr(self, '_upload_success') and not self._upload_success:
+            rank0_print("⚠️  Keeping local files since upload failed")
 
 
 class FSDPTrainer(BasicTrainer):
@@ -528,6 +547,15 @@ class FSDPTrainer(BasicTrainer):
             self.write_state_dict(self.example_counter, scheduler_state_dict, metrics, 'scheduler.pt', output_dir)
         dist.barrier()
         
+        # Perform cleanup after all files are saved, if upload was successful (rank 0 only)
+        if self.rank == 0 and hasattr(self, '_upload_success') and self._upload_success and hasattr(self, '_policy_path'):
+            from upload_to_bucket import cleanup_training_artifacts
+            rank0_print("Starting cleanup of training artifacts...")
+            cleanup_training_artifacts(self._policy_path)
+            rank0_print("✅ Local training artifacts cleaned up after successful upload")
+        elif self.rank == 0 and hasattr(self, '_upload_success') and not self._upload_success:
+            rank0_print("⚠️  Keeping local files since upload failed")
+        
 
 class TensorParallelTrainer(BasicTrainer):
     def __init__(self, policy, config, seed, run_dir, reference_model=None, rank=0, world_size=1):
@@ -551,3 +579,12 @@ class TensorParallelTrainer(BasicTrainer):
     
         self.write_state_dict(self.example_counter, policy_state_dict, metrics, 'policy.pt', output_dir)
         del policy_state_dict
+        
+        # Perform cleanup after all files are saved, if upload was successful
+        if hasattr(self, '_upload_success') and self._upload_success and hasattr(self, '_policy_path'):
+            from upload_to_bucket import cleanup_training_artifacts
+            rank0_print("Starting cleanup of training artifacts...")
+            cleanup_training_artifacts(self._policy_path)
+            rank0_print("✅ Local training artifacts cleaned up after successful upload")
+        elif hasattr(self, '_upload_success') and not self._upload_success:
+            rank0_print("⚠️  Keeping local files since upload failed")
