@@ -28,6 +28,9 @@ from typing import Dict, List, Any, Optional, Union
 import asyncio
 from dataclasses import dataclass
 
+# Disable SDPA to avoid PyTorch 2.8 + Transformers 4.49 compatibility issues
+os.environ['TRANSFORMERS_ATTN_IMPLEMENTATION'] = 'eager'
+
 # Setup logging
 logging.basicConfig(
     level=logging.INFO,
