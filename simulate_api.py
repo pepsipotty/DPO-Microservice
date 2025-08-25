@@ -148,6 +148,12 @@ def simulate_direct_training(
             logger.error("Make sure you're running from the correct directory and dependencies are installed")
             raise
         
+        # Validate batch size configuration  
+        if batch_size < 4:
+            logger.warning(f"Batch size {batch_size} is very small. DPO training works best with batch_size >= 16")
+        if n_examples < batch_size * 2:
+            logger.warning(f"n_examples ({n_examples}) should be at least 2x batch_size ({batch_size}) for stable training")
+        
         logger.info("Starting direct training...")
         result = run_training(
             model_name=base_model,
@@ -155,9 +161,9 @@ def simulate_direct_training(
             loss_config={"name": algo, "beta": 0.1},
             exp_name=exp_name,
             debug=debug,
-            batch_size=batch_size,
+            batch_size=max(16, batch_size),  # Ensure minimum batch size
             eval_batch_size=4,
-            n_examples=n_examples,
+            n_examples=max(32, n_examples),  # Ensure minimum examples
             n_eval_examples=20
         )
         
@@ -292,6 +298,10 @@ async def simulate_job_processing(job: MockJobRequest, run_store):
             mapped_model = model_mapping.get(job.base_model, "zephyr")
             logger.info(f"Using model '{mapped_model}' for requested '{job.base_model}'")
             
+            # Validate batch size configuration
+            if job.batch_size < 4:
+                logger.warning(f"Batch size {job.batch_size} is very small. DPO training works best with batch_size >= 16")
+            
             # Run training
             logger.info("Starting training execution...")
             result = run_training(
@@ -300,9 +310,9 @@ async def simulate_job_processing(job: MockJobRequest, run_store):
                 loss_config={"name": job.algo, "beta": 0.1},
                 exp_name=job.exp_name,
                 debug=True,  # Disable wandb
-                batch_size=8,
+                batch_size=max(16, job.batch_size),  # Ensure minimum batch size
                 eval_batch_size=4,
-                n_examples=80,
+                n_examples=max(32, job.n_examples),  # Ensure minimum examples
                 n_eval_examples=20
             )
             
@@ -361,8 +371,8 @@ def main():
     direct_parser.add_argument('--exp-name', required=True, help='Experiment name')
     direct_parser.add_argument('--model', default='zephyr', help='Base model (default: zephyr)')
     direct_parser.add_argument('--algo', default='dpo', help='Training algorithm (default: dpo)')
-    direct_parser.add_argument('--batch-size', type=int, default=8, help='Batch size (default: 8)')
-    direct_parser.add_argument('--n-examples', type=int, default=80, help='Number of examples (default: 80)')
+    direct_parser.add_argument('--batch-size', type=int, default=16, help='Batch size (default: 16)')
+    direct_parser.add_argument('--n-examples', type=int, default=100, help='Number of examples (default: 100)')
     
     # Pipeline mode
     pipeline_parser = subparsers.add_parser('pipeline', help='Full pipeline simulation')
@@ -370,8 +380,8 @@ def main():
     pipeline_parser.add_argument('--exp-name', required=True, help='Experiment name')
     pipeline_parser.add_argument('--model', default='zephyr', help='Base model (default: zephyr)')
     pipeline_parser.add_argument('--algo', default='dpo', help='Training algorithm (default: dpo)')
-    pipeline_parser.add_argument('--batch-size', type=int, default=8, help='Batch size (default: 8)')
-    pipeline_parser.add_argument('--n-examples', type=int, default=80, help='Number of examples (default: 80)')
+    pipeline_parser.add_argument('--batch-size', type=int, default=16, help='Batch size (default: 16)')
+    pipeline_parser.add_argument('--n-examples', type=int, default=100, help='Number of examples (default: 100)')
     pipeline_parser.add_argument('--kb-id', default='test_kb', help='Knowledge base ID (default: test_kb)')
     
     # Create sample
