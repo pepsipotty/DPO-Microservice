@@ -29,7 +29,10 @@ import asyncio
 from dataclasses import dataclass
 
 # Disable SDPA to avoid PyTorch 2.8 + Transformers 4.49 compatibility issues
+# Set multiple environment variables to ensure SDPA is disabled
 os.environ['TRANSFORMERS_ATTN_IMPLEMENTATION'] = 'eager'
+os.environ['TRANSFORMERS_VERBOSITY'] = 'info'  # For debugging
+os.environ['TORCH_USE_CUDA_DSA'] = '1'  # Alternative attention implementation
 
 # Setup logging
 logging.basicConfig(
