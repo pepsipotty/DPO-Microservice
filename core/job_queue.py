@@ -10,6 +10,8 @@ import logging
 import time
 import tempfile
 import os
+from concurrent.futures import ProcessPoolExecutor
+from functools import partial
 from dataclasses import dataclass
 from typing import Optional, Dict, Any, List, Union
 from pathlib import Path
@@ -19,6 +21,46 @@ from .config import get_config
 
 
 logger = logging.getLogger(__name__)
+
+
+def run_training_in_process(
+    model_name: str,
+    datasets: List[str],
+    loss_config: Dict[str, Any],
+    exp_name: str,
+    kb_id: Optional[str],
+    debug: bool,
+    batch_size: int,
+    eval_batch_size: int,
+    n_examples: int,
+    n_eval_examples: int
+) -> Dict[str, str]:
+    """
+    Wrapper function to run training in a separate process.
+    This function must be at module level to be picklable.
+    """
+    # Import inside function to avoid circular imports
+    from training import run_training
+    
+    return run_training(
+        model_name=model_name,
+        datasets=datasets,
+        loss_config=loss_config,
+        exp_name=exp_name,
+        kb_id=kb_id,
+        debug=debug,
+        batch_size=batch_size,
+        eval_batch_size=eval_batch_size,
+        n_examples=n_examples,
+        n_eval_examples=n_eval_examples
+    )
+
+
+def _init_worker_process():
+    """Initialize worker process (set CUDA device, etc.)"""
+    import os
+    # Ensure each process uses GPU properly
+    os.environ.setdefault('CUDA_VISIBLE_DEVICES', '0')
 
 
 @dataclass 
@@ -47,6 +89,12 @@ class JobQueue:
         self._idempotency_cache: Dict[str, str] = {}  # key -> run_id
         self._shutdown_event = asyncio.Event()
         self._running = False
+        
+        # Process pool for training jobs to avoid blocking event loop
+        self._executor = ProcessPoolExecutor(
+            max_workers=self.config.max_concurrent_jobs,
+            initializer=_init_worker_process
+        )
     
     async def start(self) -> None:
         """Start the job queue and worker processes."""
@@ -90,6 +138,10 @@ class JobQueue:
         
         self._workers.clear()
         self._active_jobs.clear()
+        
+        # Shutdown the process pool
+        self._executor.shutdown(wait=True, cancel_futures=True)
+        
         self._running = False
         
         logger.info("Job queue stopped")
@@ -206,9 +258,6 @@ class JobQueue:
             dataset_path = await self._prepare_dataset(job)
             
             try:
-                # Import training module
-                from training import run_training
-                
                 # Map model names to available configs
                 model_mapping = {
                     "pythia_2_8b": "pythia28",
@@ -224,18 +273,21 @@ class JobQueue:
                 mapped_model = model_mapping.get(job.base_model, "zephyr")
                 logger.info(f"Using model '{mapped_model}' for requested '{job.base_model}'")
                 
-                # Run training
-                result = run_training(
-                    model_name=mapped_model,
-                    datasets=["novalto"],  # Always use novalto for microservice
-                    loss_config={"name": job.algo, "beta": 0.1},
-                    exp_name=job.exp_name,
-                    kb_id=job.kb_id,  # Pass kb_id for new file naming convention
-                    debug=True,  # Disable wandb (no API key configured)
-                    batch_size=8,
-                    eval_batch_size=4,
-                    n_examples=80,
-                    n_eval_examples=20
+                # Run training in separate process to avoid blocking event loop
+                loop = asyncio.get_event_loop()
+                result = await loop.run_in_executor(
+                    self._executor,
+                    run_training_in_process,
+                    mapped_model,
+                    ["novalto"],  # Always use novalto for microservice
+                    {"name": job.algo, "beta": 0.1},
+                    job.exp_name,
+                    job.kb_id,  # Pass kb_id for new file naming convention
+                    True,  # debug - Disable wandb (no API key configured)
+                    8,     # batch_size
+                    4,     # eval_batch_size
+                    80,    # n_examples
+                    20     # n_eval_examples
                 )
                 
                 # Update run with results
