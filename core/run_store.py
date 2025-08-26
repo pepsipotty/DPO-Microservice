@@ -50,6 +50,17 @@ class TrainingRun:
     report_url: Optional[str] = None
     logs_url: Optional[str] = None
     
+    # Progress tracking fields
+    current_step: Optional[int] = None
+    total_steps: Optional[int] = None
+    current_epoch: Optional[int] = None
+    total_epochs: Optional[int] = None
+    progress_percentage: float = 0.0
+    current_phase: str = "queued"  # queued, initializing, training, evaluating, saving, completed
+    phase_message: str = ""
+    eta_seconds: Optional[float] = None
+    last_metrics: Optional[Dict[str, float]] = None
+    
     def to_dict(self) -> Dict[str, Any]:
         """Convert run to dictionary for API responses."""
         data = asdict(self)
@@ -151,6 +162,46 @@ class RunStore:
                 run.metrics = metrics
                 
             logger.info(f"Updated artifacts for run {run_id}")
+            return True
+
+    async def update_run_progress(
+        self,
+        run_id: str,
+        current_step: Optional[int] = None,
+        total_steps: Optional[int] = None,
+        current_epoch: Optional[int] = None,
+        total_epochs: Optional[int] = None,
+        progress_percentage: Optional[float] = None,
+        current_phase: Optional[str] = None,
+        phase_message: Optional[str] = None,
+        eta_seconds: Optional[float] = None,
+        last_metrics: Optional[Dict[str, float]] = None
+    ) -> bool:
+        """Update progress tracking fields for a run."""
+        async with self._lock:
+            run = self._runs.get(run_id)
+            if not run:
+                return False
+                
+            if current_step is not None:
+                run.current_step = current_step
+            if total_steps is not None:
+                run.total_steps = total_steps
+            if current_epoch is not None:
+                run.current_epoch = current_epoch
+            if total_epochs is not None:
+                run.total_epochs = total_epochs
+            if progress_percentage is not None:
+                run.progress_percentage = progress_percentage
+            if current_phase is not None:
+                run.current_phase = current_phase
+            if phase_message is not None:
+                run.phase_message = phase_message
+            if eta_seconds is not None:
+                run.eta_seconds = eta_seconds
+            if last_metrics is not None:
+                run.last_metrics = last_metrics
+                
             return True
     
     async def list_runs_for_user(self, uid: str, limit: int = 100) -> List[TrainingRun]:

@@ -251,11 +251,17 @@ class JobQueue:
         run_id = job.run_id
         
         try:
+            # Create progress reporter
+            from .progress_reporter import ProgressReporter
+            progress_reporter = ProgressReporter(run_id)
+            
             # Update status to running
             await self.run_store.update_run_status(run_id, RunStatus.RUNNING)
+            await progress_reporter.update_phase("initializing", "Setting up training environment")
             
             # Prepare dataset
             dataset_path = await self._prepare_dataset(job)
+            await progress_reporter.update_phase("initializing", "Dataset prepared, loading model")
             
             try:
                 # Map model names to available configs
@@ -272,6 +278,10 @@ class JobQueue:
                 # Use mapped model name or default to zephyr if not found
                 mapped_model = model_mapping.get(job.base_model, "zephyr")
                 logger.info(f"Using model '{mapped_model}' for requested '{job.base_model}'")
+                
+                # Set up training parameters and progress tracking
+                await progress_reporter.set_total_steps(total_steps=80, total_epochs=1)  # Based on n_examples
+                await progress_reporter.update_phase("training", f"Starting {job.algo.upper()} training with {mapped_model}")
                 
                 # Run training in separate process to avoid blocking event loop
                 loop = asyncio.get_event_loop()
@@ -290,6 +300,16 @@ class JobQueue:
                     20     # n_eval_examples
                 )
                 
+                # Training completed, update progress
+                await progress_reporter.update_phase("saving", "Training completed, saving model artifacts")
+                await progress_reporter.update_progress(
+                    current_step=80,
+                    total_steps=80,
+                    current_epoch=1,
+                    total_epochs=1,
+                    message="Training completed successfully"
+                )
+                
                 # Update run with results
                 await self.run_store.update_run_artifacts(
                     run_id,
@@ -298,6 +318,7 @@ class JobQueue:
                 )
                 
                 # Mark as completed
+                await progress_reporter.update_phase("completed", "Model training and upload completed")
                 await self.run_store.update_run_status(run_id, RunStatus.COMPLETED)
                 
                 logger.info(f"Job {run_id} completed successfully")

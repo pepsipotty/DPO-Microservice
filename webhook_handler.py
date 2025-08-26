@@ -87,6 +87,17 @@ class RunStatusResponse(BaseModel):
     metrics: Optional[Dict[str, Any]] = None
     started_at: Optional[int] = None  # Unix timestamp
     finished_at: Optional[int] = None  # Unix timestamp
+    
+    # Progress tracking fields
+    current_step: Optional[int] = None
+    total_steps: Optional[int] = None
+    current_epoch: Optional[int] = None
+    total_epochs: Optional[int] = None
+    progress_percentage: float = 0.0
+    current_phase: str = "queued"
+    phase_message: str = ""
+    eta_seconds: Optional[float] = None
+    last_metrics: Optional[Dict[str, float]] = None
 
 
 class RunArtifactsResponse(BaseModel):
@@ -328,7 +339,17 @@ async def get_run_status(
         status=run.status.value,
         metrics=run.metrics,
         started_at=int(run.started_at) if run.started_at else None,
-        finished_at=int(run.finished_at) if run.finished_at else None
+        finished_at=int(run.finished_at) if run.finished_at else None,
+        # Progress tracking fields
+        current_step=run.current_step,
+        total_steps=run.total_steps,
+        current_epoch=run.current_epoch,
+        total_epochs=run.total_epochs,
+        progress_percentage=run.progress_percentage,
+        current_phase=run.current_phase,
+        phase_message=run.phase_message,
+        eta_seconds=run.eta_seconds,
+        last_metrics=run.last_metrics
     )
 
 
