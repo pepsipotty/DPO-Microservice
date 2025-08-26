@@ -18,6 +18,7 @@ def run_training(
     datasets: Union[str, List[str]],
     loss_config: Dict[str, Any],
     exp_name: str,
+    kb_id: Optional[str] = None,  # Add kb_id parameter for new naming convention
     trainer: str = "FSDPTrainer",
     batch_size: int = 128,
     eval_batch_size: int = 64,
@@ -42,6 +43,7 @@ def run_training(
         datasets: Dataset name(s) to train on (e.g., 'novalto' or ['hh', 'shp'])
         loss_config: Loss configuration dict (e.g., {'name': 'dpo', 'beta': 0.1})
         exp_name: Experiment name for tracking and output directory
+        kb_id: Knowledge base ID for new file naming convention (optional, falls back to exp_name)
         trainer: Trainer class to use ('BasicTrainer', 'FSDPTrainer', 'TensorParallelTrainer')
         batch_size: Training batch size
         eval_batch_size: Evaluation batch size
@@ -84,6 +86,7 @@ def run_training(
         'datasets': datasets,
         'loss': loss_config,
         'exp_name': exp_name,
+        'kb_id': kb_id,  # Add kb_id to config for new file naming
         'trainer': trainer,
         'batch_size': batch_size,
         'eval_batch_size': eval_batch_size,

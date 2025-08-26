@@ -230,6 +230,7 @@ class JobQueue:
                     datasets=["novalto"],  # Always use novalto for microservice
                     loss_config={"name": job.algo, "beta": 0.1},
                     exp_name=job.exp_name,
+                    kb_id=job.kb_id,  # Pass kb_id for new file naming convention
                     debug=True,  # Disable wandb (no API key configured)
                     batch_size=8,
                     eval_batch_size=4,

@@ -416,8 +416,16 @@ class BasicTrainer(object):
         }, output_path)
 
         if filename == "policy.pt":
-            current_datetime = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-            unique_name = f"policy_{self.exp_name}_{current_datetime}.pt"
+            # Use new naming convention: policy_{kb_id}_{timestampMs}.pt
+            import time
+            timestamp_ms = int(time.time() * 1000)  # Unix timestamp in milliseconds
+            
+            # Use kb_id if available, fallback to exp_name for backward compatibility
+            identifier = getattr(self.config, 'kb_id', self.exp_name)
+            if identifier is None:
+                identifier = self.exp_name
+            
+            unique_name = f"policy_{identifier}_{timestamp_ms}.pt"
 
             rank0_print(f"Uploading file as {unique_name}")
             # Upload without cleanup - cleanup will happen later in save() method
