@@ -20,7 +20,7 @@ def trigger_policy_upload(policy_path: str, file_name: str, cleanup_after_upload
         cleanup_after_upload: Whether to clean up training artifacts after successful upload
         
     Returns:
-        bool: True if upload successful, False otherwise
+        tuple: (success: bool, firebase_url: str) - success status and Firebase download URL
     """
     try:
         # Get the Firebase Storage bucket
@@ -32,17 +32,26 @@ def trigger_policy_upload(policy_path: str, file_name: str, cleanup_after_upload
         # Upload the file from the local file system
         blob.upload_from_filename(policy_path)
 
+        # Get the Firebase download URL
+        firebase_url = f"https://firebasestorage.googleapis.com/v0/b/dpo-frontend.firebasestorage.app/o/policies%2F{file_name}?alt=media"
+        
         print(f"Successfully uploaded {policy_path} to Firebase Storage as {file_name}.")
+        
+        # Create success marker file with Firebase URL
+        policy_file = Path(policy_path)
+        success_marker = policy_file.parent / ".upload_success"
+        success_marker.write_text(firebase_url)
+        print(f"Created upload success marker: {success_marker}")
         
         # Perform cleanup after successful upload
         if cleanup_after_upload:
             cleanup_training_artifacts(policy_path)
             
-        return True
+        return True, firebase_url
         
     except Exception as e:
         print(f"Error uploading {policy_path}: {e}")
-        return False
+        return False, ""
 
 
 def cleanup_training_artifacts(policy_path: str):
@@ -89,18 +98,23 @@ def cleanup_training_artifacts(policy_path: str):
             os.remove(policy_file)
             print(f"Deleted local policy.pt ({policy_file})")
             
-        # Check if LATEST directory is now empty and remove it
-        remaining_files = list(latest_dir.glob("*"))
+        # Check if LATEST directory is now empty (except for .upload_success marker)
+        remaining_files = [f for f in latest_dir.glob("*") if f.name != ".upload_success"]
         if not remaining_files:
-            latest_dir.rmdir()
-            print(f"Removed empty LATEST directory ({latest_dir})")
-            
-            # Check if parent experiment directory is empty and remove it
-            experiment_dir = latest_dir.parent
-            remaining_items = list(experiment_dir.glob("*"))
-            if not remaining_items:
-                experiment_dir.rmdir()
-                print(f"Removed empty experiment directory ({experiment_dir})")
+            # Only remove directory if no success marker exists
+            success_marker = latest_dir / ".upload_success"
+            if not success_marker.exists():
+                latest_dir.rmdir()
+                print(f"Removed empty LATEST directory ({latest_dir})")
+                
+                # Check if parent experiment directory is empty and remove it
+                experiment_dir = latest_dir.parent
+                remaining_items = list(experiment_dir.glob("*"))
+                if not remaining_items:
+                    experiment_dir.rmdir()
+                    print(f"Removed empty experiment directory ({experiment_dir})")
+            else:
+                print(f"Keeping LATEST directory with upload success marker")
         else:
             print(f"LATEST directory contains {len(remaining_files)} remaining files, keeping directory")
             

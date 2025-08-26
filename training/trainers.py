@@ -421,10 +421,11 @@ class BasicTrainer(object):
 
             rank0_print(f"Uploading file as {unique_name}")
             # Upload without cleanup - cleanup will happen later in save() method
-            upload_success = trigger_policy_upload(output_path, unique_name, cleanup_after_upload=False)
+            upload_success, firebase_url = trigger_policy_upload(output_path, unique_name, cleanup_after_upload=False)
             
-            # Store the upload status and paths for cleanup later
+            # Store the upload status, URL, and paths for cleanup later
             self._upload_success = upload_success
+            self._firebase_url = firebase_url
             self._policy_path = output_path
             
             if upload_success:

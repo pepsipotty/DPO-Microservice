@@ -149,16 +149,31 @@ def run_training(
             # Construct result paths
             run_dir = cfg.local_run_dir
             artifact_path = os.path.join(run_dir, "LATEST", "policy.pt")
+            success_marker_path = os.path.join(run_dir, "LATEST", ".upload_success")
             
-            # Verify the artifact was created
-            if not os.path.exists(artifact_path):
-                raise RuntimeError(f"Training completed but artifact not found at {artifact_path}")
+            # Check for upload success first (preferred)
+            if os.path.exists(success_marker_path):
+                # Upload was successful, read Firebase URL from marker file
+                with open(success_marker_path, 'r') as f:
+                    firebase_url = f.read().strip()
+                
+                return {
+                    "artifact_path": firebase_url,  # Use Firebase URL instead of local path
+                    "logs_path": os.path.abspath(run_dir),
+                    "exp_name": exp_name
+                }
             
-            return {
-                "artifact_path": os.path.abspath(artifact_path),
-                "logs_path": os.path.abspath(run_dir),
-                "exp_name": exp_name
-            }
+            # Fallback: verify local artifact exists (for cases without upload)
+            elif os.path.exists(artifact_path):
+                return {
+                    "artifact_path": os.path.abspath(artifact_path),
+                    "logs_path": os.path.abspath(run_dir),
+                    "exp_name": exp_name
+                }
+            
+            else:
+                # Neither upload success nor local file found
+                raise RuntimeError(f"Training completed but no artifact found. Expected local file at {artifact_path} or upload success marker at {success_marker_path}")
             
     except Exception as e:
         raise RuntimeError(f"Training failed: {str(e)}") from e
