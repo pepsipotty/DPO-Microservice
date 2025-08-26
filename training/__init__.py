@@ -86,7 +86,6 @@ def run_training(
         'datasets': datasets,
         'loss': loss_config,
         'exp_name': exp_name,
-        'kb_id': kb_id,  # Add kb_id to config for new file naming
         'trainer': trainer,
         'batch_size': batch_size,
         'eval_batch_size': eval_batch_size,
@@ -97,6 +96,10 @@ def run_training(
         'seed': seed,
         'debug': debug,
     }
+    
+    # Add kb_id using Hydra's + syntax for new keys
+    if kb_id is not None:
+        config_overrides['+kb_id'] = kb_id
     
     if n_epochs is not None:
         config_overrides['n_epochs'] = n_epochs
