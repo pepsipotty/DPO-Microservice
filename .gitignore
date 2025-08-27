@@ -130,3 +130,6 @@ config/model/zephyr_a100.yaml
 
 # Service integration manifests
 dpo_service_manifest.json
+
+# Reporting and troubleshooting files (development only)
+reporting/
